@@ -7,6 +7,7 @@ import SwSwitch from "./switch/SwSwitch.vue";
 import SwCollapse from "./collapse/SwCollapse.vue";
 import SwCollapseModel from "./collapse/model";
 import { Validators } from "./utils";
+import snowindPlugin from "./snowind.plugin";
 
 export {
   SwInput,
@@ -17,5 +18,6 @@ export {
   SwSwitch,
   SwCollapse,
   SwCollapseModel,
-  Validators
+  Validators,
+  snowindPlugin
 };
