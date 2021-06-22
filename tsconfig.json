@@ -27,7 +27,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/snowind.plugin.js",
+    "src/**/*.js",
     "src/**/*.vue",
   ],
   "exclude": [
