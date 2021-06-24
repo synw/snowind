@@ -13,7 +13,6 @@
     "rootDir": "src",
     "outDir": "lib",
     "declaration": true,
-    "allowJs": true,
     "paths": {
       "@/*": [
         "src/*"

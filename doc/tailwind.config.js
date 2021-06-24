@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const defaultTheme = require('tailwindcss/defaultTheme');
-const snowindPlugin = require('./src/snowind/snowind.plugin');
-const colors = require('tailwindcss/colors')
+//const colors = require('tailwindcss/colors')
 
 module.exports = {
   future: {
@@ -34,6 +33,6 @@ module.exports = {
   darkMode: 'class',
   plugins: [
     require('@tailwindcss/forms'),
-    snowindPlugin
+    require('@snowind/plugin')
   ],
 };
