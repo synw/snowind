@@ -5,13 +5,14 @@
   ],
   "main": "./dist/snowind.umd.js",
   "module": "./dist/snowind.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/snowind.es.js",
       "require": "./dist/snowind.umd.js"
     }
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A Vuejs 3 Tailwindcss design system",
   "scripts": {
     "dev": "vite",
