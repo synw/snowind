@@ -5,7 +5,7 @@
 <script lang="ts">
 import { defineComponent, ref, toRefs } from "vue";
 import { guidGenerator } from "../utils";
-import { SwSwitch } from "@/snowind";
+import SwSwitch from "../switch/SwSwitch.vue";
 
 export default defineComponent({
   components: {
