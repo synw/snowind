@@ -1,4 +1,4 @@
-import { StringValidator } from "./types";
+type StringValidator = (v: string) => boolean;
 
 function guidGenerator(): string {
   const S4 = function () {

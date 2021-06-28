@@ -1,32 +1,37 @@
 {
   "name": "snowind",
-  "version": "0.0.3",
-  "description": "A Vuejs 3 Tailwindcss design system",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "declaration": true,
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-lib": "vue-cli-service build --target lib --name snowind src/index.ts && tsc --emitDeclarationOnly -p tsconfig.json"
-  },
   "files": [
-    "/lib"
+    "dist"
   ],
+  "main": "./dist/my-lib.umd.js",
+  "module": "./dist/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.js",
+      "require": "./dist/my-lib.umd.js"
+    }
+  },
+  "version": "0.0.2",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
   "dependencies": {
     "rxclass": "^0.0.17"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "typescript": "^4.3.2",
+    "vite": "^2.3.8",
+    "vue": "^3.0.5",
+    "vue-tsc": "^0.0.24",
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
     "tailwindcss": ">=2.0.0"
   },
-  "devDependencies": {
-    "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.1.2",
-    "tslib": "^2.1.0",
-    "typescript": "^4.2.3",
-    "vue": "^3.0.11"
-  },
-  "prepublish": "tsc",
   "author": "synw",
   "license": "MIT",
   "repository": {
