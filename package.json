@@ -12,7 +12,7 @@
       "require": "./dist/snowind.umd.js"
     }
   },
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A Vuejs 3 Tailwindcss design system",
   "scripts": {
     "dev": "vite",
