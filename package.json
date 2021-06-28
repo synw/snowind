@@ -12,6 +12,7 @@
     }
   },
   "version": "0.0.4",
+  "description": "A Vuejs 3 Tailwindcss design system",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
