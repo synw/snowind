@@ -1,7 +1,10 @@
 <template>
-  <div class="flex justify-center w-full" :class="{ dark: user.store.isDarkMode.value === true }">
+  <div
+    class="flex flex-row justify-center w-full"
+    :class="{ dark: user.store.isDarkMode.value === true }"
+  >
     <div
-      class="flex flex-col w-screen max-w-screen-xl min-w-screen-xl dark:text-foreground-dark dark:bg-background-dark"
+      class="w-screen max-w-screen-xl min-w-screen-xl dark:text-foreground-dark dark:bg-background-dark"
     >
       <div class="fixed flex w-screen h-16 max-w-screen-xl p-5 min-w-screen-xl">
         <div class="flex-none text-2xl cursor-pointer" @click="$router.push('/')">
@@ -17,7 +20,7 @@
           </button>
         </div>
       </div>
-      <div id="main-zone" class="w-full mt-16 main-zone">
+      <div id="main-zone" class="mt-16">
         <div
           class="fixed w-48 h-full pt-6 pl-10 space-y-3 border-r shadow border-light dark:border-light-dark"
         >
@@ -31,12 +34,12 @@
           <div>
             <router-link to="/button">Button</router-link>
           </div>
+          <div>
+            <router-link to="/collapse">Collapse</router-link>
+          </div>
 
           <div class="pt-6 pb-2 text-xl">Widgets</div>
           <!-- div>
-            <router-link to="/collapse">Collapse</router-link>
-          </div>
-          <div>
             <router-link to="/input">Input</router-link>
           </div>
           <div>

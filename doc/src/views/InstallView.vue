@@ -7,6 +7,7 @@
     <i>tailwind.config.js</i>:
   </div>
   <code-block :code="code2" lang="javascript" class="mt-8"></code-block>
+  <div class="mt-8">All the css is available. The components must be installed independently</div>
   <next-bar
     class="mt-24"
     :next="{ link: '/colors', text: 'Colors' }"
@@ -26,13 +27,13 @@ export default defineComponent({
   },
   setup() {
     const code1 = `
-      npm install snowind
+      npm install @snowind/plugin
       # or
-      yarn install snowind
+      yarn install @snowind/plugin
     `;
 
     const code2 = `
-    const snowindPlugin = require('snowind/snowind.plugin');
+    const snowindPlugin = require('@snowind/plugin');
 
     module.exports = {
       // ...

@@ -21,12 +21,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Button',
     component: () => import('../views/ButtonView.vue')
   },
-  /*{
+  {
     path: '/collapse',
     name: 'Collapse',
     component: () => import('../views/CollapseView.vue')
   },
-  {
+  /*{
     path: '/input',
     name: 'Input',
     component: () => import('../views/InputView.vue')

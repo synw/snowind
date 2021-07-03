@@ -1,7 +1,7 @@
 <template>
   <div class="text-2xl">Introduction</div>
   <div class="mt-8">
-    Snowind is a set of css and components for Vuejs 3 and Tailwindcss. It is composed
+    Snowind is a set of tools for Vuejs 3 and Tailwindcss to help create a design system. It is composed
     of a Tailwindcss plugin and some Vuejs 3 components.
   </div>
   <ul class="mt-5 ml-5 space-y-2 list-disc list-inside">
@@ -14,7 +14,7 @@
       <span class="font-semibold">Dark mode support</span>: dark mode is fully supported out of the box
     </li>
   </ul>
-  <div class="mt-12 mb-8 text-xl">Available components</div>
+  <div class="mt-12 mb-8 text-xl">Css</div>
   <ul class="mt-5 ml-5 space-y-2 list-disc list-inside">
     <li>
       <router-link to="/button" class="underline">Button</router-link>: styled button using only
@@ -24,6 +24,9 @@
       <router-link to="/collapse" class="underline">Collapse</router-link>: a vertical
       collapsable widget: can be opened and closed and uses a configurable css animation
     </li>
+  </ul>
+  <div class="mt-12 mb-8 text-xl">Components</div>
+  <ul class="mt-5 ml-5 space-y-2 list-disc list-inside">
     <li>
       <router-link to="/input" class="underline">Input</router-link>: a reactive input form
       field with debouncing and validation management

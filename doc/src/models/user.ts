@@ -6,20 +6,20 @@ export default class User extends RxStorage {
       isDarkMode: false
     };
     super("user", store);
-    //this.setDarkMode()
+    this.setDarkMode()
   }
 
 
   toggleDarkMode(): void {
     this.store.isDarkMode.value = !this.store.isDarkMode.value;
-    //this.setDarkMode();
+    this.setDarkMode();
   }
 
   setDarkMode(): void {
     if (this.store.isDarkMode.value === true) {
-      document.body.classList.add("bg-gray-600");
+      document.body.classList.add("bg-background-dark");
     } else {
-      document.body.classList.remove("bg-gray-600");
+      document.body.classList.remove("bg-background-dark");
     }
   }
 }

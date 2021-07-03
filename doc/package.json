@@ -7,8 +7,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@snowind/collapse": "file:/home/ggg/dev/js/snowind/packages/@snowind-collapse/",
-    "@snowind/switch": "file:/home/ggg/dev/js/snowind/packages/@snowind-switch/",
+    "@snowind/plugin": "file:../packages/@snowind-plugin/",
+    "@snowind/switch": "file:../packages/@snowind-switch/",
     "highlight.js": "^10.7.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rxclass": "^0.0.17",
@@ -16,7 +16,6 @@
     "vue-router": "4"
   },
   "devDependencies": {
-    "@snowind/plugin": "^0.0.1",
     "@tailwindcss/forms": "^0.3.3",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",

@@ -19,11 +19,12 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props) {
+  emits: ["toggle"],
+  setup(props, { emit }) {
     const { collapse } = toRefs(props);
 
     function toggle() {
-      collapse.value = !collapse.value;
+      emit("toggle");
     }
     return {
       toggle
