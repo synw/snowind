@@ -14,8 +14,8 @@ export default class SwDatatableModel<T = Record<string, any>> extends RxClass {
     });
   }
 
-  setColumnsFromData(): void { //eslint-disable-line
-    const v = this.rows.value[0];
+  setColumnsFromData(): void {
+    const v = this.rows.value[0]; //eslint-disable-line
     console.log("Setting columns from row names", Object.keys(v))
     const cols = [] as Array<string>;
     Object.keys(v).forEach((k) => {

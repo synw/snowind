@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import { defineComponent, onBeforeMount, ref, toRefs } from "vue";
-import { guidGenerator } from "../utils";
+import { guidGenerator } from "./utils";
 
 export default defineComponent({
   props: {

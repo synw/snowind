@@ -1,25 +1,25 @@
 <template>
-  <div :aria-hidden="model.isCollapsed" :class="cssClass" class="sw-slide-y">
+  <div :aria-hidden="model" :class="cssClass" class="sw-slide-y">
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, toRefs } from "vue";
-import SwCollapseModel from "./model";
 
 export default defineComponent({
   props: {
     model: {
-      type: SwCollapseModel,
-      default: () => new SwCollapseModel(),
+      type: Boolean,
+      default: true,
     },
   },
   setup(props) {
     const { model } = toRefs(props);
+
     const cssClass = computed<string>(() => {
       let v = "";
-      if (model.value.isCollapsed.value === true) {
+      if (model.value === true) {
         v = "sw-slideup";
       } else {
         v = "sw-slidedown";
