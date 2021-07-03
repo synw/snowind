@@ -4,21 +4,46 @@
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
-    "jsx": "preserve",
     "sourceMap": false,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    //"isolatedModules": true,
     "outDir": "./dist",
+    "allowJs": true,
+    "removeComments": true,
+    "strictFunctionTypes": true,
+    "types": [
+      "node",
+      "vite/client"
+    ],
     "lib": [
       "esnext",
       "dom"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "snowind": [
+        "src"
+      ],
+      "*": [
+        "src/*",
+        "node_modules/*"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }

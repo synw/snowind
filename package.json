@@ -1,18 +1,6 @@
 {
   "name": "snowind",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/snowind.umd.js",
-  "module": "./dist/snowind.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/snowind.es.js",
-      "require": "./dist/snowind.umd.js"
-    }
-  },
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A Vuejs 3 Tailwindcss design system",
   "scripts": {
     "dev": "vite",
@@ -32,9 +20,13 @@
     "vue": "^3.0.5",
     "vue-tsc": "^0.0.24"
   },
-  "peerDependencies": {
-    "tailwindcss": ">=2.0.0"
-  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "files": [
+    "dist"
+  ],
   "author": "synw",
   "license": "MIT",
   "repository": {
