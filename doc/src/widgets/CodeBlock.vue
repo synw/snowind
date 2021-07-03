@@ -1,14 +1,14 @@
 <template>
-  <pre class="bg-yellow-50 dark:bg-gray-700"><code
-    v-html="parsedCode"
-    style="white-space: pre"
-    
-  ></code></pre>
+  <pre class="bg-yellow-50 dark:bg-gray-700"><code v-html="parsedCode" style="white-space: pre"></code></pre>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import { defineComponent, toRefs } from "vue";
-import hljs from "highlight.js";
+import hljs from 'highlight.js/lib/core';
+import typescript from 'highlight.js/lib/languages/typescript';
+import xml from 'highlight.js/lib/languages/xml';
+hljs.registerLanguage('typescript', typescript);
+hljs.registerLanguage('xml', xml);
 
 export default defineComponent({
   props: {
