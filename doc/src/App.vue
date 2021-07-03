@@ -39,20 +39,20 @@
           </div>
 
           <div class="pt-6 pb-2 text-xl">Widgets</div>
-          <!-- div>
+          <div>
             <router-link to="/input">Input</router-link>
           </div>
-          <div>
+          <!-- div>
             <router-link to="/sidebar">Sidebar</router-link>
           </div-->
           <div>
             <router-link to="/switch">Switch</router-link>
           </div>
 
-          <!-- div class="pt-6 pb-2 text-xl">Examples</div>
+          <div class="pt-6 pb-2 text-xl">Examples</div>
           <div>
             <router-link to="/examples/form">Form</router-link>
-          </div-->
+          </div>
         </div>
         <div class="p-6 pb-24 ml-48">
           <router-view></router-view>

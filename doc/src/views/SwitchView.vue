@@ -106,6 +106,13 @@
     </div>
     <code-button class="mt-3" :collapse="collapse5" @toggle="collapse5 = !collapse5"></code-button>
 
+    <div class="mt-12 mb-8 text-xl">Install</div>
+    <code lang="bash">npm install @snowind/switch</code>
+    <br />
+    <code class="mt-3 text-neutral"># or</code>
+    <br />
+    <code class="mt-3">yarn add @snowind/switch</code>
+
     <div class="mt-12 mb-8 text-xl">Props</div>
     <props-table :tableData="propsData"></props-table>
 
@@ -114,7 +121,7 @@
 
     <next-bar
       class="mt-24"
-      :prev="{ link: '/sidebar', text: 'Sidebar' }"
+      :prev="{ link: '/input', text: 'Input' }"
       :next="{ link: '/examples/form', text: 'Form example' }"
     ></next-bar>
   </div>
@@ -147,6 +154,12 @@ export default defineComponent({
       </div>
     `;
     const code2 = `
+    import SwSwitch from "@snowind/switch";
+    
+    export default defineComponent({
+      components: {
+        SwSwitch,
+      },
       setup() {
         const switch1 = ref(false);
 
@@ -193,6 +206,12 @@ export default defineComponent({
         onChangeSwitch
       }
     }
+    `;
+
+    const code9 = `
+    npm install @snowind/switch
+    # or
+    yarn add @snowind/switch
     `;
 
     const switch1 = ref(false);
@@ -258,6 +277,7 @@ export default defineComponent({
       code6,
       code7,
       code8,
+      code9,
       collapse,
       collapse2,
       collapse3,

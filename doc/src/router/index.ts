@@ -26,11 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Collapse',
     component: () => import('../views/CollapseView.vue')
   },
-  /*{
+  {
     path: '/input',
     name: 'Input',
     component: () => import('../views/InputView.vue')
-  },*/
+  },
   {
     path: '/switch',
     name: 'Switch',
@@ -40,12 +40,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/sidebar',
     name: 'Sidebar',
     component: () => import('../views/SidebarView.vue')
-  },
+  },*/
   {
     path: '/examples/form',
     name: 'Form example',
     component: () => import('../views/FormView.vue')
-  }*/
+  }
 ]
 
 const router = createRouter({

@@ -61,8 +61,8 @@
 
   <next-bar
     class="mt-24"
-    :prev="{ link: '/button', text: 'Buttons' }"
-    :next="{ link: '/switch', text: 'Switch' }"
+    :prev="{ link: '/button', text: 'Button' }"
+    :next="{ link: '/input', text: 'Input' }"
   ></next-bar>
 </template>
 

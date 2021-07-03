@@ -1,0 +1,34 @@
+{
+  "name": "@snowind/input",
+  "version": "0.0.1",
+  "description": "An input widget for Snowind",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "typescript": "^4.3.2",
+    "vite": "^2.3.8",
+    "vue-tsc": "^0.0.24",
+    "rxclass": "^0.0.17"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/input.umd.js",
+  "module": "./dist/input.es.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/input.es.js",
+      "require": "./dist/input.umd.js"
+    }
+  },
+  "license": "MIT"
+}

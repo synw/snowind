@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@snowind/plugin": "file:../packages/@snowind-plugin/",
+    "@snowind/input": "file:../packages/@snowind-input/",
     "@snowind/switch": "file:../packages/@snowind-switch/",
     "highlight.js": "^10.7.2",
     "rollup-plugin-typescript2": "^0.30.0",
