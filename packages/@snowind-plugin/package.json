@@ -1,9 +1,9 @@
 {
   "name": "@snowind/plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Tailwindcss plugin for Snowind",
   "main": "index.js",
-  "repository": "https://github.com/synw/snowindplugin",
+  "repository": "https://github.com/synw/snowind",
   "author": "synw",
   "license": "MIT",
   "dependencies": {

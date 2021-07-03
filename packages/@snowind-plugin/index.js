@@ -57,29 +57,29 @@ module.exports = plugin(function ({ addComponents, theme }) {
         borderColor: theme('colors.success.DEFAULT'),
       }
     },
-    '.sw-slide-x': {
+    '.slide-x': {
       overflowX: 'hidden',
       transitionProperty: 'width',
       transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
       transitionDuration: '300ms',
     },
-    '.sw-slide-y': {
+    '.slide-y': {
       overflowY: 'hidden',
       transitionProperty: 'max-height',
       transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
       transitionDuration: '300ms',
+    },
+    '.slidedown': {
+      maxHeight: '1000px'
+    },
+    '.slideup': {
+      maxHeight: '0'
     },
     '.sw-sidebar': {
       width: '80px', // w-20
       '&.opened': {
         width: '208px' // w-52
       }
-    },
-    '.sw-slidedown': {
-      maxHeight: '1000px'
-    },
-    '.sw-slideup': {
-      maxHeight: '0'
     },
     '.sw-input': {
       '@apply rounded-sm': {},
@@ -121,10 +121,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
       }
     },
     '.sw-switch': {
-      'max-width': '2.5rem', // w-10,
-      '&.big': {
-        'max-width': '3.5rem', /// w-14
-      },
       '& .dot': {
         backgroundColor: theme('colors.light.DEFAULT'),
         'width': '1rem', // w-4
