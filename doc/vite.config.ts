@@ -19,4 +19,7 @@ export default defineConfig({
     ]
   },
   base: '/snowind/',
+  build: {
+    outDir: '../docs'
+  }
 })
