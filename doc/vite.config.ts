@@ -17,5 +17,9 @@ export default defineConfig({
     alias: [
       { find: '@/', replacement: '/src/' }
     ]
+  },
+  base: process.env.NODE_ENV === 'production' ? '/snowind/' : './',
+  build: {
+    outDir: '../docs'
   }
 })
