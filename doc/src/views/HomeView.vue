@@ -31,10 +31,10 @@
       <router-link to="/input" class="underline">Input</router-link>: a reactive input form
       field with debouncing and validation management
     </li>
-    <li>
+    <!-- li>
       <router-link to="/sidebar" class="underline">Sidebar</router-link>: a vertical
       collapsable sidebar
-    </li>
+    </li-->
     <li>
       <router-link to="/switch" class="underline">Switch</router-link>: a switch
       checkbox like widget
