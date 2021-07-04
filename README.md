@@ -1,4 +1,4 @@
-# <img src="doc/public/img/logo.png" width="25" height="25"> Snowind
+# <img src="public/img/logo.png" width="25" height="25"> Snowind
 
 Snowind is a set of tools for Vuejs 3 and Tailwindcss to help create a design system. It is composed
 of a Tailwindcss plugin and some Vuejs 3 components
