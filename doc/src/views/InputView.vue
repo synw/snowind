@@ -23,7 +23,7 @@
   <next-bar
     class="mt-24"
     :prev="{ link: '/collapse', text: 'Collapse' }"
-    :next="{ link: '/switch', text: 'Switch' }"
+    :next="{ link: '/sidebar', text: 'Sidebar' }"
   ></next-bar>
 </template>
 
@@ -58,11 +58,19 @@ export default defineComponent({
         required: false,
       },
       {
-        prop: "value",
+        prop: "v-model:value",
         description: "The initial value of the input",
         type: "string",
         values: "any string",
         default: "",
+        required: false,
+      },
+      {
+        prop: "v-model:isvalid",
+        description: "The validity property of the input",
+        type: "boolean or null",
+        values: "false, true or null",
+        default: "null",
         required: false,
       },
       {

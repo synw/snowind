@@ -35,12 +35,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/switch',
     name: 'Switch',
     component: () => import('../views/SwitchView.vue')
-  },/*
+  },
   {
     path: '/sidebar',
     name: 'Sidebar',
     component: () => import('../views/SidebarView.vue')
-  },*/
+  },
   {
     path: '/examples/form',
     name: 'Form example',

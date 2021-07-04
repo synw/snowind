@@ -42,9 +42,9 @@
           <div>
             <router-link to="/input">Input</router-link>
           </div>
-          <!-- div>
+          <div>
             <router-link to="/sidebar">Sidebar</router-link>
-          </div-->
+          </div>
           <div>
             <router-link to="/switch">Switch</router-link>
           </div>

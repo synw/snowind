@@ -10,6 +10,7 @@
     "@snowind/plugin": "file:../packages/@snowind-plugin/",
     "@snowind/input": "file:../packages/@snowind-input/",
     "@snowind/switch": "file:../packages/@snowind-switch/",
+    "@snowind/sidebar": "file:../packages/@snowind-sidebar/",
     "highlight.js": "^10.7.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rxclass": "^0.0.17",

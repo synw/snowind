@@ -23,7 +23,7 @@
         </td>
         <td class="px-8 py-3">
           <i class="fas fa-check text-success dark:text-success-dark" v-if="row.required === true"></i>
-          <i class="text-light dark:text-light-dark fas fa-times"></i>
+          <i class="text-light dark:text-light-dark fas fa-times" v-else></i>
         </td>
       </tr>
     </tbody>

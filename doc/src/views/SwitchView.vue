@@ -121,7 +121,7 @@
 
     <next-bar
       class="mt-24"
-      :prev="{ link: '/input', text: 'Input' }"
+      :prev="{ link: '/sidebar', text: 'Sidebar' }"
       :next="{ link: '/examples/form', text: 'Form example' }"
     ></next-bar>
   </div>
