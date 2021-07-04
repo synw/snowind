@@ -58,7 +58,7 @@
     <i>tailwind.config.js</i> file to customize the Snowind color palette and override the
     default colors:
   </div>
-  <code-block class="mt-3" lang="javascript" :code="code1"></code-block>
+  <code-block class="mt-3" lang="typescript" :code="code1"></code-block>
   <div class="mt-3">
     In this example the
     <code>primary</code> color will be overrided. The
@@ -66,7 +66,7 @@
     The dark variants has to be set as well
   </div>
   <div class="mt-12 mb-8 text-xl">Default Snowind colors</div>
-  <code-block class="mt-3" lang="javascript" :code="code2"></code-block>
+  <code-block class="mt-3" lang="typescript" :code="code2"></code-block>
   <next-bar
     class="mt-24"
     :prev="{ link: '/install', text: 'Install' }"

@@ -1,12 +1,12 @@
 <template>
   <div class="mb-8 text-2xl">Install</div>
-  <code-block :code="code1" lang="bash" class="mt-8"></code-block>
+  <code-block :code="code1" class="mt-8"></code-block>
   <div class="my-8 text-xl">Enable the plugin</div>
   <div>
     Enable the Snowind plugin in
     <i>tailwind.config.js</i>:
   </div>
-  <code-block :code="code2" lang="javascript" class="mt-8"></code-block>
+  <code-block :code="code2" lang="typescript" class="mt-8"></code-block>
   <div class="mt-8">All the css is available. The components must be installed independently</div>
   <next-bar
     class="mt-24"
