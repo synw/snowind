@@ -9,6 +9,7 @@
   <code-block :code="code2" lang="typescript" class="mt-8"></code-block>
   <div class="mt-8">All the css is available. The components must be installed independently</div>
 
+  <a name="newproject"></a>
   <div class="mt-12 text-xl">Create a new Snowind project</div>
   <div class="mt-8">
     This guide show how to create a Snowind project using Yarn, Vite and Typescript.
