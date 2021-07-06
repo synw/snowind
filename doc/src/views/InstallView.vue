@@ -80,7 +80,7 @@ export default defineComponent({
     const code1 = `
       npm install -D @snowind/plugin
       # or
-      yarn install -D @snowind/plugin
+      yarn add -D @snowind/plugin
     `;
 
     const code2 = `
