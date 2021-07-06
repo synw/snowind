@@ -1,17 +1,17 @@
 <template>
-  <div class="flex justify-between">
+  <div class="flex justify-between" id="nextbar">
     <div>
-      <router-link :to="prev.link" v-if="prev !== null">
+      <button class="btn" @click="$router.push(prev?.link ?? '/')" v-if="prev !== null">
         <i class="mr-3 fas fa-long-arrow-alt-left"></i>
         Previous: {{ prev.text }}
-      </router-link>
+      </button>
     </div>
     <div>
-      <router-link v-if="next !== null" :to="next.link">
+      <button v-if="next !== null" class="btn" @click="$router.push(next?.link ?? '/')">
         Next:
         {{ next.text }}
         <i class="ml-3 fas fa-long-arrow-alt-right"></i>
-      </router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -32,3 +32,8 @@ export default defineComponent({
   }
 });
 </script>
+
+<style lang="sass" scoped>
+button
+  @apply border-none
+</style>

@@ -30,6 +30,9 @@
           <div class="mt-3">
             <router-link to="/colors">Colors</router-link>
           </div>
+          <div class="mt-3">
+            <router-link to="/storybook">Storybook</router-link>
+          </div>
           <div class="pt-6 pb-2 text-xl">Css</div>
           <div>
             <router-link to="/button">Button</router-link>
@@ -54,7 +57,7 @@
             <router-link to="/examples/form">Form</router-link>
           </div>
         </div>
-        <div class="p-6 pb-24 ml-48">
+        <div class="p-6 pb-24 ml-48" id="main-content">
           <router-view></router-view>
         </div>
       </div>
@@ -90,6 +93,9 @@ html
   font-family: Arial, Helvetica, sans-serif
 #main-zone
   height: calc(100%-4rem)
+#main-content
+  & a, a:visited, a:hover
+    @apply text-primary dark:text-secondary-dark
 .dark
   @apply bg-gray-600
 .variable
