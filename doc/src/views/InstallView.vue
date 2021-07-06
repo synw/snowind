@@ -45,9 +45,14 @@
     <code class="variable">postcss.config.js</code> file:
   </div>
   <code-block :code="code8" lang="javascript" class="mt-8"></code-block>
+  <div class="mt-8">
+    The
+    <code class="variable">vite.config.ts</code> file:
+  </div>
+  <code-block :code="code9" lang="javascript" class="mt-8"></code-block>
 
   <div class="mt-8 text-lg">3. Run</div>
-  <code-block :code="code9" class="mt-8"></code-block>
+  <code-block :code="code10" class="mt-8"></code-block>
   <div class="mt-8">
     To
     <router-link to="/colors" class="underline">configure the colors</router-link>&nbsp;see next section
@@ -72,9 +77,9 @@ export default defineComponent({
   },
   setup() {
     const code1 = `
-      npm install @snowind/plugin
+      npm install -D @snowind/plugin
       # or
-      yarn install @snowind/plugin
+      yarn install -D @snowind/plugin
     `;
 
     const code2 = `
@@ -139,6 +144,29 @@ export default defineComponent({
     `;
 
     const code9 = `
+    import { defineConfig } from 'vite'
+    import vue from '@vitejs/plugin-vue'
+    import typescript2 from "rollup-plugin-typescript2"
+    const path = require('path')
+
+    export default defineConfig({
+      plugins: [
+        typescript2({
+          check: false,
+          tsconfig: path.resolve(__dirname, 'tsconfig.json'),
+          clean: true
+        }),
+        vue(),
+      ],
+      resolve: {
+        alias: [
+          { find: '@/', replacement: '/src/' }
+        ]
+      }
+    })
+    `;
+
+    const code10 = `
     yarn dev
     `;
 
@@ -151,7 +179,8 @@ export default defineComponent({
       code6,
       code7,
       code8,
-      code9
+      code9,
+      code10
     }
   }
 });
