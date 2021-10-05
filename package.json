@@ -1,0 +1,40 @@
+{
+  "name": "snowind",
+  "version": "0.0.9",
+  "description": "A Vuejs 3 Tailwindcss design system",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.19"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/compiler-sfc": "^3.2.19",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.2",
+    "vue-tsc": "^0.3.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.3.0"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "synw",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/synw/snowind"
+  },
+  "keywords": [
+    "vuejs3",
+    "tailwindcss",
+    "snowind"
+  ]
+}

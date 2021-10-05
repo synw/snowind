@@ -1,11 +1,9 @@
-import { computed } from "@vue/reactivity";
-import { RxStorage } from "rxclass";
+import { useStorage } from '@vueuse/core'
 
-export default class SwSidebarModel extends RxStorage {
-  constructor({ isOpened = false, name = "sw-sidebar" }: { isOpened?: boolean, name?: string } = {}) {
-    const store = {
-      isOpened: isOpened,
-    };
-    super(name, store, {});
+export default class SwSidebarModel {
+  isOpened = useStorage("isOpened", true);
+
+  constructor(isOpened = false) {
+    this.isOpened.value = isOpened;
   }
 }

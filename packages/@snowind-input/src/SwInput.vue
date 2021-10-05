@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { defineComponent, toRefs } from "vue";
-import { RxInput } from "rxclass";
+import RxInput from "./input";
 import { guidGenerator } from "./utils";
 
 export default defineComponent({
