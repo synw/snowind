@@ -1,6 +1,6 @@
 <template>
   <div :class="{
-    'opened': model.store.isOpened.value === true
+    'opened': model.isOpened.value === true
   }" class="sw-sidebar slide-x">
     <slot></slot>
   </div>
@@ -17,30 +17,26 @@ export default defineComponent({
     opened: {
       type: Boolean as () => boolean,
       required: true
-    },
-    name: {
-      type: String,
-      default: "sidebar"
     }
   },
   emits: ["update:opened"],
   setup(props, { emit }) {
-    const { opened, name } = toRefs(props);
-    const model = new SwSidebarModel({ name: name.value });
+    const { opened } = toRefs(props);
+    const model = new SwSidebarModel();
     let initialized = ref(false);
 
     watchEffect(() => {
       if (initialized.value === true) {
         if (opened.value === true) {
-          model.store.isOpened.value = true;
+          model.isOpened.value = true;
         } else if (opened.value === false) {
-          model.store.isOpened.value = false;
+          model.isOpened.value = false;
         }
       }
     });
 
     onMounted(() => {
-      emit("update:opened", model.store.isOpened.value);
+      emit("update:opened", model.isOpened.value);
       initialized.value = true;
     })
 

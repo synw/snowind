@@ -125,7 +125,7 @@ export default defineComponent({
         name: {
           val: "", // initial value
           isValid: null, // initial state
-          (v: string) => v.length > 2,
+          validator: (v: string) => v.length > 2,
         },
         password: {
           val: "", // initial value
