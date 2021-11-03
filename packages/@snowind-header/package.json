@@ -23,6 +23,10 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "./dist/header.umd.js",
   "module": "./dist/header.es.js",
   "types": "./dist/main.d.ts",
