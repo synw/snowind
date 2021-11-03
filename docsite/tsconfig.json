@@ -13,6 +13,9 @@
       "esnext",
       "dom"
     ],
+    "types": [
+      "vite/client"
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
