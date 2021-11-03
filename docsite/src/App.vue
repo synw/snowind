@@ -1,7 +1,7 @@
 <template>
   <div
     class="flex flex-row justify-center w-full"
-    :class="{ dark: user.store.isDarkMode.value === true }"
+    :class="{ dark: user.isDarkMode.value === true }"
   >
     <div
       class="w-screen max-w-screen-xl min-w-screen-xl dark:text-foreground-dark dark:bg-background-dark"
@@ -72,7 +72,7 @@ import { user } from "@/state";
 export default defineComponent({
   setup() {
     const modeIcon = computed<string>(() => {
-      if (user.store.isDarkMode.value === true) {
+      if (user.isDarkMode.value === true) {
         return "fas fa-sun text-xl";
       }
       return "fas fa-moon text-xl";
@@ -92,7 +92,7 @@ html
   margin: 0
   font-family: Arial, Helvetica, sans-serif
 #main-zone
-  height: calc(100%-4rem)
+  height: calc(100% - 4rem)
 #main-content
   & a, a:visited, a:hover
     @apply text-primary dark:text-secondary-dark

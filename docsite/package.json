@@ -7,20 +7,21 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@snowind/plugin": "file:../packages/@snowind-plugin/",
-    "@snowind/input": "file:../packages/@snowind-input/",
-    "@snowind/switch": "file:../packages/@snowind-switch/",
-    "@snowind/sidebar": "file:../packages/@snowind-sidebar/",
-    "highlight.js": "^10.7.2",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "rxclass": "^0.0.17",
-    "vue": "^3.0.5",
-    "vue-router": "4"
+    "@snowind/input": "^0.0.3",
+    "@snowind/sidebar": "^0.0.3",
+    "@snowind/switch": "^0.0.3",
+    "@snowind/header": "^0.0.6",
+    "@vueuse/core": "^6.5.3",
+    "vue": "^3.2.19",
+    "vue-router": "4",
+    "highlight.js": "^10.7.2"
   },
   "devDependencies": {
+    "@snowind/plugin": "^0.0.2",
     "@tailwindcss/forms": "^0.3.3",
-    "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.0.5",
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/compiler-sfc": "^3.2.19",
+    "rollup-plugin-typescript2": "^0.30.0",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
