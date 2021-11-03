@@ -15,7 +15,7 @@
       class="mt-4"
     >
       Template:
-      <code-block :code="code1" class="my-3"></code-block>Script:
+      <code-block :code="code1" lang="html" class="my-3"></code-block>Script:
       <code-block :code="code2" lang="typescript" class="mt-3"></code-block>
     </div>
     <code-button class="mt-3" :collapse="collapse" @toggle="collapse = !collapse"></code-button>
@@ -167,6 +167,7 @@ export default defineComponent({
           switch1
         }
       }
+    });
     `;
     const code3 = `
       <sw-switch label="Switch" v-model:value="switch2" :checked="switch2" class="w-max" big></sw-switch>

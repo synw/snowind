@@ -43,6 +43,9 @@
 
           <div class="pt-6 pb-2 text-xl">Widgets</div>
           <div>
+            <router-link to="/header">Header</router-link>
+          </div>
+          <div>
             <router-link to="/input">Input</router-link>
           </div>
           <div>
