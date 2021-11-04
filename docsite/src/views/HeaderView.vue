@@ -65,6 +65,47 @@
     </div>
     <code-button class="mt-3" :collapse="collapse1" @toggle="collapse1 = !collapse1"></code-button>
 
+    <div class="mt-12 mb-8 text-xl">Slots</div>
+    <div class="mt-3">Template slots are available for the mobile layout and the desktop layout.</div>
+    <div class="mt-3">
+      Available template slots for the desktop layout:
+      <div class="mt-3 bg-white rounded-lg shadow">
+        <ul class="divide-y-2 divide-gray-100">
+          <li class="p-3">
+            <div class="inline-block font-bold">#branding</div>:&nbsp;the site branding for desktop, usualy a logo
+          </li>
+          <li class="p-3">
+            <div class="inline-block font-bold">#menu</div>:&nbsp;the links to display at the top right of the header for desktop
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-5">
+      Available template slots for the mobile layout:
+      <div class="mt-3 bg-white rounded-lg shadow">
+        <ul class="divide-y-2 divide-gray-100">
+          <li class="p-3">
+            <div class="inline-block font-bold">#mobile-branding</div>:&nbsp;the site branding for mobile
+          </li>
+          <li class="p-3">
+            <div class="inline-block font-bold">#mobile-back</div>:&nbsp;the back arrow icon on mobile
+          </li>
+          <li class="p-3">
+            <div class="inline-block font-bold">#menuicon</div>:&nbsp;a slot to provide a custom menu icon. If
+            not provided it will use by default a svg icon
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 mb-8 text-xl">Configuration</div>
+    <div class="mt-3">
+      <div class="inline-block font-bold">Important:</div>&nbsp;configure Tailwind to whitelist your
+      breakpoint, to avoid purging the necessary classes at build time: in
+      <i>tailwind.config.js</i>:
+      <code-block :code="code3" lang="javascript" class="my-3"></code-block>
+    </div>
+
     <div class="mt-12 mb-8 text-xl">Props</div>
     <props-table :tableData="propsData"></props-table>
 
@@ -188,6 +229,14 @@ export default defineComponent({
       });
     `;
 
+    const code3 = `  
+    purge: {
+      content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+      options: {
+        safelist: ['sm:block', 'sm:hidden'],
+      }
+    },`;
+
     function closeMenu1() {
       isMenu1Visible.value = false;
     }
@@ -199,6 +248,7 @@ export default defineComponent({
       closeMenu1,
       code1,
       code2,
+      code3,
       collapse1,
       propsData,
       eventsData,

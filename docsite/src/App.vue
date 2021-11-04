@@ -12,12 +12,17 @@
           <span class="ml-3">Snowind</span>
         </div>
         <div class="flex-1 text-right">
-          <button
-            class="text-gray-300 border-none cursor-pointer focus:outline-none btn"
-            @click="user.toggleDarkMode()"
-          >
-            <i :class="modeIcon"></i>
-          </button>
+          <div class="flex flex-row items-center justify-end h-full">
+            <button class="text-xl border-none btn">
+              <i-fa-brands:github></i-fa-brands:github>
+            </button>
+            <button
+              class="text-gray-300 border-none cursor-pointer focus:outline-none btn"
+              @click="user.toggleDarkMode()"
+            >
+              <i :class="modeIcon"></i>
+            </button>
+          </div>
         </div>
       </div>
       <div id="main-zone" class="mt-16">

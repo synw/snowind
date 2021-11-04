@@ -9,7 +9,7 @@ export default class User {
   }
 
   toggleDarkMode() {
-    console.log("Toggle dark mode", this.isDarkMode.value, "=>", !this.isDarkMode.value)
+    // console.log("Toggle dark mode", this.isDarkMode.value, "=>", !this.isDarkMode.value)
     this.isDarkMode.value = !this.isDarkMode.value;
     this.checkDarkMode()
   }

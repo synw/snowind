@@ -1,4 +1,4 @@
-import{C}from"./CodeBlock.e2b443a9.js";import{C as g}from"./CodeButton.ec198959.js";import{N as h}from"./NextBar.53a2d3cb.js";import{_ as y}from"./index.aab83dc6.js";import{d as q,q as a,r,a as w,b as s,t as p,n as i,e as t,F as k,f as m,o as B}from"./vendor.2a37f64c.js";const _=`Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing
+import{C}from"./CodeBlock.ed0315b4.js";import{C as g}from"./CodeButton.d7bd13c1.js";import{N as h}from"./NextBar.2038dc1f.js";import{_ as y}from"./index.50d7b35f.js";import{d as q,q as a,r,c as w,a as s,t as p,n as i,e as t,F as k,f as m,o as B}from"./vendor.36fa6795.js";const _=`Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing
 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 tortor pretium viverra suspendisse potenti nullam ac. Massa sed elementum
 tempus egestas sed sed risus pretium quam. Non curabitur gravida arcu ac.

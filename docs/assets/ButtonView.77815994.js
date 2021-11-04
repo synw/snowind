@@ -1,4 +1,4 @@
-import{C as u}from"./CodeBlock.e2b443a9.js";import{N as b}from"./NextBar.53a2d3cb.js";import{_ as d}from"./index.aab83dc6.js";import{d as i,r as e,a as m,e as o,F as B,m as _,b as n,o as g}from"./vendor.2a37f64c.js";const p=i({components:{CodeBlock:u,NextBar:b},setup(){return{code1:`
+import{C as u}from"./CodeBlock.ed0315b4.js";import{N as b}from"./NextBar.2038dc1f.js";import{_ as d}from"./index.50d7b35f.js";import{d as i,r as e,c as m,e as o,F as B,m as _,a as n,o as g}from"./vendor.36fa6795.js";const p=i({components:{CodeBlock:u,NextBar:b},setup(){return{code1:`
         <button class="btn">Button</button>
         <button class="btn primary">Button</button>
         <button class="btn secondary">Button</button>
