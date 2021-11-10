@@ -2,6 +2,7 @@
   "name": "@snowind/header",
   "version": "0.0.7",
   "description": "A responsive header with a mobile menu widget for Snowind",
+  "repository": "https://github.com/synw/snowind",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

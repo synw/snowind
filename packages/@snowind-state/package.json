@@ -1,7 +1,8 @@
 {
   "name": "@snowind/state",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "State management primitives for Snowind",
+  "repository": "https://github.com/synw/snowind",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
