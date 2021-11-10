@@ -1,0 +1,39 @@
+{
+  "name": "@snowind/state",
+  "version": "0.0.1",
+  "description": "State management primitives for Snowind",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.19"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/compiler-sfc": "^3.2.19",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.2",
+    "vue-tsc": "^0.3.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/state.umd.js",
+  "module": "./dist/state.es.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/state.es.js",
+      "require": "./dist/state.umd.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT"
+}
