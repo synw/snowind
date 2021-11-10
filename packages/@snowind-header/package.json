@@ -1,6 +1,6 @@
 {
   "name": "@snowind/header",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A responsive header with a mobile menu widget for Snowind",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,8 @@
     "localpub": "yarn publish --registry http://localhost:4873/"
   },
   "dependencies": {
-    "vue": "^3.2.19"
+    "vue": "^3.2.19",
+    "@snowind/state": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
