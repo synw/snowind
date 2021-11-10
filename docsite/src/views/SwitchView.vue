@@ -122,7 +122,7 @@
     <next-bar
       class="mt-24"
       :prev="{ link: '/sidebar', text: 'Sidebar' }"
-      :next="{ link: '/examples/form', text: 'Form example' }"
+      :next="{ link: '/state/screen', text: 'Screen size' }"
     ></next-bar>
   </div>
 </template>

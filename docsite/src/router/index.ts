@@ -52,6 +52,16 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/SidebarView.vue')
   },
   {
+    path: '/state/screen',
+    name: 'State: screen',
+    component: () => import('../views/state/StateScreenView.vue')
+  },
+  {
+    path: '/state/user',
+    name: 'State: user',
+    component: () => import('../views/state/StateUserView.vue')
+  },
+  {
     path: '/examples/form',
     name: 'Form example',
     component: () => import('../views/FormView.vue')

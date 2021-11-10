@@ -69,8 +69,8 @@
     <div class="mt-3">Template slots are available for the mobile layout and the desktop layout.</div>
     <div class="mt-3">
       Available template slots for the desktop layout:
-      <div class="mt-3 bg-white rounded-lg shadow">
-        <ul class="divide-y-2 divide-gray-100">
+      <div class="mt-3 bg-gray-100 rounded-lg shadow dark:bg-gray-700">
+        <ul class="divide-y-2 divide-gray-100 dark:divide-gray-800">
           <li class="p-3">
             <div class="inline-block font-bold">#branding</div>:&nbsp;the site branding for desktop, usualy a logo
           </li>
@@ -82,8 +82,8 @@
     </div>
     <div class="mt-5">
       Available template slots for the mobile layout:
-      <div class="mt-3 bg-white rounded-lg shadow">
-        <ul class="divide-y-2 divide-gray-100">
+      <div class="mt-3 bg-gray-100 rounded-lg shadow dark:bg-gray-700">
+        <ul class="divide-y-2 divide-gray-100 dark:divide-gray-800">
           <li class="p-3">
             <div class="inline-block font-bold">#mobile-branding</div>:&nbsp;the site branding for mobile
           </li>
@@ -96,6 +96,15 @@
           </li>
         </ul>
       </div>
+    </div>
+
+    <div class="mt-12 mb-8 text-xl">Install</div>
+    <div class="mt-3">
+      <code lang="bash">npm install @snowind/header</code>
+      <br />
+      <code class="mt-3 text-neutral"># or</code>
+      <br />
+      <code class="mt-3">yarn add @snowind/header</code>
     </div>
 
     <div class="mt-12 mb-8 text-xl">Configuration</div>

@@ -13,7 +13,7 @@
         </div>
         <div class="flex-1 text-right">
           <div class="flex flex-row items-center justify-end h-full">
-            <button class="text-xl border-none btn">
+            <button class="text-xl border-none btn" @click="gitLink()">
               <i-fa-brands:github></i-fa-brands:github>
             </button>
             <button
@@ -60,6 +60,14 @@
             <router-link to="/switch">Switch</router-link>
           </div>
 
+          <div class="pt-6 pb-2 text-xl">State</div>
+          <div>
+            <router-link to="/state/screen">Screen size</router-link>
+          </div>
+          <div>
+            <router-link to="/state/user">User</router-link>
+          </div>
+
           <div class="pt-6 pb-2 text-xl">Examples</div>
           <div>
             <router-link to="/examples/form">Form</router-link>
@@ -86,9 +94,12 @@ export default defineComponent({
       return "fas fa-moon text-xl";
     });
 
+    const gitLink = () => window.location.href = 'https://github.com/synw/snowind';
+
     return {
       user,
       modeIcon,
+      gitLink,
     };
   },
 });
