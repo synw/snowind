@@ -13,14 +13,14 @@
         </div>
         <div class="flex-1 text-right">
           <div class="flex flex-row items-center justify-end h-full">
-            <button class="text-xl border-none btn" @click="gitLink()">
-              <i-fa-brands:github></i-fa-brands:github>
-            </button>
             <button
-              class="text-gray-300 border-none cursor-pointer focus:outline-none btn"
+              class="border-none cursor-pointer focus:outline-none btn text-light dark:text-light-dark"
               @click="user.toggleDarkMode()"
             >
               <i :class="modeIcon"></i>
+            </button>
+            <button class="text-xl border-none btn" @click="gitLink()">
+              <i-fa-brands:github></i-fa-brands:github>
             </button>
           </div>
         </div>

@@ -65,20 +65,24 @@ export default defineComponent({
     `;
 
     const code2 = `
+    import { Ref } from "vue";
     import { user } from "@/state";
 
     // user name persistent reference
-    const username = user.name.value;
+    const usernameRef: Ref<string> = user.name;
+    const username: string = user.name.value;
 
     // dark mode persistent reference
-    const isDarkModeOn = user.isDarkMode.value;
+    const isDarkModeOnRef: Ref<boolean> = user.isDarkMode;
+    const isDarkModeOn: boolean = user.isDarkMode.value;
     `;
 
     const code3 = `
     import { user } from "@/state";
 
     // the user connection state
-    const isLoggedIn = user.isLoggedIn.value;
+    const isLoggedInRef: Ref<boolean> = user.isLoggedIn;
+    const isLoggedIn: boolean = user.isLoggedIn.value;
     `;
 
     return {
