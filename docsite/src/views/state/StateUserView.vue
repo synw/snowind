@@ -26,6 +26,14 @@
       <code class="variable">false</code>
     </li>
   </ul>
+  <div class="mt-8">Toggle dark mode for the user:</div>
+  <code-block :code="code4" lang="typescript" class="mt-5"></code-block>
+  <div class="mt-5">
+    This will add the
+    <code class="variable">bg-background-dark</code> and
+    <code class="variable">text-foreground-dark</code> css classes to the html body tag when the dark mode
+    is activated and remove them for the light mode
+  </div>
 
   <div class="mt-12 mb-8 text-xl">Ephemeral properties</div>
   <div>Some user properties are not persistent across sessions:</div>
@@ -85,10 +93,17 @@ export default defineComponent({
     const isLoggedIn: boolean = user.isLoggedIn.value;
     `;
 
+    const code4 = `
+    import { user } from "@/state";
+
+    user.toggleDarkMode();
+    `;
+
     return {
       code1,
       code2,
       code3,
+      code4,
     }
   }
 });
