@@ -1,4 +1,4 @@
-import{C as i}from"./CodeBlock.30bd7eb2.js";import{N as m}from"./NextBar.1d2e5131.js";import{_ as p}from"./index.2876ec33.js";import{d as u,r,c as f,e as t,F as _,a as e,f as s,m as v,o as b}from"./vendor.36fa6795.js";const h=u({components:{CodeBlock:i,NextBar:m},setup(){return{code1:`
+import{C as i}from"./CodeBlock.9dd76a51.js";import{N as m}from"./NextBar.813c79f3.js";import{_ as p}from"./index.ac70ca66.js";import{d as u,r,c as f,e as t,F as _,a as e,f as s,m as v,o as b}from"./vendor.36fa6795.js";const h=u({components:{CodeBlock:i,NextBar:m},setup(){return{code1:`
     import { User } from "@snowind/state";
 
     const user = new User();

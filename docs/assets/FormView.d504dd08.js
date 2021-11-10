@@ -1,4 +1,4 @@
-import{C as f}from"./CodeBlock.30bd7eb2.js";import{S as w}from"./input.es.2a943488.js";import{N as h}from"./NextBar.1d2e5131.js";import{_ as V}from"./index.2876ec33.js";import{d as y,y as b,b as g,r,c as t,a as e,e as d,n as _,f as v,o}from"./vendor.36fa6795.js";const k=y({components:{CodeBlock:f,SwInput:w,NextBar:h},setup(){const s=b({name:{val:"",isValid:null,validator:l=>l.length>2},password:{val:"",isValid:null,validator:l=>l.length>7}}),a=g(()=>s.name.isValid===!0&&s.password.isValid===!0);return{form:s,code1:`
+import{C as f}from"./CodeBlock.9dd76a51.js";import{S as w}from"./input.es.2a943488.js";import{N as h}from"./NextBar.813c79f3.js";import{_ as V}from"./index.ac70ca66.js";import{d as y,y as b,b as g,r,c as t,a as e,e as d,n as _,f as v,o}from"./vendor.36fa6795.js";const k=y({components:{CodeBlock:f,SwInput:w,NextBar:h},setup(){const s=b({name:{val:"",isValid:null,validator:l=>l.length>2},password:{val:"",isValid:null,validator:l=>l.length>7}}),a=g(()=>s.name.isValid===!0&&s.password.isValid===!0);return{form:s,code1:`
       <sw-input
         v-model:value="form.name.val"
         v-model:isvalid="form.name.isValid"
