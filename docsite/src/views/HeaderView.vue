@@ -107,14 +107,6 @@
       <code class="mt-3">yarn add @snowind/header</code>
     </div>
 
-    <div class="mt-12 mb-8 text-xl">Configuration</div>
-    <div class="mt-3">
-      <div class="inline-block font-bold">Important:</div>&nbsp;configure Tailwind to whitelist your
-      breakpoint, to avoid purging the necessary classes at build time: in
-      <i>tailwind.config.js</i>:
-      <code-block :code="code3" lang="javascript" class="my-3"></code-block>
-    </div>
-
     <div class="mt-12 mb-8 text-xl">Props</div>
     <props-table :tableData="propsData"></props-table>
 
@@ -238,14 +230,6 @@ export default defineComponent({
       });
     `;
 
-    const code3 = `  
-    purge: {
-      content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-      options: {
-        safelist: ['sm:block', 'sm:hidden'],
-      }
-    },`;
-
     function closeMenu1() {
       isMenu1Visible.value = false;
     }
@@ -257,7 +241,6 @@ export default defineComponent({
       closeMenu1,
       code1,
       code2,
-      code3,
       collapse1,
       propsData,
       eventsData,

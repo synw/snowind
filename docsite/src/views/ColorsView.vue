@@ -108,71 +108,71 @@ export default defineComponent({
     const colors = require('tailwindcss/colors');
 
     colors: {
-        'primary': {
-          DEFAULT: colors.cyan[700],
-          dark: colors.cyan[700],
-        },
-        'primary-r': {
-          DEFAULT: colors.white,
-          dark: colors.white
-        },
-        'secondary': {
-          DEFAULT: colors.cyan[500],
-          dark: colors.cyan[500],
-        },
-        'secondary-r': {
-          DEFAULT: colors.white,
-          dark: colors.white
-        },
-        'success': {
-          DEFAULT: colors.green[600],
-          dark: colors.green[600]
-        },
-        'success-r': {
-          DEFAULT: colors.white,
-          dark: colors.white
-        },
-        'warning': {
-          DEFAULT: colors.amber[500],
-          dark: colors.amber[500]
-        },
-        'warning-r': {
-          DEFAULT: colors.white,
-          dark: colors.white
-        },
-        'danger': {
-          DEFAULT: colors.red[500],
-          dark: colors.red[400]
-        },
-        'danger-r': {
-          DEFAULT: colors.white,
-          dark: colors.white
-        },
-        'neutral': {
-          DEFAULT: colors.gray[500],
-          dark: colors.coolGray[300]
-        },
-        'neutral-r': {
-          DEFAULT: colors.white,
-          dark: colors.gray[800]
-        },
-        'light': {
-          DEFAULT: colors.warmGray[200],
-          dark: colors.gray[500]
-        },
-        'light-r': {
-          DEFAULT: colors.gray[800],
-          dark: colors.white
-        },
-        'background': {
-          DEFAULT: colors.white,
-          dark: colors.coolGray[600]
-        },
-        'foreground': {
-          DEFAULT: colors.gray[800],
-          dark: colors.white
-        }
+      'primary': {
+        DEFAULT: colors.cyan[700],
+        dark: colors.cyan[700],
+      },
+      'primary-r': {
+        DEFAULT: colors.white,
+        dark: colors.white
+      },
+      'secondary': {
+        DEFAULT: colors.cyan[500],
+        dark: colors.cyan[500],
+      },
+      'secondary-r': {
+        DEFAULT: colors.white,
+        dark: colors.white
+      },
+      'success': {
+        DEFAULT: colors.green[600],
+        dark: colors.green[600]
+      },
+      'success-r': {
+        DEFAULT: colors.white,
+        dark: colors.white
+      },
+      'warning': {
+        DEFAULT: colors.amber[500],
+        dark: colors.amber[500]
+      },
+      'warning-r': {
+        DEFAULT: colors.white,
+        dark: colors.white
+      },
+      'danger': {
+        DEFAULT: colors.red[500],
+        dark: colors.red[400]
+      },
+      'danger-r': {
+        DEFAULT: colors.white,
+        dark: colors.white
+      },
+      'neutral': {
+        DEFAULT: colors.gray[500],
+        dark: colors.coolGray[300]
+      },
+      'neutral-r': {
+        DEFAULT: colors.white,
+        dark: colors.gray[800]
+      },
+      'light': {
+        DEFAULT: colors.warmGray[200],
+        dark: colors.gray[500]
+      },
+      'light-r': {
+        DEFAULT: colors.gray[800],
+        dark: colors.white
+      },
+      'background': {
+        DEFAULT: colors.white,
+        dark: colors.coolGray[600]
+      },
+      'foreground': {
+        DEFAULT: colors.gray[800],
+        dark: colors.white
       }
+    }
     `;
 
     return {

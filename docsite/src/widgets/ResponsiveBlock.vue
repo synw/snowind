@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-row justify-end space-x-3 cursor-pointer">
-    <div @click="toMobile()" :class="{ 'text-neutral': !isMobile }">
+  <div class="flex flex-row justify-end cursor-pointer">
+    <button id="btn-left" class="btn" @click="toMobile()" :class="{ 'active': isMobile }">
       <i-zmdi-smartphone-iphone></i-zmdi-smartphone-iphone>&nbsp;Mobile
-    </div>
-    <div @click="toDesktop()" :class="{ 'text-neutral': isMobile }">
+    </button>
+    <button id="btn-right" class="btn" @click="toDesktop()" :class="{ 'active': !isMobile }">
       <i-fa-solid-desktop></i-fa-solid-desktop>&nbsp;Desktop
-    </div>
+    </button>
   </div>
 </template>
 
@@ -41,3 +41,14 @@ export default defineComponent({
   }
 });
 </script>
+
+<style lang="sass" scoped>
+#btn-left
+  @apply border border-r-0 rounded-none border-light text-neutral
+  &.active
+    @apply border-r text-foreground border-b-0
+#btn-right
+  @apply border border-l-0 rounded-none border-light text-neutral
+  &.active
+    @apply text-foreground border border-b-0
+</style>

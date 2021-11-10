@@ -19,9 +19,11 @@
             >
               <i :class="modeIcon"></i>
             </button>
-            <button class="text-xl border-none btn" @click="gitLink()">
-              <i-fa-brands:github></i-fa-brands:github>
-            </button>
+            <a href="https://github.com/synw/snowind">
+              <button class="text-xl border-none btn">
+                <i-fa-brands:github></i-fa-brands:github>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -94,12 +96,9 @@ export default defineComponent({
       return "fas fa-moon text-xl";
     });
 
-    const gitLink = () => window.location.href = 'https://github.com/synw/snowind';
-
     return {
       user,
       modeIcon,
-      gitLink,
     };
   },
 });
