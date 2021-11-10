@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "vue": "^3.2.19",
-    "@snowind/state": "^0.0.1"
+    "@snowind/state": "^0.0.2"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
