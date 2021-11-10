@@ -27,7 +27,7 @@
       </div>
       <div id="main-zone" class="mt-16">
         <div
-          class="fixed w-48 h-full pt-6 pl-10 space-y-3 border-r shadow border-light dark:border-light-dark"
+          class="fixed w-48 h-full pt-6 pl-10 space-y-3 overflow-auto border-r shadow border-light dark:border-light-dark"
         >
           <div>
             <router-link to="/install">Install</router-link>
