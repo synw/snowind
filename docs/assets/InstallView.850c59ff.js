@@ -1,4 +1,4 @@
-import{C as m}from"./CodeBlock.9cd87e28.js";import{N as _}from"./NextBar.ab9c44a2.js";import{_ as v}from"./index.2e2cec19.js";import{d as f,r as n,c as h,e as o,a as e,w as g,F as w,f as s,o as x}from"./vendor.36fa6795.js";const b=f({components:{CodeBlock:m,NextBar:_},setup(){return{code1:`
+import{C as m}from"./CodeBlock.9ecf39ea.js";import{N as _}from"./NextBar.1435cba3.js";import{_ as v}from"./index.93d97ca4.js";import{d as f,r as n,c as h,e as o,a as e,w as g,F as w,f as s,o as x}from"./vendor.36fa6795.js";const b=f({components:{CodeBlock:m,NextBar:_},setup(){return{code1:`
       npm install -D @snowind/plugin
       # or
       yarn add -D @snowind/plugin

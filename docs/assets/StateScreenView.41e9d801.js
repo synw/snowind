@@ -1,4 +1,4 @@
-import{C as i}from"./CodeBlock.9cd87e28.js";import{N as c}from"./NextBar.ab9c44a2.js";import{_ as l}from"./index.2e2cec19.js";import{d as r,r as t,c as d,e as s,F as m,a as o,m as b,o as p}from"./vendor.36fa6795.js";const _=r({components:{CodeBlock:i,NextBar:c},setup(){return{code1:`
+import{C as i}from"./CodeBlock.9ecf39ea.js";import{N as c}from"./NextBar.1435cba3.js";import{_ as l}from"./index.93d97ca4.js";import{d as r,r as t,c as d,e as s,F as m,a as o,m as b,o as p}from"./vendor.36fa6795.js";const _=r({components:{CodeBlock:i,NextBar:c},setup(){return{code1:`
     import { useScreenSize } from "@snowind/state";
 
     // provide a mobile breakpoint and a tablet breakpoint
