@@ -29,4 +29,4 @@ of a Tailwindcss plugin and some Vuejs 3 components
 
 | Version | Name | Description |
 | --- | --- | --- |
-| [![pub package](https://img.shields.io/npm/v/@snowind/state)](https://www.npmjs.com/package/@snowind/state) | [@snowind/state](https://synw.github.io/snowind/state/screen) | State management primitives: scren size, user preferences |
+| [![pub package](https://img.shields.io/npm/v/@snowind/state)](https://www.npmjs.com/package/@snowind/state) | [@snowind/state](https://synw.github.io/snowind/state/screen) | State management primitives: screen size, user preferences |
