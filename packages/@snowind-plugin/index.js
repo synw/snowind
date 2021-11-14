@@ -4,6 +4,34 @@ const colors = require('tailwindcss/colors')
 
 module.exports = plugin(function ({ addComponents, theme }) {
   const components = {
+    '.primary': {
+      backgroundColor: theme('colors.primary.DEFAULT'),
+      color: theme('colors.primary-r.DEFAULT'),
+    },
+    '.secondary': {
+      backgroundColor: theme('colors.secondary.DEFAULT'),
+      color: theme('colors.secondary-r.DEFAULT'),
+    },
+    '.neutral': {
+      backgroundColor: theme('colors.neutral.DEFAULT'),
+      color: theme('colors.neutral-r.DEFAULT'),
+    },
+    '.light': {
+      backgroundColor: theme('colors.light.DEFAULT'),
+      color: theme('colors.light-r.DEFAULT'),
+    },
+    '.danger': {
+      backgroundColor: theme('colors.danger.DEFAULT'),
+      color: theme('colors.danger-r.DEFAULT'),
+    },
+    '.warning': {
+      backgroundColor: theme('colors.warning.DEFAULT'),
+      color: theme('colors.warning-r.DEFAULT'),
+    },
+    '.success': {
+      backgroundColor: theme('colors.success.DEFAULT'),
+      color: theme('colors.success-r.DEFAULT'),
+    },
     '.btn': {
       borderWidth: '1px',
       borderRadius: '0.25rem',
@@ -22,38 +50,24 @@ module.exports = plugin(function ({ addComponents, theme }) {
         cursor: 'not-allowed'
       },
       '&.primary': {
-        backgroundColor: theme('colors.primary.DEFAULT'),
-        color: theme('colors.primary-r.DEFAULT'),
         borderColor: theme('colors.primary.DEFAULT'),
       },
       '&.secondary': {
-        backgroundColor: theme('colors.secondary.DEFAULT'),
-        color: theme('colors.secondary-r.DEFAULT'),
         borderColor: theme('colors.secondary.DEFAULT'),
       },
       '&.neutral': {
-        backgroundColor: theme('colors.neutral.DEFAULT'),
-        color: theme('colors.neutral-r.DEFAULT'),
         borderColor: theme('colors.neutral.DEFAULT'),
       },
       '&.light': {
-        backgroundColor: theme('colors.light.DEFAULT'),
-        color: theme('colors.light-r.DEFAULT'),
         borderColor: theme('colors.light.DEFAULT'),
       },
       '&.danger': {
-        backgroundColor: theme('colors.danger.DEFAULT'),
-        color: theme('colors.danger-r.DEFAULT'),
         borderColor: theme('colors.danger.DEFAULT'),
       },
       '&.warning': {
-        backgroundColor: theme('colors.warning.DEFAULT'),
-        color: theme('colors.warning-r.DEFAULT'),
         borderColor: theme('colors.warning.DEFAULT'),
       },
       '&.success': {
-        backgroundColor: theme('colors.success.DEFAULT'),
-        color: theme('colors.success-r.DEFAULT'),
         borderColor: theme('colors.success.DEFAULT'),
       }
     },
@@ -184,42 +198,56 @@ module.exports = plugin(function ({ addComponents, theme }) {
       },
     },
     '.dark': {
+      '& .primary': {
+        backgroundColor: theme('colors.primary.dark'),
+        color: theme('colors.primary-r.dark'),
+      },
+      '& .secondary': {
+        backgroundColor: theme('colors.secondary.dark'),
+        color: theme('colors.secondary-r.dark'),
+      },
+      '& .neutral': {
+        backgroundColor: theme('colors.neutral.dark'),
+        color: theme('colors.neutral-r.dark'),
+      },
+      '& .light': {
+        backgroundColor: theme('colors.light.dark'),
+        color: theme('colors.light-r.dark'),
+      },
+      '& .danger': {
+        backgroundColor: theme('colors.danger.dark'),
+        color: theme('colors.danger-r.dark'),
+      },
+      '& .warning': {
+        backgroundColor: theme('colors.warning.dark'),
+        color: theme('colors.warning-r.dark'),
+      },
+      '& .success': {
+        backgroundColor: theme('colors.success.dark'),
+        color: theme('colors.success-r.dark'),
+      },
       '& .btn': {
         borderColor: theme('colors.neutral.dark'),
         color: theme('colors.foreground.dark'),
         '&.primary': {
-          backgroundColor: theme('colors.primary.dark'),
-          color: theme('colors.primary-r.dark'),
           borderColor: theme('colors.primary.dark'),
         },
         '&.secondary': {
-          backgroundColor: theme('colors.secondary.dark'),
-          color: theme('colors.secondary-r.dark'),
           borderColor: theme('colors.secondary.dark'),
         },
         '&.neutral': {
-          backgroundColor: theme('colors.neutral.dark'),
-          color: theme('colors.neutral-r.dark'),
           borderColor: theme('colors.neutral.dark'),
         },
         '&.light': {
-          backgroundColor: theme('colors.light.dark'),
-          color: theme('colors.light-r.dark'),
           borderColor: theme('colors.light.dark'),
         },
         '&.danger': {
-          backgroundColor: theme('colors.danger.dark'),
-          color: theme('colors.danger-r.dark'),
           borderColor: theme('colors.danger.dark'),
         },
         '&.warning': {
-          backgroundColor: theme('colors.warning.dark'),
-          color: theme('colors.warning-r.dark'),
           borderColor: theme('colors.warning.dark'),
         },
         '&.success': {
-          backgroundColor: theme('colors.success.dark'),
-          color: theme('colors.success-r.dark'),
           borderColor: theme('colors.success.dark'),
         }
       },
