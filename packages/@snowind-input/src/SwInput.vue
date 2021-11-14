@@ -7,7 +7,7 @@
       :class="{
         'valid': input.isValid.value === true,
         'invalid': input.isValid.value === false,
-        'neutral': input.isValid.value === null
+        'unset': input.isValid.value === null
       }"
       :placeholder="placeholder"
       :required="required"
@@ -19,7 +19,7 @@
       :class="{
         'valid': input.isValid.value === true,
         'invalid': input.isValid.value === false,
-        'neutral': input.isValid.value === null
+        'unset': input.isValid.value === null
       }"
     >{{ inlineLabel }}</label>
   </div>

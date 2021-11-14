@@ -1,6 +1,6 @@
 {
   "name": "@snowind/input",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An input widget for Snowind",
   "scripts": {
     "dev": "vite",
