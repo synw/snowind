@@ -7,17 +7,17 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@snowind/input": "^0.0.3",
+    "@snowind/input": "^0.0.4",
     "@snowind/sidebar": "^0.0.3",
-    "@snowind/switch": "^0.0.3",
-    "@snowind/header": "^0.0.6",
+    "@snowind/switch": "^0.0.4",
+    "@snowind/header": "^0.0.7",
     "@vueuse/core": "^6.5.3",
     "vue": "^3.2.19",
     "vue-router": "4",
     "highlight.js": "^10.7.2"
   },
   "devDependencies": {
-    "@snowind/plugin": "^0.0.2",
+    "@snowind/plugin": "^0.0.3",
     "@iconify/json": "^1.1.373",
     "unplugin-icons": "^0.12.14",
     "unplugin-vue-components": "^0.15.6",

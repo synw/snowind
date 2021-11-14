@@ -42,12 +42,20 @@
     </div>
     <code-button class="mt-3" :collapse="collapse2" @toggle="collapse2 = !collapse2"></code-button>
 
-    <div class="my-8">Color variants</div>
+    <div class="my-8">Color variants and clickable labels</div>
     <div class="flex flex-row w-full space-x-3">
-      <sw-switch label="Primary" class="primary" :checked="true"></sw-switch>
-      <sw-switch label="Secondary" class="secondary" :checked="true"></sw-switch>
-      <sw-switch label="Danger" class="danger" :checked="true"></sw-switch>
-      <sw-switch label="Warning" class="warning" :checked="true"></sw-switch>
+      <sw-switch class="primary" :checked="true">
+        <div class="ml-2">Primary</div>
+      </sw-switch>
+      <sw-switch class="secondary" :checked="true">
+        <div class="ml-2">Secondary</div>
+      </sw-switch>
+      <sw-switch class="danger" :checked="true">
+        <div class="ml-2">Danger</div>
+      </sw-switch>
+      <sw-switch class="warning" :checked="true">
+        <div class="ml-2">Warning</div>
+      </sw-switch>
     </div>
     <div
       :class="{
@@ -183,10 +191,18 @@ export default defineComponent({
     `;
 
     const code5 = `
-      <sw-switch label="Primary" class="primary" :checked="true"></sw-switch>
-      <sw-switch label="Secondary" class="secondary" :checked="true"></sw-switch>
-      <sw-switch label="Danger" class="danger" :checked="true"></sw-switch>
-      <sw-switch label="Warning" class="warning" :checked="true"></sw-switch>
+      <sw-switch class="primary" :checked="true">
+        <div class="ml-2">Primary</div>
+      </sw-switch>
+      <sw-switch class="secondary" :checked="true">
+        <div class="ml-2">Secondary</div>
+      </sw-switch>
+      <sw-switch class="danger" :checked="true">
+        <div class="ml-2">Danger</div>
+      </sw-switch>
+      <sw-switch class="warning" :checked="true">
+        <div class="ml-2">Warning</div>
+      </sw-switch>
     `;
 
     const code6 = `

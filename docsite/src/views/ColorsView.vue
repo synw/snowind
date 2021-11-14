@@ -52,6 +52,20 @@
       <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
     </div>
   </div>
+
+  <div class="mt-12 mb-3 text-xl">Available classes</div>
+  <div class="mt-5 text-lg">Utilities</div>
+  <div class="mt-5">
+    The Tailwind utilities will be available for each color:
+    <code-block class="mt-3" lang="html" :code="code3"></code-block>
+  </div>
+  <div class="mt-5 text-lg">Semantic color blocks</div>
+  <div class="mt-5">
+    The Snowind color classes can be used directly:
+    <code-block class="mt-3" lang="html" :code="code4"></code-block>will do the same as:
+    <code-block class="mt-3" lang="html" :code="code5"></code-block>
+  </div>
+
   <div class="mt-12 mb-8 text-xl">Configure the colors</div>
   <div class="mt-3">
     Use the
@@ -61,8 +75,8 @@
   <code-block class="mt-3" lang="typescript" :code="code1"></code-block>
   <div class="mt-3">
     In this example the
-    <code>primary</code> color will be overrided. The
-    <code>primary-r</code> class is the primary reversed color, example for text if primary is the background.
+    <code class="variable">primary</code> color will be overrided. The
+    <code class="variable">primary-r</code> class is the primary reversed color, example for text if primary is the background.
     The dark variants has to be set as well
   </div>
   <div class="mt-12 mb-8 text-xl">Default Snowind colors</div>
@@ -175,10 +189,26 @@ export default defineComponent({
     }
     `;
 
+    const code3 = `
+    <div class="text-primary">Text primary</div>
+    <div class="bg-primary">Background primary</div>
+    `;
+
+    const code4 = `
+    <div class="light">Light block</div>
+    `;
+
+    const code5 = `
+    <div class="bg-light text-light-r dark:bg-light-dark dark:text-light-r-dark">Light block</div>
+    `;
+
     return {
       code1,
       code2,
-      user
+      code3,
+      code4,
+      code5,
+      user,
     };
   },
 });

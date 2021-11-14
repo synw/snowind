@@ -13,7 +13,7 @@
       <sw-header
         class="h-12 bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-r-dark"
         @togglemenu="isMenu1Visible = !isMenu1Visible"
-        :breakpoint="isMobile1 ? '2xl' : 'sm'"
+        :breakpoint="isMobile1 ? '2xl' : '2xl'"
       >
         <template #branding>
           <div class="ml-5 text-lg">Branding</div>
@@ -123,7 +123,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { SwHeader, SwMobileMenu } from "@snowind/header";
+//import { SwHeader, SwMobileMenu } from "@snowind/header";
+import { SwMobileMenu } from "@snowind/header";
+import SwHeader from "@/packages/header/SwHeader.vue";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import PropsTable from "@/widgets/PropsTable.vue";
 import EventsTable from "@/widgets/EventsTable.vue";
