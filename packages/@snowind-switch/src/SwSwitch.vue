@@ -1,5 +1,5 @@
 <template>
-  <div class="sw-switch">
+  <div class="inline-block sw-switch" style="background-color:transparent;color:inherit">
     <label :for="'toggle' + sid" class="flex items-center cursor-pointer">
       <div class="relative">
         <input
@@ -16,7 +16,7 @@
           :class="{ 'big': big === true }"
         ></div>
       </div>
-      <div class="ml-3 font-medium" v-if="label !== null" v-html="label"></div>
+      <slot></slot>
     </label>
   </div>
 </template>
@@ -30,10 +30,6 @@ export default defineComponent({
     checked: {
       type: Boolean as () => boolean | null,
       default: null,
-    },
-    label: {
-      type: String,
-      default: null
     },
     big: {
       type: Boolean,
