@@ -1,4 +1,4 @@
-import{C as u}from"./CodeBlock.ecfbc756.js";import{N as g}from"./NextBar.496b1c9d.js";import{_ as b,u as p}from"./index.7691d424.js";import{d as y,r as i,c as r,a as e,j as a,e as d,F as x,p as w,k as T,f as t,o as c}from"./vendor.ba3950ab.js";const f=y({components:{CodeBlock:u,NextBar:g},setup(){return{code1:`
+import{C as u}from"./CodeBlock.8e63f17f.js";import{N as g}from"./NextBar.2221aae1.js";import{_ as b,u as p}from"./index.9c82c8e6.js";import{d as y,r as i,c as r,a as e,j as a,e as d,F as x,p as w,k as T,f as t,o as c}from"./vendor.ba3950ab.js";const f=y({components:{CodeBlock:u,NextBar:g},setup(){return{code1:`
     const colors = require('tailwindcss/colors');
 
     module.exports = {
