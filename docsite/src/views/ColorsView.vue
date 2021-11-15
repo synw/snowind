@@ -54,16 +54,29 @@
   </div>
 
   <div class="mt-12 mb-3 text-xl">Available classes</div>
-  <div class="mt-5 text-lg">Utilities</div>
+  <div class="mt-5 text-lg">Tailwind utilities</div>
   <div class="mt-5">
     The Tailwind utilities will be available for each color:
     <code-block class="mt-3" lang="html" :code="code3"></code-block>
   </div>
-  <div class="mt-5 text-lg">Semantic color blocks</div>
+  <div class="mt-5 text-lg">Semantic color as utilities</div>
   <div class="mt-5">
     The Snowind color classes can be used directly:
     <code-block class="mt-3" lang="html" :code="code4"></code-block>will do the same as:
     <code-block class="mt-3" lang="html" :code="code5"></code-block>
+  </div>
+  <div class="mt-5 text-lg">Hover variants</div>
+  <div class="mt-5 mb-3">
+    To apply an hover variant for light and dark mode:
+    <code-block class="mt-3" lang="html" :code="code6"></code-block>
+  </div>Renders:
+  <div class="p-3 mt-3 light hover:success dark:hover:secondary-dark">
+    Block
+    <div v-if="user.isDarkMode.value === true" class="inline-block">in dark mode</div>
+  </div>
+  <div class="mt-3">
+    Use a
+    <code class="variable">-dark</code> suffix to apply the dark color with the hover variant
   </div>
 
   <div class="mt-12 mb-8 text-xl">Configure the colors</div>
@@ -102,20 +115,27 @@ export default defineComponent({
   },
   setup() {
     const code1 = `
-    theme: {
-      extend: {
-        colors: {
-          'primary': {
-            DEFAULT: "#somecolor",
-            dark: "#somecolor",
-          },
-          'primary-r': {
-            DEFAULT: "#somecolor",
-            dark: "#somecolor",
-          },
-        }
-      },
-    },
+    const colors = require('tailwindcss/colors');
+
+    module.exports = {
+      // ...
+      theme: {
+        extend: {
+          colors: {
+            // the primary background color
+            'primary': {
+              DEFAULT: "#somecolor",
+              dark: colors.gray[700],
+            },
+            // the primary text color
+            'primary-r': {
+              DEFAULT: "#somecolor",
+              dark: colors.white,
+            },
+          }
+        },
+      }
+    }
     `;
 
     const code2 = `
@@ -124,15 +144,15 @@ export default defineComponent({
     colors: {
       'primary': {
         DEFAULT: colors.cyan[700],
-        dark: colors.cyan[700],
+        dark: colors.gray[700],
       },
       'primary-r': {
         DEFAULT: colors.white,
-        dark: colors.white
+        dark: colors.white,
       },
       'secondary': {
         DEFAULT: colors.cyan[500],
-        dark: colors.cyan[500],
+        dark: colors.gray[800],
       },
       'secondary-r': {
         DEFAULT: colors.white,
@@ -202,12 +222,17 @@ export default defineComponent({
     <div class="bg-light text-light-r dark:bg-light-dark dark:text-light-r-dark">Light block</div>
     `;
 
+    const code6 = `
+    <div class="p-3 light hover:success dark:hover:secondary-dark">Block</div>
+    `
+
     return {
       code1,
       code2,
       code3,
       code4,
       code5,
+      code6,
       user,
     };
   },
