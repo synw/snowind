@@ -2,8 +2,8 @@
 const plugin = require('tailwindcss/plugin');
 const colors = require('tailwindcss/colors')
 
-module.exports = plugin(function ({ addComponents, theme }) {
-  const components = {
+module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
+  const utilities = {
     '.primary': {
       backgroundColor: theme('colors.primary.DEFAULT'),
       color: theme('colors.primary-r.DEFAULT'),
@@ -32,6 +32,40 @@ module.exports = plugin(function ({ addComponents, theme }) {
       backgroundColor: theme('colors.success.DEFAULT'),
       color: theme('colors.success-r.DEFAULT'),
     },
+    '.primary-dark': {
+      backgroundColor: theme('colors.primary.dark'),
+      color: theme('colors.primary-r.dark'),
+    },
+    '.secondary-dark': {
+      backgroundColor: theme('colors.secondary.dark'),
+      color: theme('colors.secondary-r.dark'),
+    },
+    '.neutral-dark': {
+      backgroundColor: theme('colors.neutral.dark'),
+      color: theme('colors.neutral-r.dark'),
+    },
+    '.light-dark': {
+      backgroundColor: theme('colors.light.dark'),
+      color: theme('colors.light-r.dark'),
+    },
+    '.danger-dark': {
+      backgroundColor: theme('colors.danger.dark'),
+      color: theme('colors.danger-r.dark'),
+    },
+    '.warning-dark': {
+      backgroundColor: theme('colors.warning.dark'),
+      color: theme('colors.warning-r.dark'),
+    },
+    '.success-dark': {
+      backgroundColor: theme('colors.success.dark'),
+      color: theme('colors.success-r.dark'),
+    },
+
+  };
+  addUtilities(utilities, {
+    variants: ['hover', 'dark'],
+  });
+  const components = {
     '.btn': {
       borderWidth: '1px',
       borderRadius: '0.25rem',
@@ -347,15 +381,15 @@ module.exports = plugin(function ({ addComponents, theme }) {
       colors: {
         'primary': {
           DEFAULT: colors.cyan[700],
-          dark: colors.cyan[700],
+          dark: colors.gray[700],
         },
         'primary-r': {
           DEFAULT: colors.white,
-          dark: colors.white
+          dark: colors.white,
         },
         'secondary': {
           DEFAULT: colors.cyan[500],
-          dark: colors.cyan[500],
+          dark: colors.gray[800],
         },
         'secondary-r': {
           DEFAULT: colors.white,
@@ -412,4 +446,4 @@ module.exports = plugin(function ({ addComponents, theme }) {
       }
     }
   }
-});
+})
