@@ -13,7 +13,36 @@
       <sw-header
         class="h-12 bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-r-dark"
         @togglemenu="isMenu1Visible = !isMenu1Visible"
-        :breakpoint="isMobile1 ? '2xl' : '2xl'"
+        v-if="isMobile1"
+        breakpoint="2xl"
+      >
+        <template #branding>
+          <div class="ml-5 text-lg">Branding</div>
+        </template>
+        <template #mobile-branding>
+          <div class="ml-5 text-lg">Mobile branding</div>
+        </template>
+        <template #mobile-back>
+          <i-ion-arrow-back-outline
+            class="inline-flex ml-2 text-3xl"
+            v-if="$router.currentRoute.value.path != ''"
+          ></i-ion-arrow-back-outline>
+        </template>
+        <template #menu>
+          <div class="flex flex-row items-center justify-end h-full space-x-1">
+            <button class="border-none btn" @click="closeMenu1()">Page 1</button>
+            <button class="border-none btn" @click="closeMenu1()">Page 2</button>
+            <div class="px-5 text-lg cursor-pointer" @click="user.toggleDarkMode()">
+              <i-fa-solid-moon v-if="user.isDarkMode.value == false"></i-fa-solid-moon>
+              <i-fa-solid-sun v-else></i-fa-solid-sun>
+            </div>
+          </div>
+        </template>
+      </sw-header>
+      <sw-header
+        class="h-12 bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-r-dark"
+        @togglemenu="isMenu1Visible = !isMenu1Visible"
+        v-else
       >
         <template #branding>
           <div class="ml-5 text-lg">Branding</div>
@@ -123,9 +152,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-//import { SwHeader, SwMobileMenu } from "@snowind/header";
-import { SwMobileMenu } from "@snowind/header";
-import SwHeader from "@/packages/header/SwHeader.vue";
+import { SwHeader, SwMobileMenu } from "@snowind/header";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import PropsTable from "@/widgets/PropsTable.vue";
 import EventsTable from "@/widgets/EventsTable.vue";
