@@ -7,31 +7,31 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@snowind/header": "^0.0.7",
     "@snowind/input": "^0.0.4",
     "@snowind/sidebar": "^0.0.3",
     "@snowind/switch": "^0.0.4",
-    "@snowind/header": "^0.0.7",
     "@vueuse/core": "^6.5.3",
+    "highlight.js": "^10.7.2",
     "vue": "^3.2.19",
-    "vue-router": "4",
-    "highlight.js": "^10.7.2"
+    "vue-router": "4"
   },
   "devDependencies": {
-    "@snowind/plugin": "^0.0.3",
     "@iconify/json": "^1.1.373",
-    "unplugin-icons": "^0.12.14",
-    "unplugin-vue-components": "^0.15.6",
+    "@snowind/plugin": "^0.0.4",
     "@tailwindcss/forms": "^0.3.3",
     "@vitejs/plugin-vue": "^1.9.2",
     "@vue/compiler-sfc": "^3.2.19",
-    "rollup-plugin-typescript2": "^0.30.0",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
     "sass": "^1.35.1",
     "tailwindcss": "^2.2.4",
     "tslib": "^2.3.0",
     "typescript": "^4.3.2",
+    "unplugin-icons": "^0.12.14",
+    "unplugin-vue-components": "^0.15.6",
     "vite": "^2.3.8",
     "vue-tsc": "^0.0.24"
   }
