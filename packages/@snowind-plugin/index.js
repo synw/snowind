@@ -136,7 +136,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         top: '0%',
         transform: 'translateY(-50%)',
         'font-size': '0.8em',
-        '&.neutral': {
+        '&.unset': {
           color: theme('colors.foreground.DEFAULT'),
         },
         '&.valid': {
@@ -146,7 +146,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
           color: theme('colors.danger.DEFAULT'),
         },
       },
-      '& .neutral': {
+      '& .unset': {
         borderColor: theme('colors.neutral.DEFAULT'),
       },
       '& .valid': {
@@ -157,7 +157,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       },
       '& :focus': {
         '@apply outline-none shadow-none ring': {},
-        '&.neutral': {
+        '&.unset': {
           '@apply ring-neutral': {}
         },
         '&.valid': {
@@ -291,7 +291,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         '& label': {
           backgroundColor: theme('colors.background.dark'),
-          '&.neutral': {
+          '&.unset': {
             color: theme('colors.foreground.dark'),
           },
           '&.valid': {
@@ -301,7 +301,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
             color: theme('colors.danger.dark'),
           }
         },
-        '& .neutral': {
+        '& .unset': {
           borderColor: theme('colors.neutral.dark'),
         },
         '& .valid': {
@@ -311,7 +311,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
           borderColor: theme('colors.danger.dark'),
         },
         '& :focus': {
-          '&.neutral': {
+          '&.unset': {
             '@apply ring-neutral-dark': {}
           },
           '&.valid': {
