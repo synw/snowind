@@ -13,12 +13,6 @@
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  props: {
-    breakpoint: {
-      type: String,
-      default: "sm"
-    }
-  },
   emits: ["desktop", "mobile"],
   setup(props, { emit }) {
     const isMobile = ref(false);
