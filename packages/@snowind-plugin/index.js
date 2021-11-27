@@ -4,6 +4,26 @@ const colors = require('tailwindcss/colors')
 
 module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
   const utilities = {
+    '.txt-background': { color: theme('colors.background.DEFAULT') },
+    '.txt-primary': { color: theme('colors.primary.DEFAULT') },
+    '.txt-secondary': { color: theme('colors.secondary.DEFAULT') },
+    '.txt-neutral': { color: theme('colors.neutral.DEFAULT') },
+    '.txt-light': { color: theme('colors.light.DEFAULT') },
+    '.txt-danger': { color: theme('colors.danger.DEFAULT') },
+    '.txt-warning': { color: theme('colors.warning.DEFAULT') },
+    '.txt-success': { color: theme('colors.success.DEFAULT') },
+    '.block-background': { backgroundColor: theme('colors.background.DEFAULT') },
+    '.block-primary': { backgroundColor: theme('colors.primary.DEFAULT') },
+    '.block-secondary': { backgroundColor: theme('colors.secondary.DEFAULT') },
+    '.block-neutral': { backgroundColor: theme('colors.neutral.DEFAULT') },
+    '.block-light': { backgroundColor: theme('colors.light.DEFAULT') },
+    '.block-danger': { backgroundColor: theme('colors.danger.DEFAULT') },
+    '.block-warning': { backgroundColor: theme('colors.warning.DEFAULT') },
+    '.block-success': { backgroundColor: theme('colors.success.DEFAULT') },
+    '.background': {
+      backgroundColor: theme('colors.background.DEFAULT'),
+      color: theme('colors.foreground.DEFAULT'),
+    },
     '.primary': {
       backgroundColor: theme('colors.primary.DEFAULT'),
       color: theme('colors.primary-r.DEFAULT'),
@@ -63,7 +83,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
 
   };
   addUtilities(utilities, {
-    variants: ['hover', 'dark'],
+    variants: ['hover', 'dark', 'responsive'],
   });
   const components = {
     '.btn': {
@@ -75,35 +95,12 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       paddingBottom: '0.25rem',
       letterSpacing: '0.05em',
       cursor: 'pointer',
-      borderColor: theme('colors.neutral.DEFAULT'),
-      '&:hover': {
-        opacity: '0.9',
-      },
+      borderColor: 'transparent',
+      '&:hover': { opacity: '0.9', },
       '&:disabled': {
         opacity: '0.75',
         cursor: 'not-allowed'
       },
-      '&.primary': {
-        borderColor: theme('colors.primary.DEFAULT'),
-      },
-      '&.secondary': {
-        borderColor: theme('colors.secondary.DEFAULT'),
-      },
-      '&.neutral': {
-        borderColor: theme('colors.neutral.DEFAULT'),
-      },
-      '&.light': {
-        borderColor: theme('colors.light.DEFAULT'),
-      },
-      '&.danger': {
-        borderColor: theme('colors.danger.DEFAULT'),
-      },
-      '&.warning': {
-        borderColor: theme('colors.warning.DEFAULT'),
-      },
-      '&.success': {
-        borderColor: theme('colors.success.DEFAULT'),
-      }
     },
     '.slide-x': {
       overflowX: 'hidden',
@@ -117,12 +114,8 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
       transitionDuration: '300ms',
     },
-    '.slidedown': {
-      maxHeight: '1000px'
-    },
-    '.slideup': {
-      maxHeight: '0'
-    },
+    '.slidedown': { maxHeight: '1000px' },
+    '.slideup': { maxHeight: '0' },
     '.sw-sidebar': {
       width: '80px', // w-20
       '&.opened': {
@@ -136,25 +129,13 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         top: '0%',
         transform: 'translateY(-50%)',
         'font-size': '0.8em',
-        '&.unset': {
-          color: theme('colors.foreground.DEFAULT'),
-        },
-        '&.valid': {
-          color: theme('colors.success.DEFAULT'),
-        },
-        '&.invalid': {
-          color: theme('colors.danger.DEFAULT'),
-        },
+        '&.unset': { color: theme('colors.foreground.DEFAULT') },
+        '&.valid': { color: theme('colors.success.DEFAULT') },
+        '&.invalid': { color: theme('colors.danger.DEFAULT') },
       },
-      '& .unset': {
-        borderColor: theme('colors.neutral.DEFAULT'),
-      },
-      '& .valid': {
-        borderColor: theme('colors.success.DEFAULT'),
-      },
-      '& .invalid': {
-        borderColor: theme('colors.danger.DEFAULT'),
-      },
+      '& .unset': { borderColor: theme('colors.neutral.DEFAULT') },
+      '& .valid': { borderColor: theme('colors.success.DEFAULT') },
+      '& .invalid': { borderColor: theme('colors.danger.DEFAULT') },
       '& :focus': {
         '@apply outline-none shadow-none ring': {},
         '&.unset': {
@@ -232,6 +213,26 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       },
     },
     '.dark': {
+      '& .txt-background': { color: theme('colors.background.dark') },
+      '& .txt-primary': { color: theme('colors.primary.dark') },
+      '& .txt-secondary': { color: theme('colors.secondary.dark') },
+      '& .txt-neutral': { color: theme('colors.neutral.dark') },
+      '& .txt-light': { color: theme('colors.light.dark') },
+      '& .txt-danger': { color: theme('colors.danger.dark') },
+      '& .txt-warning': { color: theme('colors.warning.dark') },
+      '& .txt-success': { color: theme('colors.success.dark') },
+      '& .block-background': { backgroundColor: theme('colors.background.dark') },
+      '& .block-primary': { backgroundColor: theme('colors.primary.dark') },
+      '& .block-secondary': { backgroundColor: theme('colors.secondary.dark') },
+      '& .block-neutral': { backgroundColor: theme('colors.neutral.dark') },
+      '& .block-light': { backgroundColor: theme('colors.light.dark') },
+      '& .block-danger': { backgroundColor: theme('colors.danger.dark') },
+      '& .block-warning': { backgroundColor: theme('colors.warning.dark') },
+      '& .block-success': { backgroundColor: theme('colors.success.dark') },
+      '& .background': {
+        backgroundColor: theme('colors.background.dark'),
+        color: theme('colors.foreground.dark'),
+      },
       '& .primary': {
         backgroundColor: theme('colors.primary.dark'),
         color: theme('colors.primary-r.dark'),
@@ -260,56 +261,19 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         backgroundColor: theme('colors.success.dark'),
         color: theme('colors.success-r.dark'),
       },
-      '& .btn': {
-        borderColor: theme('colors.neutral.dark'),
-        color: theme('colors.foreground.dark'),
-        '&.primary': {
-          borderColor: theme('colors.primary.dark'),
-        },
-        '&.secondary': {
-          borderColor: theme('colors.secondary.dark'),
-        },
-        '&.neutral': {
-          borderColor: theme('colors.neutral.dark'),
-        },
-        '&.light': {
-          borderColor: theme('colors.light.dark'),
-        },
-        '&.danger': {
-          borderColor: theme('colors.danger.dark'),
-        },
-        '&.warning': {
-          borderColor: theme('colors.warning.dark'),
-        },
-        '&.success': {
-          borderColor: theme('colors.success.dark'),
-        }
-      },
       '& .sw-input': {
         '& input': {
           backgroundColor: theme('colors.background.dark'),
         },
         '& label': {
           backgroundColor: theme('colors.background.dark'),
-          '&.unset': {
-            color: theme('colors.foreground.dark'),
-          },
-          '&.valid': {
-            color: theme('colors.success.dark'),
-          },
-          '&.invalid': {
-            color: theme('colors.danger.dark'),
-          }
+          '&.unset': { color: theme('colors.foreground.dark') },
+          '&.valid': { color: theme('colors.success.dark') },
+          '&.invalid': { color: theme('colors.danger.dark') }
         },
-        '& .unset': {
-          borderColor: theme('colors.neutral.dark'),
-        },
-        '& .valid': {
-          borderColor: theme('colors.success.dark'),
-        },
-        '& .invalid': {
-          borderColor: theme('colors.danger.dark'),
-        },
+        '& .unset': { borderColor: theme('colors.neutral.dark') },
+        '& .valid': { borderColor: theme('colors.success.dark') },
+        '& .invalid': { borderColor: theme('colors.danger.dark') },
         '& :focus': {
           '&.unset': {
             '@apply ring-neutral-dark': {}
@@ -381,7 +345,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       colors: {
         'primary': {
           DEFAULT: colors.cyan[700],
-          dark: colors.gray[700],
+          dark: colors.gray[800],
         },
         'primary-r': {
           DEFAULT: colors.white,
@@ -389,7 +353,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'secondary': {
           DEFAULT: colors.cyan[500],
-          dark: colors.gray[800],
+          dark: colors.gray[700],
         },
         'secondary-r': {
           DEFAULT: colors.white,
@@ -428,7 +392,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
           dark: colors.gray[800]
         },
         'light': {
-          DEFAULT: colors.warmGray[200],
+          DEFAULT: colors.warmGray[100],
           dark: colors.gray[500]
         },
         'light-r': {
