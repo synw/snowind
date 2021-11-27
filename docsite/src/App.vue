@@ -6,7 +6,7 @@
     <div
       class="w-screen max-w-screen-xl min-w-screen-xl dark:text-foreground-dark dark:bg-background-dark"
     >
-      <div class="fixed flex w-screen h-16 max-w-screen-xl p-5 min-w-screen-xl">
+      <div class="fixed z-0 flex w-screen h-16 max-w-screen-xl p-5 min-w-screen-xl">
         <div class="flex-none text-2xl cursor-pointer" @click="$router.push('/')">
           <img src="/img/logo.png" class="inline align-middle" style="height:35px;width:31px" />
           <span class="ml-3">Snowind</span>

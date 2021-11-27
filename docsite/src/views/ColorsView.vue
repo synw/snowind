@@ -54,18 +54,38 @@
   </div>
 
   <div class="mt-12 mb-3 text-xl">Available classes</div>
-  <div class="mt-5 text-lg">Tailwind utilities</div>
+
+  <anchor-title name="twutils" class="mt-5 text-lg">Tailwind utilities</anchor-title>
   <div class="mt-5">
     The Tailwind utilities will be available for each color:
     <code-block class="mt-3" lang="html" :code="code3"></code-block>
   </div>
-  <div class="mt-5 text-lg">Semantic color as utilities</div>
+
+  <anchor-title name="swutils" class="mt-8 text-lg">Semantic color as utilities</anchor-title>
   <div class="mt-5">
     The Snowind color classes can be used directly:
     <code-block class="mt-3" lang="html" :code="code4"></code-block>will do the same as:
     <code-block class="mt-3" lang="html" :code="code5"></code-block>
   </div>
-  <div class="mt-5 text-lg">Hover variants</div>
+  <storybook-button class="mt-5" link="story/colors--basic-utilities"></storybook-button>
+
+  <anchor-title name="textutils" class="mt-8 text-lg">Text utilities</anchor-title>
+  <div class="mt-5">
+    Semantic colors as text utilities:
+    <code-block class="mt-3" lang="html" :code="code7"></code-block>will do the same as:
+    <code-block class="mt-3" lang="html" :code="code8"></code-block>
+  </div>
+  <storybook-button class="mt-5" link="story/colors--text-utilities"></storybook-button>
+
+  <anchor-title name="blockutils" class="mt-8 text-lg">Background utilities</anchor-title>
+  <div class="mt-5">
+    Semantic colors as background utilities:
+    <code-block class="mt-3" lang="html" :code="code9"></code-block>will do the same as:
+    <code-block class="mt-3" lang="html" :code="code10"></code-block>
+  </div>
+  <storybook-button class="mt-5" link="story/colors--background-utilities"></storybook-button>
+
+  <anchor-title name="hovervariants" class="mt-8 text-lg">Hover variants</anchor-title>
   <div class="mt-5 mb-3">
     To apply an hover variant for light and dark mode:
     <code-block class="mt-3" lang="html" :code="code6"></code-block>
@@ -78,8 +98,24 @@
     Use a
     <code class="variable">-dark</code> suffix to apply the dark color with the hover variant
   </div>
+  <storybook-button class="mt-5" link="story/colors--hover-variants"></storybook-button>
 
-  <div class="mt-12 mb-8 text-xl">Configure the colors</div>
+  <anchor-title name="responsivevariants" class="mt-8 text-lg">Responsive variants</anchor-title>
+  <div class="mt-5 mb-3">
+    To apply a responsive variant for light and dark mode for the
+    <code class="variable">sm</code>
+    breakpoint
+    <code-block class="mt-3" lang="html" :code="code11"></code-block>will display a primary block only
+    for mobile, same as:
+    <code-block class="mt-3" lang="html" :code="code12"></code-block>
+  </div>
+  <div class="mt-3">
+    Use a
+    <code class="variable">-dark</code> suffix to apply the dark color with the hover variant
+  </div>
+  <storybook-button class="mt-5" link="story/colors--responsive-variants"></storybook-button>
+
+  <anchor-title name="configure" class="mt-12 mb-8 text-xl">Configure the colors</anchor-title>
   <div class="mt-3">
     Use the
     <i>tailwind.config.js</i> file to customize the Snowind color palette and override the
@@ -92,6 +128,8 @@
     <code class="variable">primary-r</code> class is the primary reversed color, example for text if primary is the background.
     The dark variants has to be set as well
   </div>
+  <storybook-button class="mt-8" link="story/colors--basic-utilities"></storybook-button>
+
   <div class="mt-12 mb-8 text-xl">Default Snowind colors</div>
   <code-block class="mt-3" lang="typescript" :code="code2"></code-block>
   <next-bar
@@ -106,10 +144,14 @@
 import { defineComponent } from "vue";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import NextBar from "@/widgets/NextBar.vue";
+import AnchorTitle from "@/widgets/AnchorTitle.vue";
+import StorybookButton from "@/widgets/StorybookButton.vue";
 import { user } from "@/state";
 
 export default defineComponent({
   components: {
+    AnchorTitle,
+    StorybookButton,
     CodeBlock,
     NextBar,
   },
@@ -144,7 +186,7 @@ export default defineComponent({
     colors: {
       'primary': {
         DEFAULT: colors.cyan[700],
-        dark: colors.gray[700],
+        dark: colors.gray[800],
       },
       'primary-r': {
         DEFAULT: colors.white,
@@ -152,7 +194,7 @@ export default defineComponent({
       },
       'secondary': {
         DEFAULT: colors.cyan[500],
-        dark: colors.gray[800],
+        dark: colors.gray[700],
       },
       'secondary-r': {
         DEFAULT: colors.white,
@@ -191,7 +233,7 @@ export default defineComponent({
         dark: colors.gray[800]
       },
       'light': {
-        DEFAULT: colors.warmGray[200],
+        DEFAULT: colors.warmGray[100],
         dark: colors.gray[500]
       },
       'light-r': {
@@ -226,6 +268,31 @@ export default defineComponent({
     <div class="p-3 light hover:success dark:hover:secondary-dark">Block</div>
     `
 
+    const code7 = `
+    <div class="txt-primary">txt-primary</div>
+    `;
+
+    const code8 = `
+    <div class="text-primary dark:text-primary-dark">txt-primary</div>
+    `;
+
+    const code9 = `
+    <div class="block-primary">block-primary</div>
+    `;
+
+    const code10 = `
+    <div class="bg-primary dark:bg-primary-dark">txt-primary</div>
+    `;
+
+    const code11 = `
+    <div class="sm:background sm:dark:background-dark primary">primary mobile only</div>
+    `;
+
+    const code12 = `
+    <div class="bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-dark\n\t\tsm:bg-background sm:text-foreground sm:dark:bg-background-dark sm:dark:text-foreground-dark">
+      primary mobile only</div>
+    `;
+
     return {
       code1,
       code2,
@@ -233,6 +300,12 @@ export default defineComponent({
       code4,
       code5,
       code6,
+      code7,
+      code8,
+      code9,
+      code10,
+      code11,
+      code12,
       user,
     };
   },
