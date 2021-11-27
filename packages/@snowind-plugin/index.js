@@ -52,6 +52,10 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       backgroundColor: theme('colors.success.DEFAULT'),
       color: theme('colors.success-r.DEFAULT'),
     },
+    '.background-dark': {
+      backgroundColor: theme('colors.background.dark'),
+      color: theme('colors.foreground.dark'),
+    },
     '.primary-dark': {
       backgroundColor: theme('colors.primary.dark'),
       color: theme('colors.primary-r.dark'),
