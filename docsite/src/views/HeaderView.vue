@@ -144,8 +144,8 @@
 
     <next-bar
       class="mt-24"
-      :prev="{ link: '/collapse', text: 'Collapse' }"
-      :next="{ link: '/input', text: 'Input' }"
+      :prev="{ link: '/switch', text: 'Switch' }"
+      :next="{ link: '/toast', text: 'Toast message' }"
     ></next-bar>
   </div>
 </template>

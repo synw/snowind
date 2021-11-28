@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-8 text-2xl">Storybook</div>
+  <div class="mb-8 text-2xl">Ressources</div>
   <div class="mt-3">
     A
     <a href="https://synw.github.io/snowind-stories/" target="_blank">Snowind storybook</a> is available online to show the components

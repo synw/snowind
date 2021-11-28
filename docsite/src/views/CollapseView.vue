@@ -62,7 +62,7 @@
   <next-bar
     class="mt-24"
     :prev="{ link: '/button', text: 'Button' }"
-    :next="{ link: '/header', text: 'Header' }"
+    :next="{ link: '/input', text: 'Input' }"
   ></next-bar>
 </template>
 

@@ -12,6 +12,7 @@
     "@snowind/input": "^0.0.4",
     "@snowind/sidebar": "^0.0.3",
     "@snowind/switch": "^0.0.4",
+    "@snowind/toast": "^0.0.1",
     "@vueuse/core": "^6.5.3",
     "highlight.js": "^10.7.2",
     "vue": "^3.2.19",

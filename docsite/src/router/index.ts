@@ -12,9 +12,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/InstallView.vue')
   },
   {
-    path: '/storybook',
-    name: 'Storybook',
-    component: () => import('../views/StorybookView.vue')
+    path: '/ressources',
+    name: 'Ressource',
+    component: () => import('../views/RessourcesView.vue')
   },
   {
     path: '/colors',
@@ -65,7 +65,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/examples/form',
     name: 'Form example',
     component: () => import('../views/FormView.vue')
-  }
+  },
+  {
+    path: '/toast',
+    name: 'Toast message',
+    component: () => import('../views/ToastView.vue')
+  },
 ]
 
 const router = createRouter({

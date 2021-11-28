@@ -38,7 +38,7 @@
             <router-link to="/colors">Colors</router-link>
           </div>
           <div class="mt-3">
-            <router-link to="/storybook">Storybook</router-link>
+            <router-link to="/ressources">Ressources</router-link>
           </div>
           <div class="pt-6 pb-2 text-xl">Css</div>
           <div>
@@ -50,9 +50,6 @@
 
           <div class="pt-6 pb-2 text-xl">Widgets</div>
           <div>
-            <router-link to="/header">Header</router-link>
-          </div>
-          <div>
             <router-link to="/input">Input</router-link>
           </div>
           <div>
@@ -60,6 +57,14 @@
           </div>
           <div>
             <router-link to="/switch">Switch</router-link>
+          </div>
+
+          <div class="pt-6 pb-2 text-xl">Mobile</div>
+          <div>
+            <router-link to="/header">Header</router-link>
+          </div>
+          <div>
+            <router-link to="/toast">Toast message</router-link>
           </div>
 
           <div class="pt-6 pb-2 text-xl">State</div>

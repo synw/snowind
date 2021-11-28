@@ -44,7 +44,7 @@
 
   <next-bar
     class="mt-24"
-    :prev="{ link: '/switch', text: 'Switch' }"
+    :prev="{ link: '/toast', text: 'Toast message' }"
     :next="{ link: '/state/user', text: 'User' }"
   ></next-bar>
 </template>

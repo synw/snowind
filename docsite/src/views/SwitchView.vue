@@ -130,7 +130,7 @@
     <next-bar
       class="mt-24"
       :prev="{ link: '/sidebar', text: 'Sidebar' }"
-      :next="{ link: '/state/screen', text: 'Screen size' }"
+      :next="{ link: '/header', text: 'Header' }"
     ></next-bar>
   </div>
 </template>

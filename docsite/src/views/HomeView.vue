@@ -14,6 +14,7 @@
       <span class="font-semibold">Dark mode support</span>: dark mode is fully supported out of the box
     </li>
   </ul>
+
   <div class="mt-12 mb-8 text-xl">Css</div>
   <ul class="mt-5 ml-5 space-y-2 list-disc list-inside">
     <li>
@@ -25,11 +26,9 @@
       collapsable widget: can be opened and closed and uses a configurable css animation
     </li>
   </ul>
-  <div class="mt-12 mb-8 text-xl">Components</div>
+
+  <div class="mt-12 mb-8 text-xl">Widgets</div>
   <ul class="mt-5 ml-5 space-y-2 list-disc list-inside">
-    <li>
-      <router-link to="/header" class="underline">Header</router-link>: a responsive header with a mobile menu widget
-    </li>
     <li>
       <router-link to="/input" class="underline">Input</router-link>: a reactive input form
       field with debouncing and validation management
@@ -41,6 +40,16 @@
     <li>
       <router-link to="/switch" class="underline">Switch</router-link>: a switch
       checkbox like widget
+    </li>
+  </ul>
+
+  <div class="mt-12 mb-8 text-xl">Mobile</div>
+  <ul class="mt-5 ml-5 space-y-2 list-disc list-inside">
+    <li>
+      <router-link to="/header" class="underline">Header</router-link>: a responsive header with a mobile menu widget
+    </li>
+    <li>
+      <router-link to="/toast" class="underline">Toast</router-link>: a toast message
     </li>
   </ul>
 
