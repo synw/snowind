@@ -1,4 +1,4 @@
-import{C as c}from"./CodeBlock.b2d3cbae.js";import{N as d}from"./NextBar.270ccf12.js";import{_ as r}from"./index.6acf82f6.js";import{d as b,r as t,c as m,e as o,F as p,a,m as l,o as v}from"./vendor.d513a3f4.js";const f=b({components:{CodeBlock:c,NextBar:d},setup(){return{code1:`
+import{C as c}from"./CodeBlock.c5949998.js";import{N as d}from"./NextBar.bfefa88f.js";import{_ as r}from"./index.fc971e03.js";import{d as b,r as t,c as m,e as o,F as p,a,m as l,o as v}from"./vendor.d513a3f4.js";const f=b({components:{CodeBlock:c,NextBar:d},setup(){return{code1:`
     import { useScreenSize } from "@snowind/state";
 
     // optionaly provide mobile and tablet Tailwind breakpoints
