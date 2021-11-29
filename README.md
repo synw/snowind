@@ -31,8 +31,9 @@ of a Tailwindcss plugin and some Vuejs 3 components
 | [![pub package](https://img.shields.io/npm/v/@snowind/header)](https://www.npmjs.com/package/@snowind/header) | [@snowind/header](https://synw.github.io/snowind/header) | A responsive header with a mobile menu widget |
 | [![pub package](https://img.shields.io/npm/v/@snowind/toast)](https://www.npmjs.com/package/@snowind/toast) | [@snowind/toast](https://synw.github.io/snowind/toast) | A toast message widget |
 
-### State management utilities
+### Site utilities
 
 | Version | Name | Description |
 | --- | --- | --- |
 | [![pub package](https://img.shields.io/npm/v/@snowind/state)](https://www.npmjs.com/package/@snowind/state) | [@snowind/state](https://synw.github.io/snowind/state/screen) | State management primitives: screen size, user preferences |
+| [![pub package](https://img.shields.io/npm/v/@snowind/api)](https://www.npmjs.com/package/@snowind/api) | [@snowind/state](https://synw.github.io/snowind/api) | A lightweight requests manager |
