@@ -24,10 +24,28 @@ export default defineComponent({
     const css = computed<Record<string, boolean>>(() => {
       const cl: Record<string, boolean> = {
         'slide-y': true,
-        slideup: isVisible.value === false,
-        slidedown: isVisible.value === true,
+        'slideup': isVisible.value === false,
+        'slidedown': isVisible.value === true,
       };
-      cl[`${breakpoint.value}:hidden`] = true;
+      let bp = "";
+      switch (breakpoint.value) {
+        case "sm":
+          bp = "sm:hidden"
+          break;
+        case "md":
+          bp = "md:hidden"
+          break;
+        case "lg":
+          bp = "lg:hidden"
+          break;
+        case "xl":
+          bp = "xl:hidden"
+          break;
+        case "2xl":
+          bp = "2xl:hidden"
+          break;
+      }
+      cl[`${bp}`] = true;
       return cl;
     });
 
