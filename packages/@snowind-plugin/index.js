@@ -347,6 +347,8 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
   theme: {
     extend: {
       colors: {
+        gray: colors.neutral,
+        green: colors.emerald,
         'primary': {
           DEFAULT: colors.cyan[700],
           dark: colors.gray[800],
