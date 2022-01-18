@@ -143,13 +143,13 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       '& :focus': {
         '@apply outline-none shadow-none ring': {},
         '&.unset': {
-          '@apply ring-neutral': {}
+          '@apply ring-neutral ring-opacity-10': {}
         },
         '&.valid': {
-          '@apply ring-success': {}
+          '@apply ring-success ring-opacity-10': {}
         },
         '&.invalid': {
-          '@apply ring-danger': {}
+          '@apply ring-danger ring-opacity-10': {}
         },
       }
     },
@@ -280,13 +280,13 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         '& .invalid': { borderColor: theme('colors.danger.dark') },
         '& :focus': {
           '&.unset': {
-            '@apply ring-neutral-dark': {}
+            '@apply ring-neutral-dark ring-opacity-10': {}
           },
           '&.valid': {
-            '@apply ring-success-dark': {}
+            '@apply ring-success-dark ring-opacity-10': {}
           },
           '&.invalid': {
-            '@apply ring-danger-dark': {}
+            '@apply ring-danger-dark ring-opacity-10': {}
           },
         }
       },
