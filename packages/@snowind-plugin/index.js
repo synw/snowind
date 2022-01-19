@@ -143,13 +143,13 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       '& :focus': {
         '@apply outline-none shadow-none ring': {},
         '&.unset': {
-          '@apply ring-neutral': {}
+          '@apply ring-neutral ring-opacity-10': {}
         },
         '&.valid': {
-          '@apply ring-success': {}
+          '@apply ring-success ring-opacity-10': {}
         },
         '&.invalid': {
-          '@apply ring-danger': {}
+          '@apply ring-danger ring-opacity-10': {}
         },
       }
     },
@@ -280,13 +280,13 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         '& .invalid': { borderColor: theme('colors.danger.dark') },
         '& :focus': {
           '&.unset': {
-            '@apply ring-neutral-dark': {}
+            '@apply ring-neutral-dark ring-opacity-10': {}
           },
           '&.valid': {
-            '@apply ring-success-dark': {}
+            '@apply ring-success-dark ring-opacity-10': {}
           },
           '&.invalid': {
-            '@apply ring-danger-dark': {}
+            '@apply ring-danger-dark ring-opacity-10': {}
           },
         }
       },
@@ -359,7 +359,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'secondary': {
           DEFAULT: colors.cyan[500],
-          dark: colors.gray[700],
+          dark: colors.cyan[700],
         },
         'secondary-r': {
           DEFAULT: colors.white,
@@ -391,15 +391,15 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'neutral': {
           DEFAULT: colors.gray[500],
-          dark: colors.coolGray[300]
+          dark: colors.gray[300]
         },
         'neutral-r': {
           DEFAULT: colors.white,
           dark: colors.gray[800]
         },
         'light': {
-          DEFAULT: colors.warmGray[100],
-          dark: colors.gray[500]
+          DEFAULT: colors.slate[200],
+          dark: colors.slate[800]
         },
         'light-r': {
           DEFAULT: colors.gray[800],
@@ -407,7 +407,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'background': {
           DEFAULT: colors.white,
-          dark: colors.coolGray[600]
+           dark: colors.slate[900]
         },
         'foreground': {
           DEFAULT: colors.gray[800],
