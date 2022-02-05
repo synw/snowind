@@ -84,10 +84,9 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
       backgroundColor: theme('colors.success.dark'),
       color: theme('colors.success-r.dark'),
     },
-
   };
   addUtilities(utilities, {
-    variants: ['hover', 'dark', 'responsive'],
+    variants: ['hover', 'dark', 'responsive', 'active', 'focus', 'required', 'invalid', 'disabled', 'file', 'marker', 'selection'],
   });
   const components = {
     '.btn': {
@@ -407,11 +406,11 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'background': {
           DEFAULT: colors.white,
-          dark: colors.neutral[900]
+          dark: "#272822"
         },
         'foreground': {
           DEFAULT: colors.gray[800],
-          dark: colors.white
+          dark: colors.neutral[300]
         }
       }
     }
