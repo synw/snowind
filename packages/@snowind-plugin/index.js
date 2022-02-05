@@ -351,7 +351,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         green: colors.emerald,
         'primary': {
           DEFAULT: colors.cyan[700],
-          dark: colors.gray[800],
+          dark: colors.cyan[800],
         },
         'primary-r': {
           DEFAULT: colors.white,
@@ -359,7 +359,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'secondary': {
           DEFAULT: colors.cyan[500],
-          dark: colors.cyan[700],
+          dark: colors.slate[600],
         },
         'secondary-r': {
           DEFAULT: colors.white,
@@ -399,7 +399,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'light': {
           DEFAULT: colors.slate[200],
-          dark: colors.slate[800]
+          dark: colors.neutral[700]
         },
         'light-r': {
           DEFAULT: colors.gray[800],
@@ -407,7 +407,7 @@ module.exports = plugin(function ({ addUtilities, addComponents, theme }) {
         },
         'background': {
           DEFAULT: colors.white,
-           dark: colors.slate[900]
+          dark: colors.neutral[900]
         },
         'foreground': {
           DEFAULT: colors.gray[800],
