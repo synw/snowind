@@ -20,13 +20,7 @@ export default defineConfig({
       name: '@snowind/subviews'
     },
     rollupOptions: {
-      external: ['vue'],
-      //input: "main.ts",
-      output: {
-        globals: {
-          vue: 'Vue'
-        }
-      }
+      external: ['@vue/reactivity'],
     }
   }
 })

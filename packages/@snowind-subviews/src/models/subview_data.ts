@@ -1,11 +1,11 @@
-import { Component } from "vue";
+import { Component, ref, Ref } from "vue";
 
 export default class SubViewData {
-  isVisible: boolean;
+  isVisible: Ref<boolean>;
   component: Component;
 
   constructor(component: Component, isVisible: boolean = true) {
-    this.isVisible = isVisible;
+    this.isVisible = ref(isVisible);
     this.component = component;
   }
 }

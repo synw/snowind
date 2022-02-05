@@ -9,7 +9,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.19"
+    "@vue/reactivity": "^3.2.29"
   },
   "devDependencies": {
     "@types/node": "^16.10.2",
