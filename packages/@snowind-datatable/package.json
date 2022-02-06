@@ -23,13 +23,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/datatable.umd.js",
-  "module": "./dist/datatable.es.js",
+  "main": "./dist/main.umd.js",
+  "module": "./dist/main.es.js",
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/datatable.es.js",
-      "require": "./dist/datatable.umd.js"
+      "import": "./dist/main.es.js",
+      "require": "./dist/main.umd.js"
     }
   },
   "publishConfig": {

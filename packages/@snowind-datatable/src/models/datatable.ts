@@ -1,11 +1,11 @@
-import { reactive, toRaw } from 'vue';
+import { reactive, toRaw, UnwrapNestedRefs } from 'vue';
 import { TableInterface, TableParams } from '../interfaces';
 import { FilterSet } from './filterset';
 
 
 export default class SwDatatableModel<T = Record<string, any>> {
-  state = reactive<TableInterface<T>>({ columns: {}, rows: [] });
-  private _initialState = reactive<TableInterface<T>>({ columns: {}, rows: [] });
+  state: UnwrapNestedRefs<TableInterface<T>> = reactive<TableInterface<T>>({ columns: {}, rows: [] });
+  _initialState: UnwrapNestedRefs<TableInterface<T>> = reactive<TableInterface<T>>({ columns: {}, rows: [] });
   filterset = new FilterSet();
   idCol: string | null = null;
   sortFilter: { col: string, direction: "asc" | "desc" } | null = null
@@ -13,7 +13,7 @@ export default class SwDatatableModel<T = Record<string, any>> {
   constructor({ columns, rows, idCol }: TableParams<T> = {}) {
     this._initialState = reactive<TableInterface<T>>({
       columns: columns ?? {},
-      rows: [...rows ?? []],
+      rows: rows ?? [],
     });
     this.state = reactive<TableInterface<T>>({
       columns: columns ?? {},
@@ -65,7 +65,7 @@ export default class SwDatatableModel<T = Record<string, any>> {
   }
 
   removeSortFilter() {
-    console.log("Remove sort filter");
+    //console.log("Remove sort filter");
     this.sortFilter = null;
     this.filter();
   }
@@ -107,7 +107,7 @@ export default class SwDatatableModel<T = Record<string, any>> {
 
   setColumnsFromData(): void {
     const row = this.state.rows[0]; //eslint-disable-line
-    console.log("Setting columns from row names", Object.keys(row))
+    //console.log("Setting columns from row names", Object.keys(row))
     const cols = {} as Record<string, string>;
     Object.keys(row).forEach((k) => {
       let _v = k.charAt(0).toUpperCase() + k.slice(1);
