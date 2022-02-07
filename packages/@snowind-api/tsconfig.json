@@ -10,6 +10,7 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     //"isolatedModules": true,
+    "declarationMap": true,
     "outDir": "./dist",
     "allowJs": true,
     "removeComments": true,
@@ -25,9 +26,6 @@
     "paths": {
       "@/*": [
         "src/*"
-      ],
-      "snowind": [
-        "src"
       ],
       "*": [
         "src/*",
