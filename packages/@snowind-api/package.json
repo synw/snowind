@@ -4,7 +4,7 @@
   "description": "A lightweight requests manager",
   "repository": "https://github.com/synw/snowind",
   "scripts": {
-    "build": "tsc --noEmit && cp src/api.ts dist"
+    "build": "tsc && cp src/api.ts dist"
   },
   "dependencies": {
     "js-cookie": "^3.0.1"

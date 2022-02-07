@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2015",
+    "module": "es2015",
     "moduleResolution": "node",
     "strict": true,
     "sourceMap": false,
@@ -9,8 +9,6 @@
     "esModuleInterop": true,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
-    //"isolatedModules": true,
-    "declarationMap": true,
     "outDir": "./dist",
     "allowJs": true,
     "removeComments": true,
@@ -19,7 +17,7 @@
       "node"
     ],
     "lib": [
-      "esnext",
+      "es2015",
       "dom"
     ],
     "baseUrl": ".",
