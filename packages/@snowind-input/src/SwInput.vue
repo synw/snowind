@@ -11,6 +11,7 @@
       }"
       :placeholder="placeholder"
       :required="required"
+      :autofocus="autofocus"
     />
     <label
       v-if="inlineLabel !== ''"
@@ -60,6 +61,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    autofocus: {
+      type: Boolean,
+      default: false,
+    }
   },
   emits: ["update:value", "update:isvalid"],
   setup(props, { emit }) {
