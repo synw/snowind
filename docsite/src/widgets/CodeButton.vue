@@ -1,9 +1,9 @@
 <template>
   <button
     @click="toggle()"
-    class="border-none focus:outline-none text-neutral btn dark:text-neutral-dark"
+    class="flex flex-row items-center justify-center border-none focus:outline-none txt-light btn"
   >
-    <i class="fas fa-code"></i>&nbsp;
+    <i-fa-solid:code class="mr-1" />&nbsp;
     <span v-if="collapse === true">Show code</span>
     <span v-else>Hide code</span>
   </button>

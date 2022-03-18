@@ -12,7 +12,7 @@
               class="border-none cursor-pointer focus:outline-none btn txt-light"
               @click="user.toggleDarkMode()"
             >
-              <i-fa-solid:moon v-if="!user.isDarkMode.value"></i-fa-solid:moon>
+              <i-fa-solid:moon class="txt-lighter" v-if="!user.isDarkMode.value"></i-fa-solid:moon>
               <i-fa-solid:sun v-else></i-fa-solid:sun>
             </button>
             <a href="https://github.com/synw/snowind">
@@ -98,8 +98,8 @@ html
   height: calc(100% - 4rem)
 #main-content
   & a, a:visited, a:hover
-    @apply txt-primary dark:text-amber-400 no-underline
+    @apply txt-primary dark:txt-secondary no-underline
 .variable
-  @apply text-danger dark:text-yellow-300
+  @apply txt-var
 </style>
 

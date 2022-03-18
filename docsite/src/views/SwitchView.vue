@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-8 text-2xl">Switch</div>
-    <sw-switch label="Switch" v-model:value="switch1" class="w-max"></sw-switch>
+    <sw-switch label="Switch" v-model:value="switch1" class="switch-primary"></sw-switch>
     <div class="mt-4">
       Value:
       <code>{{ switch1 }}</code>
@@ -22,7 +22,7 @@
 
     <div class="mt-12 mb-8 text-xl">Style</div>
     <div class="mb-5">Big</div>
-    <sw-switch label="Switch" v-model:value="switch2" class="w-max" big></sw-switch>
+    <sw-switch label="Switch" v-model:value="switch2" class="switch-primary" big></sw-switch>
     <div class="mt-4">
       Value:
       <code>{{ switch2 }}</code>
@@ -44,16 +44,16 @@
 
     <div class="my-8">Color variants and clickable labels</div>
     <div class="flex flex-row w-full space-x-3">
-      <sw-switch class="primary" :checked="true">
+      <sw-switch class="switch-primary" :checked="true">
         <div class="ml-2">Primary</div>
       </sw-switch>
-      <sw-switch class="secondary" :checked="true">
+      <sw-switch class="switch-secondary" :checked="true">
         <div class="ml-2">Secondary</div>
       </sw-switch>
-      <sw-switch class="danger" :checked="true">
+      <sw-switch class="switch-danger" :checked="true">
         <div class="ml-2">Danger</div>
       </sw-switch>
-      <sw-switch class="warning" :checked="true">
+      <sw-switch class="switch-warning" :checked="true">
         <div class="ml-2">Warning</div>
       </sw-switch>
     </div>
@@ -79,7 +79,7 @@
       <code class="variable">v-model</code> the initial value will be set from
       the linked variable:
     </div>
-    <sw-switch v-model:value="switch3" class="inline-block align-middle w-max"></sw-switch>
+    <sw-switch v-model:value="switch3" class="inline-block align-middle switch-secondary"></sw-switch>
     <div class="inline ml-2">
       v-model value:
       <code>{{ switch3 }}</code>
@@ -100,7 +100,7 @@
       <code class="variable">change</code> event to retrieve values and the
       <code class="variable">checked</code> attribute to set the initial value:
     </div>
-    <sw-switch @change="onChangeSwitch($event)" class="w-max" :checked="false"></sw-switch>
+    <sw-switch @change="onChangeSwitch($event)" class="switch-secondary" :checked="false"></sw-switch>
     <div
       :class="{
         'slide-y': true,
@@ -113,6 +113,12 @@
       <code-block :code="code8" lang="typescript" class="mt-3"></code-block>
     </div>
     <code-button class="mt-3" :collapse="collapse5" @toggle="collapse5 = !collapse5"></code-button>
+
+    <div class="mt-12 mb-8 text-xl">Semantic colors</div>
+    <div class="mt-3"></div>
+    <sw-switch class="switch-var" :checked="true">
+      <div class="ml-2">Custom color</div>
+    </sw-switch>
 
     <div class="mt-12 mb-8 text-xl">Install</div>
     <code lang="bash">npm install @snowind/switch</code>
@@ -155,7 +161,11 @@ export default defineComponent({
   },
   setup() {
     const code1 = `
-      <sw-switch label="Switch" v-model:value="switch1" class="w-max"></sw-switch>
+      <sw-switch 
+        label="Switch" 
+        v-model:value="switch1"
+        class="switch-primary">
+      </sw-switch>
       <div class="mt-4">
         Value:
         <code>{{ switch1 }}</code>
@@ -178,7 +188,12 @@ export default defineComponent({
     });
     `;
     const code3 = `
-      <sw-switch label="Switch" v-model:value="switch2" :checked="switch2" class="w-max" big></sw-switch>
+      <sw-switch
+        label="Switch"
+        v-model:value="switch2"
+        :checked="switch2" 
+        class="switch-primary" big>
+      </sw-switch>
     `;
     const code4 = `
       setup() {
@@ -191,26 +206,26 @@ export default defineComponent({
     `;
 
     const code5 = `
-      <sw-switch class="primary" :checked="true">
+      <sw-switch class="switch-primary" :checked="true">
         <div class="ml-2">Primary</div>
       </sw-switch>
-      <sw-switch class="secondary" :checked="true">
+      <sw-switch class="switch-secondary" :checked="true">
         <div class="ml-2">Secondary</div>
       </sw-switch>
-      <sw-switch class="danger" :checked="true">
+      <sw-switch class="switch-danger" :checked="true">
         <div class="ml-2">Danger</div>
       </sw-switch>
-      <sw-switch class="warning" :checked="true">
+      <sw-switch class="switch-warning" :checked="true">
         <div class="ml-2">Warning</div>
       </sw-switch>
     `;
 
     const code6 = `
-    <sw-switch v-model:value="switch3" class="w-max"></sw-switch>
+    <sw-switch v-model:value="switch3" class="switch-secondary"></sw-switch>
     `;
 
     const code7 = `
-    <sw-switch @change="onChangeSwitch($event)" class="w-max" :checked="false"></sw-switch>
+    <sw-switch @change="onChangeSwitch($event)" class="switch-secondary" :checked="false"></sw-switch>
     `;
 
     const code8 = `
