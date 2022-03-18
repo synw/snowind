@@ -1,9 +1,9 @@
 <template>
   <small-badge
-    v-for="(v,i) in values"
+    v-for="(v, i) in values"
     :key="i"
     :text="`${v}`"
-    :is-active="state[`${v}`] === true"
+    :is-active="state[`${v}`] == true"
     @click="toggleActivate(v)"
   ></small-badge>
 </template>
@@ -28,7 +28,7 @@ export default defineComponent({
   },
   emits: ["include", "exclude"],
   setup(props, { emit }) {
-    const { col, values } = toRefs(props);
+    const { values } = toRefs(props);
     let state = reactive<Record<any, boolean>>({});
 
     function toggleActivate(v: any) {
@@ -46,7 +46,7 @@ export default defineComponent({
 
     function _setState() {
       for (const v of values.value) {
-        state[`${v}`] = true
+        state[`${v}`] = true;
       }
     }
 

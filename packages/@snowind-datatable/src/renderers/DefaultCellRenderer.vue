@@ -1,4 +1,6 @@
-<template>{{ v }}</template>
+<template>
+  <div>{{ v }}</div>
+</template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -12,9 +14,6 @@ export default defineComponent({
     v: {
       required: true,
     },
-  },
-  setup() {
-    return {};
   },
 });
 </script>

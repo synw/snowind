@@ -3,13 +3,13 @@
     :is="renderer"
     :col="col"
     :values="vals"
-    @include="include($event)"
-    @exclude="exclude($event)"
+    @include="includeRow($event)"
+    @exclude="excludeRow($event)"
   ></component>
 </template>
 
 <script lang="ts">
-import { defineComponent, toRefs, ref, onMounted } from 'vue'
+import { defineComponent, toRefs, onMounted, reactive } from 'vue'
 import SwDatatableModel from '../models/datatable'
 import ValuesFilterSwitchRender from './ValuesFilterSwitchRender.vue';
 
@@ -33,30 +33,28 @@ export default defineComponent({
   },
   setup(props) {
     const { model, col } = toRefs(props);
-    const vals = ref(new Set());
+    const vals = reactive(new Set());
 
     function distinctValues() {
       model.value.state.rows.forEach((row) => {
-        vals.value.add(row[col.value]);
+        vals.add(row[col.value]);
       });
     }
 
-    function exclude(evt: any) {
+    function excludeRow(evt: any) {
       model.value.addExcludeFilter(col.value, evt)
     }
 
-    function include(evt: any) {
+    function includeRow(evt: any) {
       model.value.removeExcludeFilter(col.value, evt)
     }
 
-    onMounted(() => {
-      distinctValues();
-    })
+    onMounted(() => distinctValues());
 
     return {
       vals,
-      include,
-      exclude,
+      includeRow,
+      excludeRow,
     }
   }
 });

@@ -1,18 +1,15 @@
 <template>
-  <div v-for="(v,i) in values" :key="i" class="flex flex-row items-center mb-3">
+  <div v-for="(v, i) in values" :key="i" class="flex flex-row items-center mb-3">
     <sw-switch v-model:value="state[`${v}`]" @change="toggleActivate(v)" class="mr-2 primary"></sw-switch>
     <div v-html="v"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, watchEffect } from "vue";
+import { defineComponent, onBeforeMount, reactive, toRefs, watchEffect } from "vue";
 import SwSwitch from "@snowind/switch";
 
 export default defineComponent({
-  components: {
-    SwSwitch
-  },
   props: {
     col: {
       type: String,
@@ -51,10 +48,12 @@ export default defineComponent({
       _setState()
     });
 
+    onBeforeMount(() => _setState())
+
     return {
       state,
-      toggleActivate
-    };
-  },
+      toggleActivate,
+    }
+  }
 });
 </script>

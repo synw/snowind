@@ -14,8 +14,8 @@
         </th>
       </tr>
     </thead>
-    <tbody v-if="isResponsive">
-      <tr v-for="(row, i) in model.state.rows" :key="i.toString()">
+    <tbody>
+      <tr v-for="(row, i) in model.state.rows" :key="i.toString()" class="border">
         <td
           v-for="(cell, ii) in Object.keys(model.state.columns)"
           v-if="isDesktop"
