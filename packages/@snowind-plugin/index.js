@@ -1,8 +1,8 @@
 const plugin = require('tailwindcss/plugin');
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 function createSwitch(theme, colorname) {
-  return {
+  const light = {
     '& .dot': {
       backgroundColor: theme(`semanticColors.light.light.txt`),
       'width': '1rem', // w-4
@@ -28,15 +28,24 @@ function createSwitch(theme, colorname) {
     '& input:checked ~ .bg': {
       backgroundColor: theme(`semanticColors.${colorname}.light.bg`),
     },
-    '.dark': {
-      '& input:checked ~ .dot': {
-        'transform': 'translateX(100%)',
-        backgroundColor: theme(`semanticColors.${colorname}.dark.txt`),
-      },
-      '& input:checked ~ .bg': {
-        backgroundColor: theme(`semanticColors.${colorname}.dark.bg`),
-      },
-    }
+  }
+  const dark = {
+    '& .dot': {
+      backgroundColor: theme(`semanticColors.light.dark.txt`),
+    },
+    '& .bg': {
+      backgroundColor: theme(`semanticColors.light.dark.bg`),
+    },
+    '& input:checked ~ .dot': {
+      backgroundColor: theme(`semanticColors.${colorname}.dark.txt`),
+    },
+    '& input:checked ~ .bg': {
+      backgroundColor: theme(`semanticColors.${colorname}.dark.bg`),
+    },
+  }
+  return {
+    light: light,
+    dark: dark,
   }
 }
 
@@ -136,7 +145,9 @@ module.exports = plugin(function ({ addComponents, theme }) {
   }
   const semColors = theme('semanticColors');
   Object.keys(semColors).forEach((c) => {
-    components[`.switch-${c}`] = createSwitch(theme, c);
+    const { light, dark } = createSwitch(theme, c);
+    components[`.switch-${c}`] = light;
+    components['.dark'][`.switch-${c}`] = dark;
   });
   addComponents(components);
 }, {
