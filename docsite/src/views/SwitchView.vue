@@ -115,8 +115,23 @@
     <code-button class="mt-3" :collapse="collapse5" @toggle="collapse5 = !collapse5"></code-button>
 
     <div class="mt-12 mb-8 text-xl">Semantic colors</div>
-    <div class="mt-3"></div>
-    <sw-switch class="switch-var" :checked="true">
+    <div class="mt-3">
+      A css class will be generated for each semantic color defined
+      in the config, in the form of
+      <code
+        class="variable"
+      >
+        <span>switch-</span>
+        <i>mycolorname</i>
+      </code>. For example if we have an
+      <code class="variable">accent</code> color defined:
+    </div>
+    <code-block :code="code10" lang="javascript" class="mt-5"></code-block>
+    <div class="mt-5">
+      Then a
+      <code class="variable">switch-accent</code> class will be available:
+    </div>
+    <sw-switch class="mt-5 switch-accent" :checked="true">
       <div class="ml-2">Custom color</div>
     </sw-switch>
 
@@ -246,6 +261,30 @@ export default defineComponent({
     yarn add @snowind/switch
     `;
 
+    const code10 = `
+    const colors = require('tailwindcss/colors');
+
+    module.exports = {
+      // ...
+      theme: {
+        extend: {
+          semanticColors: {
+            accent: {
+              light: {
+                bg: colors.pink[500],
+                txt: colors.white
+              },
+              dark: {
+                bg: colors.purple[600],
+                txt: colors.neutral[100]
+              }
+            }
+          }
+        }
+      }
+    }
+    `;
+
     const switch1 = ref(false);
     const switch2 = ref(true);
     const switch3 = ref(false);
@@ -310,6 +349,7 @@ export default defineComponent({
       code7,
       code8,
       code9,
+      code10,
       collapse,
       collapse2,
       collapse3,

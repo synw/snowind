@@ -70,11 +70,11 @@ export default defineComponent({
         & input
           @apply ring-0 dark:bg-transparent border-b border-t-0 border-l-0 border-r-0 w-40
           &.neutral
-            @apply border-secondary dark:border-secondary-dark
+            @apply bord-secondary
           &.invalid
-            @apply bg-danger dark:bg-danger-dark text-danger-r dark:text-danger-r-dark
+            @apply danger
           &.valid
-            @apply border-success dark:border-success-dark text-success dark:text-success-dark
+            @apply bord-success txt-success
     </style>
     `;
 
@@ -93,9 +93,9 @@ export default defineComponent({
   & input
     @apply ring-0 dark:bg-transparent border-b border-t-0 border-l-0 border-r-0 w-40
     &.neutral
-      @apply border-secondary dark:border-secondary-dark
+      @apply bord-secondary
     &.invalid
-      @apply bg-danger dark:bg-danger-dark text-danger-r dark:text-danger-r-dark
+      @apply danger
     &.valid
-      @apply border-success dark:border-success-dark text-success dark:text-success-dark
+      @apply bord-success txt-success
 </style>

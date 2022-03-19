@@ -1,119 +1,59 @@
 <template>
   <div class="mb-8 text-2xl">Colors</div>
-  <div>The Snowind default palette is customizable in the Tailwind configuration file</div>
+  <div>
+    The Snowind default palette is a set of semantic colors created with the
+    <a
+      href="https://github.com/synw/tailwindcss-semantic-colors"
+    >tailwindcss-semantic-colors plugin</a>. They can be
+    customized in the Tailwind configuration file
+  </div>
   <div class="grid grid-flow-col gap-8 mt-5 auto-cols-max">
     <div class="inline-block">
-      <div
-        class="color-block bg-primary dark:bg-primary-dark text-primary-r dark:text-primary-r-dark"
-      >Text</div>
+      <div class="color-block primary">Text</div>
       <div class="mt-2 text-center">
         Primary
         <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
       </div>
     </div>
     <div class="inline-block">
-      <div
-        class="color-block bg-secondary dark:bg-secondary-dark text-secondary-r dark:text-secondary-r-dark"
-      >Text</div>
+      <div class="color-block secondary">Text</div>
       <div class="mt-2 text-center">Secondary</div>
       <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
     </div>
     <div class="inline-block">
-      <div
-        class="color-block bg-neutral dark:bg-neutral-dark text-neutral-r dark:text-neutral-r-dark"
-      >Text</div>
-      <div class="mt-2 text-center">Neutral</div>
-      <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
-    </div>
-    <div class="inline-block">
-      <div class="color-block bg-light dark:bg-light-dark text-light-r dark:text-light-r-dark">Text</div>
+      <div class="color-block light">Text</div>
       <div class="mt-2 text-center">Light</div>
       <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
     </div>
     <div class="inline-block">
-      <div
-        class="color-block bg-success dark:bg-success-dark text-success-r dark:text-success-r-dark"
-      >Text</div>
+      <div class="color-block lighter">Text</div>
+      <div class="mt-2 text-center">Lighter</div>
+      <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
+    </div>
+    <div class="inline-block">
+      <div class="color-block success">Text</div>
       <div class="mt-2 text-center">Success</div>
       <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
     </div>
     <div class="inline-block">
-      <div
-        class="color-block bg-warning dark:bg-warning-dark text-warning-r dark:text-warning-r-dark"
-      >Text</div>
+      <div class="color-block warning">Text</div>
       <div class="mt-2 text-center">Warning</div>
       <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
     </div>
     <div class="inline-block">
-      <div
-        class="color-block bg-danger dark:bg-danger-dark text-danger-r dark:text-danger-r-dark"
-      >Text</div>
+      <div class="color-block danger">Text</div>
       <div class="mt-2 text-center">Danger</div>
       <div v-if="user.isDarkMode.value === true" class="text-center">dark</div>
     </div>
   </div>
 
-  <div class="mt-12 mb-3 text-xl">Available classes</div>
-
-  <anchor-title name="twutils" class="mt-5 text-lg">Tailwind utilities</anchor-title>
-  <div class="mt-5">
-    The Tailwind utilities will be available for each color:
-    <code-block class="mt-3" lang="html" :code="code3"></code-block>
+  <div class="mt-8">
+    Check the
+    <a
+      href="https://github.com/synw/tailwindcss-semantic-colors#usage"
+    >semantic colors plugin doc</a>
+    for examples of semantic color utilities usage
   </div>
-
-  <anchor-title name="swutils" class="mt-8 text-lg">Semantic color as utilities</anchor-title>
-  <div class="mt-5">
-    The Snowind color classes can be used directly:
-    <code-block class="mt-3" lang="html" :code="code4"></code-block>will do the same as:
-    <code-block class="mt-3" lang="html" :code="code5"></code-block>
-  </div>
-  <storybook-button class="mt-5" link="story/colors--basic-utilities"></storybook-button>
-
-  <anchor-title name="textutils" class="mt-8 text-lg">Text utilities</anchor-title>
-  <div class="mt-5">
-    Semantic colors as text utilities:
-    <code-block class="mt-3" lang="html" :code="code7"></code-block>will do the same as:
-    <code-block class="mt-3" lang="html" :code="code8"></code-block>
-  </div>
-  <storybook-button class="mt-5" link="story/colors--text-utilities"></storybook-button>
-
-  <anchor-title name="blockutils" class="mt-8 text-lg">Background utilities</anchor-title>
-  <div class="mt-5">
-    Semantic colors as background utilities:
-    <code-block class="mt-3" lang="html" :code="code9"></code-block>will do the same as:
-    <code-block class="mt-3" lang="html" :code="code10"></code-block>
-  </div>
-  <storybook-button class="mt-5" link="story/colors--background-utilities"></storybook-button>
-
-  <anchor-title name="hovervariants" class="mt-8 text-lg">Hover variants</anchor-title>
-  <div class="mt-5 mb-3">
-    To apply an hover variant for light and dark mode:
-    <code-block class="mt-3" lang="html" :code="code6"></code-block>
-  </div>Renders:
-  <div class="p-3 mt-3 light hover:success dark:hover:secondary-dark">
-    Block
-    <div v-if="user.isDarkMode.value === true" class="inline-block">in dark mode</div>
-  </div>
-  <div class="mt-3">
-    Use a
-    <code class="variable">-dark</code> suffix to apply the dark color with the hover variant
-  </div>
-  <storybook-button class="mt-5" link="story/colors--hover-variants"></storybook-button>
-
-  <anchor-title name="responsivevariants" class="mt-8 text-lg">Responsive variants</anchor-title>
-  <div class="mt-5 mb-3">
-    To apply a responsive variant for light and dark mode for the
-    <code class="variable">sm</code>
-    breakpoint
-    <code-block class="mt-3" lang="html" :code="code11"></code-block>will display a primary block only
-    for mobile, same as:
-    <code-block class="mt-3" lang="html" :code="code12"></code-block>
-  </div>
-  <div class="mt-3">
-    Use a
-    <code class="variable">-dark</code> suffix to apply the dark color with the hover variant
-  </div>
-  <storybook-button class="mt-5" link="story/colors--responsive-variants"></storybook-button>
 
   <anchor-title name="configure" class="mt-12 mb-8 text-xl">Configure the colors</anchor-title>
   <div class="mt-3">
@@ -124,13 +64,10 @@
   <code-block class="mt-3" lang="typescript" :code="code1"></code-block>
   <div class="mt-3">
     In this example the
-    <code class="variable">primary</code> color will be overrided. The
-    <code class="variable">primary-r</code> class is the primary reversed color, example for text if primary is the background.
-    The dark variants has to be set as well
+    <code class="variable">primary</code> color will be overrided
   </div>
-  <storybook-button class="mt-8" link="story/colors--basic-utilities"></storybook-button>
 
-  <div class="mt-12 mb-8 text-xl">Default Snowind colors</div>
+  <div class="mt-12 mb-8 text-xl">Default Snowind semantic colors</div>
   <code-block class="mt-3" lang="typescript" :code="code2"></code-block>
   <next-bar
     class="mt-24"
@@ -163,19 +100,19 @@ export default defineComponent({
       // ...
       theme: {
         extend: {
-          colors: {
-            // the primary background color
-            'primary': {
-              DEFAULT: "#somecolor",
-              dark: colors.gray[700],
-            },
-            // the primary text color
-            'primary-r': {
-              DEFAULT: "#somecolor",
-              dark: colors.white,
-            },
+          semanticColors: {
+            primary: {
+              light: {
+                bg: colors.cyan[800],
+                txt: colors.white
+              },
+              dark: {
+                bg: colors.cyan[900],
+                txt: colors.neutral[100]
+              }
+            }
           }
-        },
+        }
       }
     }
     `;
@@ -183,129 +120,96 @@ export default defineComponent({
     const code2 = `
     const colors = require('tailwindcss/colors');
 
-    colors: {
-      'primary': {
-        DEFAULT: colors.cyan[700],
-        dark: colors.cyan[800],
-      },
-      'primary-r': {
-        DEFAULT: colors.white,
-        dark: colors.white,
-      },
-      'secondary': {
-        DEFAULT: colors.cyan[500],
-        dark: colors.slate[600],
-      },
-      'secondary-r': {
-        DEFAULT: colors.white,
-        dark: colors.white
-      },
-      'success': {
-        DEFAULT: colors.green[600],
-        dark: colors.green[600]
-      },
-      'success-r': {
-        DEFAULT: colors.white,
-        dark: colors.white
-      },
-      'warning': {
-        DEFAULT: colors.amber[500],
-        dark: colors.amber[500]
-      },
-      'warning-r': {
-        DEFAULT: colors.white,
-        dark: colors.white
-      },
-      'danger': {
-        DEFAULT: colors.red[500],
-        dark: colors.red[400]
-      },
-      'danger-r': {
-        DEFAULT: colors.white,
-        dark: colors.white
-      },
-      'neutral': {
-        DEFAULT: colors.gray[500],
-        dark: colors.gray[300]
-      },
-      'neutral-r': {
-        DEFAULT: colors.white,
-        dark: colors.gray[800]
-      },
-      'light': {
-        DEFAULT: colors.slate[200],
-        dark: colors.neutral[700]
-      },
-      'light-r': {
-        DEFAULT: colors.gray[800],
-        dark: colors.white
-      },
-      'background': {
-        DEFAULT: colors.white,
-        dark: colors.neutral[900]
-      },
-      'foreground': {
-        DEFAULT: colors.gray[800],
-        dark: colors.white
+    theme: {
+        semanticColors: {
+          primary: {
+            light: {
+              bg: colors.cyan[700],
+              txt: colors.white
+            },
+            dark: {
+              bg: colors.cyan[800],
+              txt: colors.neutral[100]
+            }
+          },
+          secondary: {
+            light: {
+              bg: colors.cyan[500],
+              txt: colors.white
+            },
+            dark: {
+              bg: colors.slate[600],
+              txt: colors.neutral[100]
+            }
+          },
+          success: {
+            light: {
+              bg: colors.green[600],
+              txt: colors.white
+            },
+            dark: {
+              bg: colors.green[600],
+              txt: colors.neutral[100]
+            }
+          },
+          warning: {
+            light: {
+              bg: colors.amber[500],
+              txt: colors.white
+            },
+            dark: {
+              bg: colors.amber[500],
+              txt: colors.neutral[100]
+            }
+          },
+          danger: {
+            light: {
+              bg: colors.red[500],
+              txt: colors.white
+            },
+            dark: {
+              bg: colors.red[400],
+              txt: colors.neutral[100]
+            }
+          },
+          light: {
+            light: {
+              bg: colors.gray[500],
+              txt: colors.white
+            },
+            dark: {
+              bg: colors.gray[300],
+              txt: colors.gray[800]
+            }
+          },
+          lighter: {
+            light: {
+              bg: colors.slate[200],
+              txt: colors.gray[800]
+            },
+            dark: {
+              bg: colors.neutral[700],
+              txt: colors.white
+            }
+          },
+          background: {
+            light: {
+              bg: colors.white,
+              txt: colors.gray[800]
+            },
+            dark: {
+              bg: "#272822",
+              txt: colors.neutral[300]
+            }
+          },
+        }
       }
     }
-    `;
-
-    const code3 = `
-    <div class="text-primary">Text primary</div>
-    <div class="bg-primary">Background primary</div>
-    `;
-
-    const code4 = `
-    <div class="light">Light block</div>
-    `;
-
-    const code5 = `
-    <div class="bg-light text-light-r dark:bg-light-dark dark:text-light-r-dark">Light block</div>
-    `;
-
-    const code6 = `
-    <div class="p-3 light hover:success dark:hover:secondary-dark">Block</div>
-    `
-
-    const code7 = `
-    <div class="txt-primary">txt-primary</div>
-    `;
-
-    const code8 = `
-    <div class="text-primary dark:text-primary-dark">txt-primary</div>
-    `;
-
-    const code9 = `
-    <div class="block-primary">block-primary</div>
-    `;
-
-    const code10 = `
-    <div class="bg-primary dark:bg-primary-dark">txt-primary</div>
-    `;
-
-    const code11 = `
-    <div class="sm:background sm:dark:background-dark primary">primary mobile only</div>
-    `;
-
-    const code12 = `
-    <div class="bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-dark\n\t\tsm:bg-background sm:text-foreground sm:dark:bg-background-dark sm:dark:text-foreground-dark">
-      primary mobile only</div>
     `;
 
     return {
       code1,
       code2,
-      code3,
-      code4,
-      code5,
-      code6,
-      code7,
-      code8,
-      code9,
-      code10,
-      code11,
-      code12,
       user,
     };
   },

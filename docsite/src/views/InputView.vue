@@ -10,7 +10,7 @@
   <div class="mt-12 mb-8 text-xl">Install</div>
   <code lang="bash">npm install @snowind/input</code>
   <br />
-  <code class="mt-3 text-neutral"># or</code>
+  <code class="mt-3 txt-light"># or</code>
   <br />
   <code class="mt-3">yarn add @snowind/input</code>
 

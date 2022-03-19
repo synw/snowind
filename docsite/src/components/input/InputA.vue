@@ -9,12 +9,9 @@
       required
     ></sw-input>
     <div class="mt-3 text-sm">
-      <div v-if="form.name.isValid === true" class="text-success dark:text-success-dark">Ok</div>
-      <div
-        v-else-if="form.name.isValid === false"
-        class="text-danger dark:text-danger-dark"
-      >Type 3 characters minimum</div>
-      <div v-else class="text-neutral dark:text-neutral-dark">Type a username</div>
+      <div v-if="form.name.isValid === true" class="txt-success">Ok</div>
+      <div v-else-if="form.name.isValid === false" class="txt-danger">Type 3 characters minimum</div>
+      <div v-else class="txt-light">Type a username</div>
     </div>
   </div>
   <div
@@ -23,7 +20,7 @@
       'slideup': collapse === true,
       'slidedown': collapse === false
     }"
-    class="mt-4"
+    class="mt-4 border-gray-100"
   >
     Template:
     <code-block :code="code1" class="my-3"></code-block>Script:
@@ -74,12 +71,12 @@ export default defineComponent({
         required>
       </sw-input>
       <div class="mt-3 text-sm">
-        <div v-if="form.name.isValid === true" class="text-success dark:text-success-dark">Ok</div>
+        <div v-if="form.name.isValid === true" class="txt-success">Ok</div>
         <div
           v-else-if="form.name.isValid === false"
-          class="text-danger dark:text-danger-dark"
+          class="txt-danger"
         >Type 3 characters minimum</div>
-        <div v-else class="text-neutral dark:text-neutral-dark">Type a username</div>
+        <div v-else class="txt-light">Type a username</div>
       </div>
     `;
 

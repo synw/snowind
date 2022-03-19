@@ -1,5 +1,5 @@
 <template>
-  <pre class="dark:bg-light-dark bg-amber-50"><code v-html="parsedCode" style="white-space: pre"></code></pre>
+  <pre class="dark:bg-neutral-700 bg-amber-50"><code v-html="parsedCode" style="white-space: pre"></code></pre>
 </template>
 
 <script lang="js">

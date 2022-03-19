@@ -7,7 +7,7 @@
     <i>tailwind.config.js</i>:
   </div>
   <code-block :code="code2" lang="typescript" class="mt-8"></code-block>
-  <div class="mt-8">All the css is available. The components must be installed independently</div>
+  <div class="mt-8">All the css is available. The Vue components must be installed independently</div>
 
   <a name="newproject"></a>
   <div class="mt-12 text-xl">Create a new Snowind project</div>
@@ -84,8 +84,6 @@ export default defineComponent({
     `;
 
     const code2 = `
-    const snowindPlugin = require('@snowind/plugin');
-
     module.exports = {
       // ...
       content: [
@@ -96,7 +94,8 @@ export default defineComponent({
       darkMode: 'class',
       plugins: [
         require('@tailwindcss/forms'),
-        snowindPlugin
+        require('@snowind/plugin'),
+        require('tailwindcss-semantic-colors'),
       ],
     };
     `;
@@ -134,17 +133,19 @@ export default defineComponent({
       darkMode: 'class',
       plugins: [
         require('@tailwindcss/forms'),
-        require('@snowind/plugin')
+        require('@snowind/plugin'),
+        require('tailwindcss-semantic-colors'),
       ],
     }
     `;
 
     const code8 = `
     module.exports = {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
+      plugins: [
+        require("postcss-import"),
+        require('tailwindcss'),
+        require('autoprefixer'),
+      ]
     }
     `;
 
