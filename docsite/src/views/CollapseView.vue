@@ -1,6 +1,10 @@
 <template>
   <div class="mb-8 text-2xl">Collapse</div>
-  <button class="mt-4 btn" @click="collapse = !collapse" v-html="collapse ? 'Open' : 'Close'"></button>
+  <button
+    class="mt-4 btn lighter"
+    @click="collapse = !collapse"
+    v-html="collapse ? 'Open' : 'Close'"
+  ></button>
   <div
     :class="{
       'slide-y': true,
@@ -29,7 +33,7 @@
   <div class="my-8 text-xl">Style</div>
   <p>Configure the animation with css</p>
   <button
-    class="mt-4 btn"
+    class="mt-4 btn lighter"
     @click="collapse2 = !collapse2"
     v-html="collapse2 ? 'Open with delay' : 'Close with delay'"
   ></button>

@@ -11,7 +11,7 @@
       :class="{ 'w-96': isMobile1, 'w-full': !isMobile1, 'mx-auto': isMobile1 }"
     >
       <sw-header
-        class="h-12 bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-r-dark"
+        class="h-12 primary"
         @togglemenu="isMenu1Visible = !isMenu1Visible"
         v-if="isMobile1"
         breakpoint="2xl"
@@ -39,11 +39,7 @@
           </div>
         </template>
       </sw-header>
-      <sw-header
-        class="h-12 bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-r-dark"
-        @togglemenu="isMenu1Visible = !isMenu1Visible"
-        v-else
-      >
+      <sw-header class="h-12 primary" @togglemenu="isMenu1Visible = !isMenu1Visible" v-else>
         <template #branding>
           <div class="ml-5 text-lg">Branding</div>
         </template>
@@ -67,11 +63,7 @@
           </div>
         </template>
       </sw-header>
-      <sw-mobile-menu
-        :is-visible="isMenu1Visible"
-        class="bg-neutral text-neutral-r dark:bg-neutral-dark dark:text-neutral-r-dark"
-        breakpoint="2xl"
-      >
+      <sw-mobile-menu :is-visible="isMenu1Visible" class="light" breakpoint="2xl">
         <div class="flex flex-col p-3 space-y-5">
           <button class="border-none btn">Page 1</button>
           <button class="border-none btn">Page 2</button>
@@ -199,7 +191,7 @@ export default defineComponent({
     const code1 = `
       <div>
         <sw-header
-          class="h-12 bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-r-dark"
+          class="h-12 primary"
           @togglemenu="isMenuVisible = !isMenuVisible"
         >
           <template #branding>
@@ -227,7 +219,7 @@ export default defineComponent({
         </sw-header>
         <sw-mobile-menu
           :is-visible="isMenuVisible"
-          class="bg-neutral text-neutral-r dark:bg-neutral-dark dark:text-neutral-r-dark">
+          class="light">
           <div class="flex flex-col p-3 space-y-5">
             <button class="border-none btn">Page 1</button>
             <button class="border-none btn">Page 2</button>

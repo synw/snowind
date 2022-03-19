@@ -38,11 +38,11 @@ export default defineComponent({
 
 <style lang="sass" scoped>
 #btn-left
-  @apply border border-r-0 rounded-none border-light text-neutral dark:border-light-dark dark:text-neutral-dark
+  @apply border border-r-0 rounded-none bord-light txt-light
   &.active
-    @apply border-r border-b-0 text-foreground dark:text-foreground-dark
+    @apply border-r border-b-0
 #btn-right
-  @apply border border-l-0 rounded-none border-light text-neutral dark:border-light-dark dark:text-neutral-dark
+  @apply border border-l-0 rounded-none bord-light txt-light
   &.active
-    @apply border border-b-0 text-foreground dark:text-foreground-dark
+    @apply border border-b-0
 </style>

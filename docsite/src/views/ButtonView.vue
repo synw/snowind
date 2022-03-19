@@ -4,8 +4,8 @@
     <button class="btn">Button</button>
     <button class="btn primary">Button</button>
     <button class="btn secondary">Button</button>
-    <button class="btn neutral">Button</button>
     <button class="btn light">Button</button>
+    <button class="btn lighter">Button</button>
     <button class="btn success">Button</button>
     <button class="btn warning">Button</button>
     <button class="btn danger">Button</button>
@@ -15,7 +15,7 @@
   <div class="my-8 text-xl">Style</div>
   <div class="mt-3">Customize with utility classes</div>
   <button
-    class="mt-5 text-yellow-800 bg-gray-200 rounded-none dark:text-black btn hover:border-danger dark:bg-yellow-300"
+    class="mt-5 rounded-none txt-warning block-lighter dark:txt-danger btn hover:bord-danger"
   >Button</button>
   <code-block :code="code2" class="mt-8"></code-block>
 
@@ -46,16 +46,15 @@ export default defineComponent({
         <button class="btn">Button</button>
         <button class="btn primary">Button</button>
         <button class="btn secondary">Button</button>
-        <button class="btn neutral">Button</button>
         <button class="btn light">Button</button>
+        <button class="btn lighter">Button</button>
         <button class="btn success">Button</button>
         <button class="btn warning">Button</button>
         <button class="btn danger">Button</button>
     `;
 
     const code2 = `
-    <button class="text-yellow-800 bg-gray-200 rounded-none dark:text-black \\
-      btn hover:border-danger dark:bg-yellow-300">Button</button>
+    <button class="rounded-none txt-warning block-lighter dark:txt-danger btn hover:bord-danger">Button</button>
       `;
 
     const code3 = `
@@ -65,8 +64,7 @@ export default defineComponent({
     const code4 = `
     <style lang="sass">
     .btn.small
-      @apply text-xs bg-light border-warning dark:border-warning-dark dark:bg-light-dark \\
-        hover:border-danger dark:hover:border-danger-dark
+      @apply text-xs block-lighter bord-warning hover:bord-danger txt-danger
     </style>
     `;
 
@@ -82,5 +80,5 @@ export default defineComponent({
 
 <style lang="sass">
 .btn.small
-  @apply text-xs bg-light border-warning dark:border-warning-dark dark:bg-light-dark hover:border-danger dark:hover:border-danger-dark text-danger dark:text-danger-dark
+  @apply text-xs block-lighter bord-warning hover:bord-danger txt-danger
 </style>
