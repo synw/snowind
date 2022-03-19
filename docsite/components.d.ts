@@ -6,6 +6,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     IAkarIconsLinkChain: typeof import('~icons/akar-icons/link-chain')['default']
     'IFaBrands:github': typeof import('~icons/fa-brands/github')['default']
+    'IFaSolid:angleDoubleLeft': typeof import('~icons/fa-solid/angle-double-left')['default']
+    'IFaSolid:angleDoubleRight': typeof import('~icons/fa-solid/angle-double-right')['default']
     'IFaSolid:code': typeof import('~icons/fa-solid/code')['default']
     'IFaSolid:moon': typeof import('~icons/fa-solid/moon')['default']
     'IFaSolid:sun': typeof import('~icons/fa-solid/sun')['default']
@@ -16,6 +18,7 @@ declare module 'vue' {
     InputA: typeof import('./src/components/input/InputA.vue')['default']
     InputB: typeof import('./src/components/input/InputB.vue')['default']
     InputC: typeof import('./src/components/input/InputC.vue')['default']
+    ITwemojiMovieCamera: typeof import('~icons/twemoji/movie-camera')['default']
     IZmdiSmartphoneIphone: typeof import('~icons/zmdi/smartphone-iphone')['default']
   }
 }
