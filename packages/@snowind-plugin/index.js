@@ -98,7 +98,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
         '&.valid': { color: theme('semanticColors.success.light.bg') },
         '&.invalid': { color: theme('semanticColors.danger.light.bg') },
       },
-      '& .unset': { borderColor: theme('semanticColors.background.light.bg') },
+      '& .unset': { borderColor: theme('semanticColors.light.light.bg') },
       '& .valid': { borderColor: theme('semanticColors.success.light.bg') },
       '& .invalid': { borderColor: theme('semanticColors.danger.light.bg') },
       '& :focus': {
@@ -125,7 +125,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
           '&.valid': { color: theme('semanticColors.success.dark.bg') },
           '&.invalid': { color: theme('semanticColors.danger.dark.bg') },
         },
-        '& .unset': { borderColor: theme('semanticColors.background.dark.bg') },
+        '& .unset': { borderColor: theme('semanticColors.light.dark.bg') },
         '& .valid': { borderColor: theme('semanticColors.success.dark.bg') },
         '& .invalid': { borderColor: theme('semanticColors.danger.dark.bg') },
       },
