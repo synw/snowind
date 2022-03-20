@@ -1,7 +1,7 @@
 {
   "name": "@snowind/subviews",
-  "version": "0.0.1",
-  "description": "Subviews manager",
+  "version": "0.0.2",
+  "description": "Subviews manager with widgets",
   "repository": "https://github.com/synw/snowind",
   "scripts": {
     "dev": "vite",

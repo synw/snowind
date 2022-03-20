@@ -31,6 +31,10 @@ export default class SubViews<T extends string> {
     return this.views[this.active.value].component;
   }
 
+  activeIndex = computed<number>(() => {
+    return Object.keys(this.views).indexOf(this.active.value);
+  })
+
   visibleViews = computed<Array<T>>(() => {
     const v = new Array<T>();
     for (const view of Object.keys(this.views) as Array<T>) {
@@ -53,12 +57,12 @@ export default class SubViews<T extends string> {
   }
 
   hide(view: T) {
-    console.log("Hiding view", view);
+    //console.log("Hiding view", view);
     this.views[view].isVisible.value = false;
   }
 
   show(view: T) {
-    console.log("Showing view", view);
+    //console.log("Showing view", view);
     this.views[view].isVisible.value = true;
   }
 }
