@@ -1,6 +1,61 @@
 const plugin = require('tailwindcss/plugin');
 const colors = require('tailwindcss/colors');
 
+function createStepper(theme, colorname) {
+  const light = {
+    '& .active': {
+      '& .stepper-step': {
+        color: theme(`semanticColors.${colorname}.light.txt`),
+        backgroundColor: theme(`semanticColors.${colorname}.light.bg`),
+        borderColor: theme(`semanticColors.${colorname}.light.bg`),
+      },
+      '& .stepper-label': {
+        color: theme(`semanticColors.${colorname}.light.bg`),
+      },
+    },
+    '& .done': {
+      '& .stepper-step': {
+        color: theme(`semanticColors.${colorname}.light.bg`),
+        borderColor: theme(`semanticColors.${colorname}.light.bg`),
+      },
+      '& .stepper-label': {
+        color: theme(`semanticColors.${colorname}.light.bg`),
+      },
+    },
+    '& .stepper-line.done': {
+      borderColor: theme(`semanticColors.${colorname}.light.bg`),
+    }
+  }
+  const dark = {
+    '& .active': {
+      '& .stepper-step': {
+        color: theme(`semanticColors.${colorname}.dark.txt`),
+        backgroundColor: theme(`semanticColors.${colorname}.dark.bg`),
+        borderColor: theme(`semanticColors.${colorname}.dark.bg`),
+      },
+      '& .stepper-label': {
+        color: theme(`semanticColors.${colorname}.dark.bg`),
+      },
+    },
+    '& .done': {
+      '& .stepper-step': {
+        color: theme(`semanticColors.${colorname}.dark.bg`),
+        borderColor: theme(`semanticColors.${colorname}.dark.bg`),
+      },
+      '& .stepper-label': {
+        color: theme(`semanticColors.${colorname}.dark.bg`),
+      },
+    },
+    '& .stepper-line.done': {
+      borderColor: theme(`semanticColors.${colorname}.dark.bg`),
+    }
+  }
+  return {
+    lights: light,
+    darks: dark,
+  }
+}
+
 function createSwitch(theme, colorname) {
   const light = {
     '& .dot': {
@@ -114,6 +169,38 @@ module.exports = plugin(function ({ addComponents, theme }) {
         },
       }
     },
+    '.sw-stepper': {
+      '& .stepper-step': {
+        width: '3rem', // w-12
+        height: '3rem', // h-12
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transitionProperty: 'color',
+        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        transitionDuration: '500ms',
+        borderWidth: '2px',
+        borderRadius: '9999px',
+      },
+      '& .stepper-label': {
+        position: 'absolute',
+        top: '0px',
+        width: '8rem',
+        marginTop: '4rem',
+        marginLeft: '-2.5rem',
+        fontSize: '0.75rem',
+        lineHeight: '1rem',
+        fontWeight: '500',
+        textAlign: 'center',
+      },
+      '& .stepper-line': {
+        flex: '1 1 auto',
+        transitionProperty: 'color',
+        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        transitionDuration: '500ms',
+        borderTopWidth: '2px',
+      }
+    },
     '.dark': {
       '& .sw-input': {
         '& input': {
@@ -148,6 +235,9 @@ module.exports = plugin(function ({ addComponents, theme }) {
     const { light, dark } = createSwitch(theme, c);
     components[`.switch-${c}`] = light;
     components['.dark'][`.switch-${c}`] = dark;
+    const { lights, darks } = createStepper(theme, c);
+    components[`.stepper-${c}`] = lights;
+    components['.dark'][`.stepper-${c}`] = darks;
   });
   addComponents(components);
 }, {
