@@ -14,6 +14,5 @@ export default class SubViewData {
     } else {
       this.component = param;
     }
-
   }
 }
