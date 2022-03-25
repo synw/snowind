@@ -21,54 +21,37 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, onBeforeMount, ref, toRefs } from "vue";
+<script setup lang="ts">
+import { onBeforeMount, ref, toRefs, watch } from "vue";
 import { guidGenerator } from "./utils";
 
-export default defineComponent({
-  props: {
-    checked: {
-      type: Boolean as () => boolean | null,
-      default: null,
-    },
-    big: {
-      type: Boolean,
-      default: false
-    },
-    value: {
-      type: Boolean as () => boolean | null,
-      default: null
-    }
+const props = defineProps({
+  big: {
+    type: Boolean,
+    default: false,
   },
-  emits: ["update:value", "change"],
-  setup(props, { emit }) {
-    const { checked, value } = toRefs(props);
-
-    const isChecked = ref<boolean>(false);
-    const sid = guidGenerator()
-
-    function onChange() {
-      emit("change", isChecked.value);
-      emit("update:value", isChecked.value);
-    }
-
-    onBeforeMount(() => {
-      // intitialize the checked state from the v-model if present
-      // or from the checked prop
-      if (value.value !== null) {
-        isChecked.value = value.value;
-        return
-      }
-      if (checked.value !== null) {
-        isChecked.value = checked.value;
-      }
-    });
-
-    return {
-      onChange,
-      isChecked,
-      sid
-    };
+  value: {
+    type: Boolean,
+    required: true,
   },
+});
+const emit = defineEmits(["update:value"]);
+
+const { value } = toRefs(props);
+
+const isChecked = ref<boolean>(false);
+const sid = guidGenerator()
+
+function onChange() {
+  emit("update:value", isChecked.value);
+}
+
+onBeforeMount(() => {
+  isChecked.value = value.value;
+});
+
+watch(() => props.value, (newval, oldval) => {
+  //console.log("Watch Update is checked from", newval, "to", oldval)
+  isChecked.value = newval
 });
 </script>
