@@ -54,6 +54,9 @@
           <div>
             <router-link to="/switch">Switch</router-link>
           </div>
+          <div>
+            <router-link to="/stepper">Progress stepper</router-link>
+          </div>
 
           <div class="pt-6 pb-2 text-xl">Mobile</div>
           <div>

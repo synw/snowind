@@ -76,6 +76,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Toast message',
     component: () => import('../views/ToastView.vue')
   },
+  {
+    path: '/stepper',
+    name: 'Progress stepper',
+    component: () => import('../views/StepperView.vue')
+  },
 ]
 
 const router = createRouter({

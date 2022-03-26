@@ -6,9 +6,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     IAkarIconsLinkChain: typeof import('~icons/akar-icons/link-chain')['default']
     'IFaBrands:github': typeof import('~icons/fa-brands/github')['default']
+    'IFaSolid:check': typeof import('~icons/fa-solid/check')['default']
     'IFaSolid:code': typeof import('~icons/fa-solid/code')['default']
     'IFaSolid:moon': typeof import('~icons/fa-solid/moon')['default']
     'IFaSolid:sun': typeof import('~icons/fa-solid/sun')['default']
+    'IFaSolid:times': typeof import('~icons/fa-solid/times')['default']
     InputA: typeof import('./src/components/input/InputA.vue')['default']
     InputB: typeof import('./src/components/input/InputB.vue')['default']
     InputC: typeof import('./src/components/input/InputC.vue')['default']
