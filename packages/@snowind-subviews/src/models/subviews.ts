@@ -5,7 +5,7 @@ import SubViewData from "./subview_data";
 
 export default class SubViews<T extends string> {
   readonly views: Record<T, SubViewData>;
-  active: Ref<T>;
+  activeName: Ref<T>;
   onChangeView?: (v: T) => void;
 
   constructor(params: SubviewParams<T>) {
@@ -21,18 +21,22 @@ export default class SubViews<T extends string> {
       }
       this.views[view] = new SubViewData(params.views[view], isVisible)
     }
-    this.active = !params.activeView ? ref<T>(keys[0] as T) as Ref : ref(params.activeView);
+    this.activeName = !params.activeView ? ref<T>(keys[0] as T) as Ref : ref(params.activeView);
     if (params.onViewChange) {
       this.onChangeView = params.onViewChange;
     }
   }
 
   get component() {
-    return this.views[this.active.value].component;
+    return this.views[this.activeName.value].component;
+  }
+
+  get active(): SubViewData {
+    return this.views[this.activeName.value]
   }
 
   activeIndex = computed<number>(() => {
-    return Object.keys(this.views).indexOf(this.active.value);
+    return Object.keys(this.views).indexOf(this.activeName.value);
   })
 
   visibleViews = computed<Array<T>>(() => {
@@ -50,7 +54,7 @@ export default class SubViews<T extends string> {
   }
 
   activate(view: T) {
-    this.active.value = view;
+    this.activeName.value = view;
     if (this.onChangeView) {
       this.onChangeView(view)
     }

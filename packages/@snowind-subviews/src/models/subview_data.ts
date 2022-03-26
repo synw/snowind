@@ -8,7 +8,7 @@ export default class SubViewData {
 
   constructor(param: SubviewDefinition, isVisible: boolean = true) {
     this.isVisible = ref(isVisible);
-    if (typeof param == "object") {
+    if ("component" in param) {
       this.component = param.component;
       this.props = reactive(param.props)
     } else {

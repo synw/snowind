@@ -1,6 +1,6 @@
 {
   "name": "@snowind/subviews",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Subviews manager with widgets",
   "repository": "https://github.com/synw/snowind",
   "scripts": {
@@ -25,7 +25,7 @@
   ],
   "main": "./dist/subviews.umd.js",
   "module": "./dist/subviews.es.js",
-  "types": "./dist/main.d.ts",
+  "types": "./dist/main.ts",
   "exports": {
     ".": {
       "import": "./dist/subviews.es.js",
