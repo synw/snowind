@@ -49,7 +49,7 @@
   <next-bar
     class="mt-24"
     :prev="{ link: '/state/screen', text: 'Screen' }"
-    :next="{ link: '/examples/form', text: 'Example form' }"
+    :next="{ link: '/state/subviews', text: 'Subviews' }"
   ></next-bar>
 </template>
 

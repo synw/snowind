@@ -47,7 +47,7 @@
       <code-block :code="code1" class="mb-3"></code-block>Script:
       <code-block :code="code2" lang="typescript"></code-block>
     </div>
-    <next-bar class="mt-24" :prev="{ link: '/switch', text: 'Switch' }"></next-bar>
+    <next-bar class="mt-24" :prev="{ link: '/state/subviews', text: 'Subviews' }"></next-bar>
   </div>
 </template>
 

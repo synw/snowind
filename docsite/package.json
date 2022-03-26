@@ -13,7 +13,7 @@
     "@snowind/sidebar": "^0.0.3",
     "@snowind/state": "^0.0.2",
     "@snowind/stepper": "^0.0.1",
-    "@snowind/subviews": "^0.0.3",
+    "@snowind/subviews": "^0.0.6",
     "@snowind/switch": "^0.0.5",
     "@snowind/toast": "^0.0.1",
     "@vueuse/core": "^7.5.5",

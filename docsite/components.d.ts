@@ -4,7 +4,9 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    IAkarIconsLinkChain: typeof import('~icons/akar-icons/link-chain')['default']
     'IFaBrands:github': typeof import('~icons/fa-brands/github')['default']
+    'IFaSolid:code': typeof import('~icons/fa-solid/code')['default']
     'IFaSolid:moon': typeof import('~icons/fa-solid/moon')['default']
     'IFaSolid:sun': typeof import('~icons/fa-solid/sun')['default']
     InputA: typeof import('./src/components/input/InputA.vue')['default']
