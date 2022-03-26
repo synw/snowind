@@ -25,7 +25,7 @@
       </div>
       <div id="main-zone" class="mt-16">
         <div
-          class="fixed w-48 h-full pt-6 pl-10 space-y-3 overflow-auto border-r shadow border-light dark:border-light-dark"
+          class="fixed w-48 h-full pt-6 pl-10 space-y-3 overflow-auto border-r shadow bord-lighter"
         >
           <div>
             <router-link to="/install">Install</router-link>
@@ -69,6 +69,9 @@
           </div>
           <div>
             <router-link to="/state/user">User</router-link>
+          </div>
+          <div>
+            <router-link to="/state/subviews">Subviews</router-link>
           </div>
 
           <div class="pt-6 pb-2 text-xl">Examples</div>

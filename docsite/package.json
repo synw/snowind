@@ -1,6 +1,6 @@
 {
   "name": "snowind-doc",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -9,11 +9,12 @@
   },
   "dependencies": {
     "@snowind/header": "^0.0.8",
-    "@snowind/input": "^0.0.4",
-    "@snowind/plugin": "^0.2.1",
+    "@snowind/input": "^0.0.5",
     "@snowind/sidebar": "^0.0.3",
     "@snowind/state": "^0.0.2",
-    "@snowind/switch": "^0.0.4",
+    "@snowind/stepper": "^0.0.1",
+    "@snowind/subviews": "^0.0.3",
+    "@snowind/switch": "^0.0.5",
     "@snowind/toast": "^0.0.1",
     "@vueuse/core": "^7.5.5",
     "highlight.js": "^11.4.0",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.0.33",
+    "@snowind/plugin": "^0.3.1",
     "@tailwindcss/forms": "^0.4.0",
     "@vitejs/plugin-vue": "^2.0.0",
     "@vue/compiler-sfc": "^3.2.19",

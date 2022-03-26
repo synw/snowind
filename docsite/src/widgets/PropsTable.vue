@@ -22,8 +22,11 @@
           <code v-html="row.default"></code>
         </td>
         <td class="px-8 py-3">
-          <i class="fas fa-check text-success dark:text-success-dark" v-if="row.required === true"></i>
-          <i class="text-light dark:text-light-dark fas fa-times" v-else></i>
+          <i-fa-solid:check
+            class="fas fa-check txt-success dark:text-success-dark"
+            v-if="row.required === true"
+          ></i-fa-solid:check>
+          <i-fa-solid:times class="txt-lighter dark:text-light-dark fas fa-times" v-else></i-fa-solid:times>
         </td>
       </tr>
     </tbody>

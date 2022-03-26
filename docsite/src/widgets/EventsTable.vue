@@ -4,7 +4,7 @@
       <tr>
         <th class="px-8 py-3">Name</th>
         <th class="px-8 py-3">Description</th>
-        <th class="px-8 py-3">Return type</th>
+        <th class="px-8 py-3">Event type</th>
       </tr>
     </thead>
     <tbody class="divide-y">
