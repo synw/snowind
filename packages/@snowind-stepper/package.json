@@ -1,7 +1,8 @@
 {
   "name": "@snowind/stepper",
   "version": "0.0.1",
-  "description": "A stepper widget for Snowind",
+  "description": "A progress stepper widget for Snowind",
+  "repository": "https://github.com/synw/snowind",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
