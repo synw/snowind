@@ -3,12 +3,12 @@
     <template v-for="(step, i) in steps">
       <div class="relative flex items-center" :class="getRowClass(i)">
         <div class="stepper-step">
-          <slot name="content" :index="i">
+          <slot name="content" :index="i" :step="step">
             <div v-html="step?.content ?? i + 1"></div>
           </slot>
         </div>
-        <div class="stepper-label" :index="i">
-          <slot name="label">
+        <div class="stepper-label">
+          <slot name="label" :index="i" :step="step">
             <div v-html="step.label"></div>
           </slot>
         </div>
@@ -18,7 +18,8 @@
   </div>
 </template>
 
-<script setup lang="ts">import { toRefs } from 'vue';
+<script setup lang="ts">
+import { toRefs } from 'vue';
 
 const props = defineProps({
   steps: {
