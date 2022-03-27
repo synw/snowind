@@ -7,38 +7,17 @@
       @mobile="isMobile1 = true"
     ></responsive-block>
     <div
-      class="mt-3 border h-96"
+      class="mt-3 h-96"
       :class="{ 'w-96': isMobile1, 'w-full': !isMobile1, 'mx-auto': isMobile1 }"
     >
-      <sw-header
-        class="h-12 primary"
-        @togglemenu="isMenu1Visible = !isMenu1Visible"
-        v-if="isMobile1"
-        breakpoint="2xl"
-      >
-        <template #branding>
-          <div class="ml-5 text-lg">Branding</div>
-        </template>
-        <template #mobile-branding>
-          <div class="ml-5 text-lg">Mobile branding</div>
-        </template>
-        <template #mobile-back>
-          <i-ion-arrow-back-outline
-            class="inline-flex ml-2 text-3xl"
-            v-if="$router.currentRoute.value.path != ''"
-          ></i-ion-arrow-back-outline>
-        </template>
-        <template #menu>
-          <div class="flex flex-row items-center justify-end h-full space-x-1">
-            <button class="border-none btn" @click="closeMenu1()">Page 1</button>
-            <button class="border-none btn" @click="closeMenu1()">Page 2</button>
-            <div class="px-5 text-lg cursor-pointer" @click="user.toggleDarkMode()">
-              <i-fa-solid-moon v-if="user.isDarkMode.value == false"></i-fa-solid-moon>
-              <i-fa-solid-sun v-else></i-fa-solid-sun>
-            </div>
-          </div>
-        </template>
-      </sw-header>
+      <div class="resizer" v-if="isMobile1">
+        <iframe
+          :src="'/snowind/header/mobile?partial=true'"
+          width="380"
+          height="420"
+          class="resized"
+        ></iframe>
+      </div>
       <sw-header class="h-12 primary" @togglemenu="isMenu1Visible = !isMenu1Visible" v-else>
         <template #branding>
           <div class="ml-5 text-lg">Branding</div>
@@ -63,13 +42,6 @@
           </div>
         </template>
       </sw-header>
-      <sw-mobile-menu :is-visible="isMenu1Visible" class="light" breakpoint="2xl">
-        <div class="flex flex-col p-3 space-y-5">
-          <button class="border-none btn">Page 1</button>
-          <button class="border-none btn">Page 2</button>
-        </div>
-      </sw-mobile-menu>
-      <div class="p-3">Main</div>
     </div>
     <div
       id="collapse1"
@@ -142,8 +114,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
+<script setup lang="ts">
+import { ref } from "vue";
 import { SwHeader, SwMobileMenu } from "@snowind/header";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import PropsTable from "@/widgets/PropsTable.vue";
@@ -153,42 +125,31 @@ import CodeButton from "@/widgets/CodeButton.vue";
 import ResponsiveBlock from "../widgets/ResponsiveBlock.vue";
 import { user } from "../state";
 
-export default defineComponent({
-  components: {
-    CodeBlock,
-    PropsTable,
-    EventsTable,
-    SwHeader,
-    SwMobileMenu,
-    NextBar,
-    CodeButton,
-    ResponsiveBlock,
+const isMobile1 = ref(false);
+const isMenu1Visible = ref(false);
+const collapse1 = ref(true);
+const baseUrl = import.meta.env.BASE_URL;
+
+const propsData: Array<Record<string, string | boolean>> = [
+  {
+    prop: "breakpoint",
+    description: "A Tailwind breakpoint from where to trigger the mobile layout",
+    type: "string",
+    values: '"sm" | "md" | "lg" | "xl" | "2xl"',
+    default: "sm",
+    required: false,
+  }
+];
+
+const eventsData: Array<Record<string, string | boolean>> = [
+  {
+    name: "togglemenu",
+    description: "Event emitted when the menu button is clicked",
+    returnType: "null",
   },
-  setup() {
-    const isMobile1 = ref(false);
-    const isMenu1Visible = ref(false);
-    const collapse1 = ref(true);
+];
 
-    const propsData: Array<Record<string, string | boolean>> = [
-      {
-        prop: "breakpoint",
-        description: "A Tailwind breakpoint from where to trigger the mobile layout",
-        type: "string",
-        values: '"sm" | "md" | "lg" | "xl" | "2xl"',
-        default: "sm",
-        required: false,
-      }
-    ];
-
-    const eventsData: Array<Record<string, string | boolean>> = [
-      {
-        name: "togglemenu",
-        description: "Event emitted when the menu button is clicked",
-        returnType: "null",
-      },
-    ];
-
-    const code1 = `
+const code1 = `
       <div>
         <sw-header
           class="h-12 primary"
@@ -228,49 +189,35 @@ export default defineComponent({
       </div>
     `;
 
-    const code2 = `
+const code2 = `
       import { SwHeader, SwMobileMenu } from "@snowind/header";
     
-      export default defineComponent({
-        components: {
-          SwHeader,
-          SwMobileMenu,
-        },
-        setup() {
-          const isMenuVisible = ref(false);
+      const isMenuVisible = ref(false);
 
-          function closeMenu() {
-            isMenuVisible.value = false;
-          }
-
-          return {
-              isMenuVisible,
-              closeMenu,
-          }
-        }
-      });
+      function closeMenu() {
+        isMenuVisible.value = false;
+      }
     `;
 
-    function closeMenu1() {
-      isMenu1Visible.value = false;
-    }
-
-    return {
-      isMobile1,
-      user,
-      isMenu1Visible,
-      closeMenu1,
-      code1,
-      code2,
-      collapse1,
-      propsData,
-      eventsData,
-    }
-  }
-});
+function closeMenu1() {
+  isMenu1Visible.value = false;
+}
 </script>
 
 <style lang="sass">
+
 #collapse1.slidedown
   max-height: 2000px
+.resizer
+  display: flex
+  margin: 0
+  padding: 0
+  resize: both
+  overflow: hidden
+.resizer
+  & > .resized
+    flex-grow: 1
+    margin: 0
+    padding: 0
+    border: 0
 </style>

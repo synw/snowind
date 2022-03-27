@@ -132,29 +132,20 @@
   ></next-bar>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
+<script setup lang="ts">
+import { ref } from "vue";
 import SwSidebar from "@snowind/sidebar";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import NextBar from "@/widgets/NextBar.vue";
 import PropsTable from "@/widgets/PropsTable.vue";
 import FileIcon from "@/widgets/icons/FileIcon.vue";
 
-export default defineComponent({
-  components: {
-    SwSidebar,
-    CodeBlock,
-    NextBar,
-    PropsTable,
-    FileIcon,
-  },
-  setup() {
-    const sidebar = ref(true);
-    const sidebar2 = ref(true);
-    const collapse1 = ref(true);
-    const collapse2 = ref(true);
+const sidebar = ref(true);
+const sidebar2 = ref(true);
+const collapse1 = ref(true);
+const collapse2 = ref(true);
 
-    const code1 = `
+const code1 = `
     <div class="flex flex-row mt-5 h-96">
       <sw-sidebar
         v-model:opened="sidebar"
@@ -192,29 +183,19 @@ export default defineComponent({
     </div>
     `;
 
-    const code2 = `
+const code2 = `
+    import { ref } from "vue";
     import SwSidebar from "@snowind/sidebar";
 
-    export default defineComponent({
-      components: {
-        SwSidebar
-      },
-      setup() {
-        const sidebar = ref(true);
-        
-        return {
-          sidebar
-        }
-      }
-    });
+    const sidebar = ref(true);
     `;
 
-    const code3 = `
+const code3 = `
     <sw-sidebar :model="sidebar2" class="w-40 ...">
     </sw-sidebar>
     `;
 
-    const code4 = `
+const code4 = `
     <style lang="sass" scoped>
     #sidebar2
       &.opened
@@ -222,30 +203,16 @@ export default defineComponent({
     </style>
     `;
 
-    const propsData: Array<Record<string, string | boolean>> = [
-      {
-        prop: "v-model:opened",
-        description: "The reactive variable that controls the sidebar widget",
-        type: "Ref",
-        values: "A <code>Ref</code> instance",
-        default: "",
-        required: true,
-      }
-    ]
-
-    return {
-      sidebar,
-      sidebar2,
-      collapse1,
-      collapse2,
-      code1,
-      code2,
-      code3,
-      code4,
-      propsData
-    }
+const propsData: Array<Record<string, string | boolean>> = [
+  {
+    prop: "v-model:opened",
+    description: "The reactive variable that controls the sidebar widget",
+    type: "Ref&lt;boolean&gt;",
+    values: "A boolean Ref instance",
+    default: "",
+    required: true,
   }
-});
+]
 </script>
 
 <style lang="sass" scoped>

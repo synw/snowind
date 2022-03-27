@@ -120,6 +120,17 @@
     <sw-switch class="mt-5 switch-accent" v-model:value="switch5">
       <div class="ml-2">Custom color</div>
     </sw-switch>
+    <div
+      :class="{
+        'slide-y': true,
+        'slideup': collapse5 === true,
+        'slidedown': collapse5 === false
+      }"
+      class="pt-5"
+    >
+      <code-block :code="code11" class="mt-3"></code-block>
+    </div>
+    <code-button class="mt-3" :collapse="collapse5" @toggle="collapse5 = !collapse5"></code-button>
 
     <anchor-title name="install" class="mt-12 mb-8 text-lg">Install</anchor-title>
     <code lang="bash">npm install @snowind/switch</code>
@@ -137,7 +148,7 @@
     <next-bar
       class="mt-24"
       :prev="{ link: '/sidebar', text: 'Sidebar' }"
-      :next="{ link: '/header', text: 'Header' }"
+      :next="{ link: '/stepper', text: 'Progress stepper' }"
     ></next-bar>
   </div>
 </template>
@@ -253,6 +264,13 @@ const code10 = `
       }
     }
     `;
+
+const code11 = `
+    <sw-switch class="mt-5 switch-accent" v-model:value="switch5">
+      <div class="ml-2">Custom color</div>
+    </sw-switch>
+
+`;
 
 const switch1 = ref(false);
 const switch2 = ref(true);

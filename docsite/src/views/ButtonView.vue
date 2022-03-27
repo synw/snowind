@@ -31,18 +31,11 @@
   ></next-bar>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import NextBar from "@/widgets/NextBar.vue";
 
-export default defineComponent({
-  components: {
-    CodeBlock,
-    NextBar
-  },
-  setup() {
-    const code1 = `
+const code1 = `
         <button class="btn">Button</button>
         <button class="btn primary">Button</button>
         <button class="btn secondary">Button</button>
@@ -53,29 +46,20 @@ export default defineComponent({
         <button class="btn danger">Button</button>
     `;
 
-    const code2 = `
+const code2 = `
     <button class="rounded-none txt-warning block-lighter dark:txt-danger btn hover:bord-danger">Button</button>
       `;
 
-    const code3 = `
+const code3 = `
     <button class="btn small">Button</button>
     `;
 
-    const code4 = `
+const code4 = `
     <style lang="sass">
     .btn.small
       @apply text-xs block-lighter bord-warning hover:bord-danger txt-danger
     </style>
     `;
-
-    return {
-      code1,
-      code2,
-      code3,
-      code4
-    };
-  },
-});
 </script>
 
 <style lang="sass">

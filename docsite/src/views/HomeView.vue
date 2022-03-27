@@ -41,6 +41,10 @@
       <router-link to="/switch" class="underline">Switch</router-link>: a switch
       checkbox like widget
     </li>
+    <li>
+      <router-link to="/stepper" class="underline">Progress stepper</router-link>: a configurable
+      progress stepper
+    </li>
   </ul>
 
   <div class="mt-12 mb-8 text-xl">Mobile</div>
@@ -62,6 +66,10 @@
     <li>
       <router-link to="/state/user" class="underline">User</router-link>: presistent user preferences with
       dark mode support
+    </li>
+    <li>
+      <router-link to="/state/subviews" class="underline">Subviews</router-link>: reactive local subviews
+      without the need of a router
     </li>
   </ul>
 

@@ -30,35 +30,28 @@
   <code-button class="mt-3" :collapse="collapse" @toggle="collapse = !collapse"></code-button>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive, ref } from "vue";
+<script setup lang="ts">
+import { reactive, ref } from "vue";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import SwInput from "@snowind/input";
 import CodeButton from "@/widgets/CodeButton.vue";
 
-export default defineComponent({
-  components: {
-    CodeBlock,
-    SwInput,
-    CodeButton
+const collapse = ref(true);
+
+const form = reactive({
+  name: {
+    val: "",
+    isValid: null,
+    validator: (v: string) => v.length >= 3
   },
-  setup() {
-    const collapse = ref(true);
+  password: {
+    val: "",
+    isValid: false,
+    validator: (v: string) => v.length >= 6
+  },
+});
 
-    const form = reactive({
-      name: {
-        val: "",
-        isValid: null,
-        validator: (v: string) => v.length >= 3
-      },
-      password: {
-        val: "",
-        isValid: false,
-        validator: (v: string) => v.length >= 6
-      },
-    });
-
-    const code1 = `
+const code1 = `
     <sw-input
       v-model:value="form.name.val"
       v-model:isvalid="form.name.isValid"
@@ -75,35 +68,20 @@ export default defineComponent({
     </sw-input>
     `;
 
-    const code2 = `
-    setup() {
-      const form = reactive({
-        name: {
-          val: "",
-          isValid: null,
-          validator: (v: string) => v.length >= 3
-        },
-        password: {
-          val: "",
-          isValid: false,
-          validator: (v: string) => v.length >= 6
-        },
-      });
-
-      return {
-        form,
-      }
-    }
+const code2 = `
+    const form = reactive({
+      name: {
+        val: "",
+        isValid: null,
+        validator: (v: string) => v.length >= 3
+      },
+      password: {
+        val: "",
+        isValid: false,
+        validator: (v: string) => v.length >= 6
+      },
+    });
     `;
-
-    return {
-      form,
-      code1,
-      code2,
-      collapse,
-    };
-  },
-});
 </script>
 
 <style lang="sass">

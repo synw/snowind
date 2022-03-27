@@ -38,30 +38,23 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent, reactive, ref } from "vue";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import SwInput from "@snowind/input";
 import CodeButton from "@/widgets/CodeButton.vue";
 
-export default defineComponent({
-  components: {
-    CodeBlock,
-    SwInput,
-    CodeButton
+const collapse = ref(true);
+
+const form = reactive({
+  name: {
+    val: "",
+    isValid: null,
+    validator: (v: string) => v.length > 2
   },
-  setup() {
-    const collapse = ref(true);
+});
 
-    const form = reactive({
-      name: {
-        val: "",
-        isValid: null,
-        validator: (v: string) => v.length > 2
-      },
-    });
-
-    const code1 = `
+const code1 = `
       <sw-input
         id="username"
         v-model:value="form.name.val"
@@ -80,34 +73,16 @@ export default defineComponent({
       </div>
     `;
 
-    const code2 = `
+const code2 = `
       import SwInput from "@snowind/input";
       
-      components: {
-        SwInput
-      },
-      setup() {
-        const form = reactive({
-          name: {
-            val: "",
-            isValid: null,
-            validator: (v: string) => v.length > 2
-          }
-        });
-
-        return {
-          form
+      const form = reactive({
+        name: {
+          val: "",
+          isValid: null,
+          validator: (v: string) => v.length > 2
         }
-      }
+      });
     `;
-
-    return {
-      form,
-      code1,
-      code2,
-      collapse,
-    };
-  },
-});
 </script>
 

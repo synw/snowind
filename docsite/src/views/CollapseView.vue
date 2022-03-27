@@ -70,25 +70,19 @@
   ></next-bar>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
+<script setup lang="ts">
+import { ref } from "vue";
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import CodeButton from "@/widgets/CodeButton.vue";
 import { textBlock } from "../const";
 import NextBar from "@/widgets/NextBar.vue";
 
-export default defineComponent({
-  components: {
-    CodeBlock,
-    CodeButton,
-    NextBar
-  },
-  setup() {
-    const collapse = ref(true);
-    const collapseCode1 = ref(true);
-    const collapse2 = ref(true);
-    const collapseCode2 = ref(true);
-    const code1 = `
+
+const collapse = ref(true);
+const collapseCode1 = ref(true);
+const collapse2 = ref(true);
+const collapseCode2 = ref(true);
+const code1 = `
     <button class="mt-4 btn" @click="collapse = !collapse" v-html="collapse ? 'Open' : 'Close'"></button>
     <div
       :class="{
@@ -101,17 +95,11 @@ export default defineComponent({
     </div>
     `;
 
-    const code2 = `
-      setup() {
-        const collapse = ref(false);
-
-        return  {
-          collapse
-        }
-      }
+const code2 = `
+    const collapse = ref(false);
     `;
 
-    const code3 = `
+const code3 = `
     <button
       class="mt-4 btn"
       @click="collapse2 = !collapse2"
@@ -126,19 +114,6 @@ export default defineComponent({
     >
     </div>
     `;
-
-    return {
-      code1,
-      code2,
-      code3,
-      collapse,
-      collapse2,
-      collapseCode1,
-      collapseCode2,
-      textBlock
-    };
-  },
-});
 </script>
 
 <style lang="sass">

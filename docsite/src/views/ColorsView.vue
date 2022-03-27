@@ -77,23 +77,15 @@
 </template>
 
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import NextBar from "@/widgets/NextBar.vue";
 import AnchorTitle from "@/widgets/AnchorTitle.vue";
 import StorybookButton from "@/widgets/StorybookButton.vue";
 import { user } from "../state";
 
-export default defineComponent({
-  components: {
-    AnchorTitle,
-    StorybookButton,
-    CodeBlock,
-    NextBar,
-  },
-  setup() {
-    const code1 = `
+
+const code1 = `
     const colors = require('tailwindcss/colors');
 
     module.exports = {
@@ -117,7 +109,7 @@ export default defineComponent({
     }
     `;
 
-    const code2 = `
+const code2 = `
     const colors = require('tailwindcss/colors');
 
     theme: {
@@ -206,14 +198,6 @@ export default defineComponent({
       }
     }
     `;
-
-    return {
-      code1,
-      code2,
-      user,
-    };
-  },
-});
 </script>
 
 <style lang="sass" scoped>

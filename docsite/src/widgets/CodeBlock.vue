@@ -1,5 +1,5 @@
 <template>
-  <pre class="dark:bg-neutral-700 bg-amber-50"><code v-html="parsedCode" style="white-space: pre"></code></pre>
+  <pre class="code-block dark:bg-neutral-700 bg-amber-50 w-max pr-20"><code v-html="parsedCode" style="white-space: pre"></code></pre>
 </template>
 
 <script lang="js">
@@ -35,3 +35,8 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="sass" scoped>
+.code-block
+  min-width: 48rem
+</style>

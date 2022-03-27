@@ -9,6 +9,12 @@
   <code-block :code="code2" lang="typescript" class="mt-8"></code-block>
   <div class="mt-8">All the css is available. The Vue components must be installed independently</div>
 
+  <div class="mt-12 text-xl">Template</div>
+  <div class="mt-5">
+    The
+    <a href="https://github.com/synw/snowind-template">Snowind template</a> repository can be used as a starter template
+  </div>
+
   <a name="newproject"></a>
   <div class="mt-12 text-xl">Create a new Snowind project</div>
   <div class="mt-8">
@@ -66,24 +72,18 @@
   ></next-bar>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import CodeBlock from "@/widgets/CodeBlock.vue";
 import NextBar from "@/widgets/NextBar.vue";
 
-export default defineComponent({
-  components: {
-    CodeBlock,
-    NextBar
-  },
-  setup() {
-    const code1 = `
+
+const code1 = `
       npm install -D @snowind/plugin
       # or
       yarn add -D @snowind/plugin
     `;
 
-    const code2 = `
+const code2 = `
     module.exports = {
       // ...
       content: [
@@ -100,22 +100,22 @@ export default defineComponent({
     };
     `;
 
-    const code3 = `
+const code3 = `
     yarn create @vitejs/app
     `;
 
-    const code4 = `
+const code4 = `
     cd myproject
     yarn add -D tailwindcss autoprefixer sass postcss tslib @tailwindcss/forms @snowind/plugin
     `;
 
-    const code5 = `
+const code5 = `
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
     `;
 
-    const code6 = `
+const code6 = `
     import { createApp } from 'vue';
     import App from './App.vue';
     import './assets/index.css';
@@ -123,7 +123,7 @@ export default defineComponent({
     createApp(App).mount('#app');
     `;
 
-    const code7 = `
+const code7 = `
     module.exports = {
       content: [
         './index.html',
@@ -139,7 +139,7 @@ export default defineComponent({
     }
     `;
 
-    const code8 = `
+const code8 = `
     module.exports = {
       plugins: [
         require("postcss-import"),
@@ -149,7 +149,7 @@ export default defineComponent({
     }
     `;
 
-    const code9 = `
+const code9 = `
     import { defineConfig } from 'vite'
     import vue from '@vitejs/plugin-vue'
     import typescript2 from "rollup-plugin-typescript2"
@@ -172,22 +172,7 @@ export default defineComponent({
     })
     `;
 
-    const code10 = `
+const code10 = `
     yarn dev
     `;
-
-    return {
-      code1,
-      code2,
-      code3,
-      code4,
-      code5,
-      code6,
-      code7,
-      code8,
-      code9,
-      code10
-    }
-  }
-});
 </script>

@@ -11,6 +11,7 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@snowind/plugin'),
     require('tailwindcss-semantic-colors'),
+    require('tailwind-scrollbar-hide'),
   ],
   theme: {
     extend: {

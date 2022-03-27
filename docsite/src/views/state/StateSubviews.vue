@@ -141,9 +141,7 @@ const collapse3 = ref(true);
 
 const code1 = `
     import { SubViews } from "@snowind/subviews";
-    import SubviewOne from "./views/SubviewOne.vue";
-    import SubviewTwo from "./views/SubviewTwo.vue";
-    import SubviewThree from "./views/SubviewThree.vue";
+    // import your subviews components here: SubviewOne,SubviewTwo,SubviewThree
 
     const subviews = new SubViews({
       views: {
@@ -167,9 +165,7 @@ const code3 = `
 
 const code4 = `
     import { SubViews } from "@snowind/subviews";
-    import SubviewOne from "./views/SubviewOne.vue";
-    import SubviewTwo from "./views/SubviewTwo.vue";
-    import SubviewThree from "./views/SubviewThree.vue";
+    // import your subviews components here: SubviewOne,SubviewTwo,SubviewThree
 
     const subviews = new SubViews({
       views: {

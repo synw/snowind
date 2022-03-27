@@ -4,91 +4,97 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/HomeView.vue')
+    component: () => import('./views/HomeView.vue')
   },
   {
     path: '/install',
     name: 'Install',
-    component: () => import('../views/InstallView.vue')
+    component: () => import('./views/InstallView.vue')
   },
   {
     path: '/ressources',
     name: 'Ressource',
-    component: () => import('../views/RessourcesView.vue')
+    component: () => import('./views/RessourcesView.vue')
   },
   {
     path: '/colors',
     name: 'Colors',
-    component: () => import('../views/ColorsView.vue')
+    component: () => import('./views/ColorsView.vue')
   },
   {
     path: '/button',
     name: 'Button',
-    component: () => import('../views/ButtonView.vue')
+    component: () => import('./views/ButtonView.vue')
   },
   {
     path: '/collapse',
     name: 'Collapse',
-    component: () => import('../views/CollapseView.vue')
+    component: () => import('./views/CollapseView.vue')
   },
   {
     path: '/header',
     name: 'Header',
-    component: () => import('../views/HeaderView.vue')
+    component: () => import('./views/HeaderView.vue'),
+  },
+  {
+    path: '/header/mobile',
+    name: 'Header mobile',
+    component: () => import('./components/MobileHeader.vue')
   },
   {
     path: '/input',
     name: 'Input',
-    component: () => import('../views/InputView.vue')
+    component: () => import('./views/InputView.vue')
   },
   {
     path: '/switch',
     name: 'Switch',
-    component: () => import('../views/SwitchView.vue')
+    component: () => import('./views/SwitchView.vue')
   },
   {
     path: '/sidebar',
     name: 'Sidebar',
-    component: () => import('../views/SidebarView.vue')
+    component: () => import('./views/SidebarView.vue')
   },
   {
     path: '/state/screen',
     name: 'State: screen',
-    component: () => import('../views/state/StateScreenView.vue')
+    component: () => import('./views/state/StateScreenView.vue')
   },
   {
     path: '/state/user',
     name: 'State: user',
-    component: () => import('../views/state/StateUserView.vue')
+    component: () => import('./views/state/StateUserView.vue')
   },
   {
     path: '/state/subviews',
     name: 'State: subviews',
-    component: () => import('../views/state/StateSubviews.vue')
+    component: () => import('./views/state/StateSubviews.vue')
   },
   {
     path: '/examples/form',
     name: 'Form example',
-    component: () => import('../views/FormView.vue')
+    component: () => import('./views/FormView.vue')
   },
   {
     path: '/toast',
     name: 'Toast message',
-    component: () => import('../views/ToastView.vue')
+    component: () => import('./views/ToastView.vue')
   },
   {
     path: '/stepper',
     name: 'Progress stepper',
-    component: () => import('../views/StepperView.vue')
+    component: () => import('./views/StepperView.vue')
   },
 ]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  scrollBehavior() {
-    document?.getElementById('app')?.scrollIntoView();
-  }
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  },
 })
+
 
 export default router
