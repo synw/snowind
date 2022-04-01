@@ -1,23 +1,14 @@
-# Snowind template
-
-A starter template for [Snowind](https://github.com/synw/snowind)
-
-## Install
+# Snowind end to end tests
 
 Clone and install the dependencies:
 
 ```
+cd tests
 yarn
 ```
 
-## Run the site
+Run the tests
 
 ```
-yarn dev
-```
-
-## Build the site
-
-```
-yarn build
+yarn test
 ```
