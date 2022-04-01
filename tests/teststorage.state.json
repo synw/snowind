@@ -1,0 +1,10 @@
+{
+  "cookies": [],
+  "origins": [],
+  "localStorage": [
+    {
+      "name": "isDarkMode",
+      "value": false
+    }
+  ]
+}
