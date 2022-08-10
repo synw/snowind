@@ -255,7 +255,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
           txt: colors.white
         },
         dark: {
-          bg: colors.cyan[800],
+          bg: colors.black,
           txt: colors.neutral[100]
         }
       },

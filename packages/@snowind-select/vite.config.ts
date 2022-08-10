@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import typescript2 from "rollup-plugin-typescript2"
-//import dts from 'vite-plugin-dts'
 const path = require('path')
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     typescript2({
@@ -12,27 +12,20 @@ export default defineConfig({
       clean: true
     }),
     vue(),
-    //dts({ outputDir: path.resolve(__dirname, 'dist') }),
   ],
   build: {
+    emptyOutDir: false,
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
-      name: '@snowind/header',
-      formats: ['es', 'umd'],
+      name: '@snowind/stepper'
     },
     rollupOptions: {
       external: ['vue'],
-      //input: "main.ts",
       output: {
         globals: {
           vue: 'Vue'
         }
       }
-    }
-  },
-  resolve: {
-    alias: {
-      'vue': path.resolve(__dirname, 'node_modules/vue')
     }
   }
 })

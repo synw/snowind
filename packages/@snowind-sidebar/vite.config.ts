@@ -17,7 +17,7 @@ export default defineConfig({
     emptyOutDir: false,
     lib: {
       entry: path.resolve(__dirname, 'src/main.ts'),
-      name: '@snowind/switch'
+      name: '@snowind/sidebar'
     },
     rollupOptions: {
       external: ['vue'],

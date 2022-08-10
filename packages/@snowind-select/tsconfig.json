@@ -8,15 +8,13 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "declaration": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
     "allowSyntheticDefaultImports": true,
     //"isolatedModules": true,
     "outDir": "./dist",
     "allowJs": true,
     "removeComments": true,
     "strictFunctionTypes": true,
+    "jsx": "preserve",
     "types": [
       "node"
     ],

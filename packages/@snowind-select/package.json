@@ -1,14 +1,14 @@
 {
-  "name": "@snowind/stepper",
-  "version": "0.0.2",
-  "description": "A progress stepper widget for Snowind",
+  "name": "@snowind/select",
+  "version": "0.0.1",
+  "description": "A dropdown select widget for Snowind",
   "repository": "https://github.com/synw/snowind",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
-  "peerDependencies": {
+  "dependencies": {
     "vue": "^3.2.19"
   },
   "devDependencies": {
@@ -23,13 +23,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/stepper.umd.js",
-  "module": "./dist/stepper.es.js",
+  "main": "./dist/select.umd.js",
+  "module": "./dist/select.es.js",
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/stepper.es.js",
-      "require": "./dist/stepper.umd.js"
+      "import": "./dist/select.es.js",
+      "require": "./dist/select.umd.js"
     }
   },
   "publishConfig": {

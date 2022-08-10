@@ -1,10 +1,10 @@
 {
   "name": "@snowind/api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight requests manager",
   "repository": "https://github.com/synw/snowind",
   "scripts": {
-    "build": "tsc && cp src/api.ts dist"
+    "build": "rollup -c && cp src/*.ts dist"
   },
   "dependencies": {
     "js-cookie": "^3.0.1"
@@ -12,18 +12,24 @@
   "devDependencies": {
     "@types/js-cookie": "^3.0.1",
     "@types/node": "^16.10.2",
-    "typescript": "^4.4.3"
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "rollup": "^2.70.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
   },
   "files": [
     "dist"
   ],
-  "main": "./dist/api.umd.js",
-  "module": "./dist/api.es.js",
-  "types": "./dist/main.d.ts",
+  "main": "./dist/api.cjs.min.js",
+  "module": "./dist/api.min.js",
+  "types": "./dist/main.ts",
   "exports": {
     ".": {
-      "import": "./dist/api.es.js",
-      "require": "./dist/api.umd.js"
+      "import": "./dist/api.cjs.min.js",
+      "require": "./dist/api.min.js"
     }
   },
   "publishConfig": {

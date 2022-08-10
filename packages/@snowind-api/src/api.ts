@@ -1,7 +1,6 @@
 import Cookies from 'js-cookie';
 
-
-class Api {
+export class Api {
   serverUrl: string;
   csrfCookieName: string;
   csrfHeaderKey: string;
@@ -169,5 +168,3 @@ class Api {
     return r;
   }
 }
-
-export default Api;
