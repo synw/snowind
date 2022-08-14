@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center sw-stepper">
     <template v-for="(step, i) in steps">
-      <div class="relative flex items-center" :class="getRowClass(i)">
+      <div class="relative flex items-center justify-center" :class="getRowClass(i)">
         <div class="stepper-step">
           <slot name="content" :index="i" :step="step">
             <div v-html="step?.content ?? i + 1"></div>
@@ -35,7 +35,7 @@ const props = defineProps({
 const { steps, activeIndex } = toRefs(props);
 
 function getRowClass(i: number): string {
-  let cls = "";
+  let cls = "todo";
   if (activeIndex.value == i) {
     cls = "active"
   } else if (i < activeIndex.value) {
