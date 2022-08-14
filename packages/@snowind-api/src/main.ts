@@ -1,3 +1,3 @@
-import { Api } from "./api";
+import useApi from "./useapi";
 
-export default Api;
+export { useApi };
