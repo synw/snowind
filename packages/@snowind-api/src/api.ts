@@ -104,7 +104,7 @@ const useApi = (serverUrl: string, options: {
 
   const get = async <T>(uri: string, verbose = false): Promise<T> => {
     let url = _serverUrl + uri;
-    const opts = _getHeader("delete");
+    const opts = _getHeader("get");
     if (verbose) {
       console.log("GET", url);
       console.log(JSON.stringify(opts, null, "  "));
