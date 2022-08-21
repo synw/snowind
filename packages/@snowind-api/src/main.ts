@@ -1,5 +1,5 @@
 import { useApi } from "./api";
-import { ResponseErrorType } from "./interfaces";
+import { ResponseErrorType, UseApiParams } from "./interfaces";
 import { ResponseError } from "./errors";
 
-export { useApi, ResponseError, ResponseErrorType };
+export { useApi, UseApiParams, ResponseError, ResponseErrorType };
