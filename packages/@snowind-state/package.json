@@ -1,6 +1,6 @@
 {
   "name": "@snowind/state",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "State management primitives for Snowind",
   "repository": "https://github.com/synw/snowind",
   "scripts": {
