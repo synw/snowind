@@ -18,7 +18,8 @@
     "removeComments": true,
     "strictFunctionTypes": true,
     "types": [
-      "node"
+      "node",
+      "web-bluetooth"
     ],
     "lib": [
       "esnext",
