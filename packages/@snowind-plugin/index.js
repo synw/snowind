@@ -142,33 +142,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
         width: '208px' // w-52
       }
     },
-    '.sw-input': {
-      '@apply rounded-sm': {},
-      '& label': {
-        backgroundColor: theme('semanticColors.background.light.bg'),
-        top: '0%',
-        transform: 'translateY(-50%)',
-        'font-size': '0.8em',
-        '&.unset': { color: theme('semanticColors.background.light.txt') },
-        '&.valid': { color: theme('semanticColors.success.light.bg') },
-        '&.invalid': { color: theme('semanticColors.danger.light.bg') },
-      },
-      '& .unset': { borderColor: theme('semanticColors.light.light.bg') },
-      '& .valid': { borderColor: theme('semanticColors.success.light.bg') },
-      '& .invalid': { borderColor: theme('semanticColors.danger.light.bg') },
-      '& :focus': {
-        '@apply outline-none shadow-none ring': {},
-        '&.unset': {
-          [`@apply ring-[${theme('semanticColors.light.light.bg')}] ring-opacity-10`]: {}
-        },
-        '&.valid': {
-          [`@apply ring-[${theme('semanticColors.success.light.bg')}] ring-opacity-10`]: {}
-        },
-        '&.invalid': {
-          [`@apply ring-[${theme('semanticColors.danger.light.bg')}] ring-opacity-10`]: {}
-        },
-      }
-    },
     '.sw-stepper': {
       '& .stepper-step': {
         width: '3rem', // w-12
@@ -201,34 +174,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
         borderTopWidth: '2px',
       }
     },
-    '.dark': {
-      '& .sw-input': {
-        '& input': {
-          backgroundColor: theme('semanticColors.background.dark.bg'),
-        },
-        '& label': {
-          backgroundColor: theme('semanticColors.background.dark.bg'),
-          '&.unset': { color: theme('semanticColors.background.dark.txt') },
-          '&.valid': { color: theme('semanticColors.success.dark.bg') },
-          '&.invalid': { color: theme('semanticColors.danger.dark.bg') },
-        },
-        '& .unset': { borderColor: theme('semanticColors.light.dark.bg') },
-        '& .valid': { borderColor: theme('semanticColors.success.dark.bg') },
-        '& .invalid': { borderColor: theme('semanticColors.danger.dark.bg') },
-      },
-      '& :focus': {
-        '@apply outline-none shadow-none ring': {},
-        '&.unset': {
-          [`@apply ring-[${theme('semanticColors.light.dark.bg')}] ring-opacity-10`]: {}
-        },
-        '&.valid': {
-          [`@apply ring-[${theme('semanticColors.success.dark.bg')}] ring-opacity-10`]: {}
-        },
-        '&.invalid': {
-          [`@apply ring-[${theme('semanticColors.danger.dark.bg')}] ring-opacity-10`]: {}
-        },
-      }
-    },
+    '.dark': {},
   }
   const semColors = theme('semanticColors');
   Object.keys(semColors).forEach((c) => {
@@ -255,7 +201,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
           txt: colors.white
         },
         dark: {
-          bg: colors.black,
+          bg: colors.neutral[950],
           txt: colors.neutral[100]
         }
       },
@@ -305,7 +251,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
           txt: colors.white
         },
         dark: {
-          bg: colors.gray[300],
+          bg: colors.gray[400],
           txt: colors.gray[800]
         }
       },
@@ -315,7 +261,17 @@ module.exports = plugin(function ({ addComponents, theme }) {
           txt: colors.gray[800]
         },
         dark: {
-          bg: colors.neutral[700],
+          bg: colors.neutral[600],
+          txt: colors.white
+        }
+      },
+      semilight: {
+        light: {
+          bg: colors.slate[400],
+          txt: colors.gray[800]
+        },
+        dark: {
+          bg: colors.neutral[500],
           txt: colors.white
         }
       },

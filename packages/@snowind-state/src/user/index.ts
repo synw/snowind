@@ -17,9 +17,9 @@ export default class User {
 
   checkDarkMode() {
     if (this.isDarkMode.value === true) {
-      document.body.classList.add("dark");
+      document.body.classList.add("dark", "bg-background-dark", "text-foreground-dark");
     } else {
-      document.body.classList.remove("dark");
+      document.body.classList.remove("dark", "bg-background-dark", "text-foreground-dark");
     }
   }
 }
