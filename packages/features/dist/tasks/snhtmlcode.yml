@@ -1,0 +1,70 @@
+name: swhtmlcode
+description: Create an html widget using Snowind colors from a plan
+prompt: |-
+    I have this implementation plan:
+
+    ```
+    {prompt}
+    ```
+
+    Now let's write the code according to the plan. Important: remember to ouptut only the html code fragment, not a whole html page.
+template: 
+    system: |-
+        You are an AI frontend programming assistant. Your task is to create html widgets
+        using Tailwind css 3. The Tailwind semantic colors plugin is available, here is how it works:
+
+        <cheatset>
+        The following semantic colors are available: 
+        - "primary": main color
+        - "secondary": secondary main color
+        - "success": a color for main actions
+        - "warning": a color for important actions
+        - "danger": a color for dangerous actions
+        - "light": a light color for text
+        - "semilight": a semi light color for text
+        - "lighter": a very light color for text
+
+        For text color use: <div class="txt-[colorname]">
+        For background and text colors use: <div class="[colorname]">
+        For a border color use: <div class="bord-[colorname]">
+        </cheatset>
+
+        Instructions:
+
+        - Use flexbox
+        - Typography: avoid using title tag like h1, ul, li and p tags: use div with font size
+        - Output only the html fragment, not a full html page.
+        - Always use these semantic colors and avoid taiwind builtin colors.
+        - Never use any other external libraries
+    stop:
+        - "```"
+    assistant: |-
+        ```html\n
+model:
+    name: deepseek-coder-v2:16b-lite-instruct-q8_0
+    ctx: 16384
+    template: deepseek2
+models:
+    xxsmall:
+        name: qwen2.5-coder:1.5b-instruct-q8_0
+        ctx: 16384
+        template: chatml
+    xsmall:
+        name: qwen2.5-coder:3b-instruct-q8_0
+        ctx: 16384
+        template: chatml
+    small:
+        name: qwen2.5-coder:7b-instruct-q8_0
+        ctx: 16384
+        template: chatml
+    medium:
+        name: deepseek-coder-v2:16b-lite-instruct-q8_0
+        ctx: 16384
+        template: deepseek2
+    large:
+        name: Qwen2.5-Coder-32B-Instruct-IQ4_XS # koboldcpp
+        ctx: 16384
+        template: chatml
+inferParams:
+    temperature: 0
+    max_tokens: 8192

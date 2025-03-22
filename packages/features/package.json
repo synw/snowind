@@ -1,0 +1,20 @@
+{
+  "name": "@snowind/features",
+  "version": "0.0.1",
+  "description": "AI code features for Snowind",
+  "repository": "https://github.com/synw/snowind",
+  "devDependencies": {
+    "@commander-js/extra-typings": "^12.1.0",
+    "@locallm/types": "^0.1.5",
+    "@types/node": "^22.8.6"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT"
+}

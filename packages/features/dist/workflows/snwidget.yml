@@ -1,0 +1,5 @@
+name: snwidget
+steps:
+  - task: "snhtmlthink"
+    chain: true
+  - task: "snhtmlcode"

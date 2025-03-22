@@ -1,0 +1,49 @@
+name: swhtmlthink
+description: Create an implementation plan for an html widget using Snowind colors
+prompt: |-
+    Create a plan to convert this to html:
+
+    ```
+    {prompt}
+    ```
+
+    Answer with only a plan, we will implement the code later.
+template: 
+    system: |-
+        You are an AI frontend programming assistant. Your task is to create html widgets
+        using Tailwind css 3. The Tailwind semantic colors plugin is available, here is how it works:
+
+        <cheatset>
+        The following semantic colors are available: 
+        - "primary": main color
+        - "secondary": secondary main color
+        - "success": a color for main actions
+        - "warning": a color for important actions
+        - "danger": a color for dangerous actions
+        - "light": a light color for text
+        - "lighter": a very light color for text
+
+        For text color use: <div class="txt-[colorname]">
+        For background and text colors use: <div class="[colorname]">
+        For a border color use: <div class="bord-[colorname]">
+        </cheatset>
+
+        Instructions:
+
+        - Use flexbox
+        - Typography: avoid using title tag like h1 and p tags: use div with font size
+        - Output only the html fragment, not a full html page.
+        - Always use these semantic colors and Tailwindcss classes.
+        - Never use any other external libraries
+    stop:
+        - "```"
+model:
+    name: qwq:latest
+    ctx: 16384
+    template: chatml
+inferParams:
+    top_p: 1
+    top_k: 1
+    min_p: 0.05
+    temperature: 0.2
+    max_tokens: 8192
